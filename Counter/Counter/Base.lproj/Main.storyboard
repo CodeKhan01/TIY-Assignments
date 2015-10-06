@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -18,35 +18,41 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT COUNT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ai-yV-Jem">
-                                <rect key="frame" x="249" y="28" width="101.5" height="23.5"/>
+                                <rect key="frame" x="249" y="28" width="102" height="24"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1Qi-EC-vOZ">
-                                <rect key="frame" x="14" y="223" width="572" height="31"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="TIYLogo" translatesAutoresizingMaskIntoConstraints="NO" id="sEk-OI-nh1">
+                                <rect key="frame" x="180" y="306" width="240" height="212"/>
+                                <animations/>
+                            </imageView>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="8lL-g8-MYH">
+                                <rect key="frame" x="261" y="267" width="94" height="29"/>
+                                <animations/>
                                 <connections>
-                                    <action selector="sliderValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="INV-ji-2Uv"/>
-                                </connections>
-                            </slider>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="8lL-g8-MYH">
-                                <rect key="frame" x="253" y="261" width="94" height="29"/>
-                                <connections>
-                                    <action selector="stepperValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="pIe-bJ-xbx"/>
+                                    <action selector="stepperValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="MDL-00-w8d"/>
                                 </connections>
                             </stepper>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TIYLogo" translatesAutoresizingMaskIntoConstraints="NO" id="sEk-OI-nh1">
-                                <rect key="frame" x="180" y="306" width="240" height="212"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iQ1-St-r3q">
-                                <rect key="frame" x="228" y="51.5" width="144" height="164"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iQ1-St-r3q">
+                                <rect key="frame" x="239" y="49" width="144" height="164"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="164" id="4Q5-tU-Osv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="120"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="1Qi-EC-vOZ">
+                                <rect key="frame" x="14" y="221" width="572" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="9wv-77-EX7"/>
+                                </connections>
+                            </slider>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
@@ -68,13 +74,17 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="countTextField" destination="iQ1-St-r3q" id="bwl-aZ-wpE"/>
-                        <outlet property="slider" destination="1Qi-EC-vOZ" id="I9J-g6-Naa"/>
-                        <outlet property="stepper" destination="8lL-g8-MYH" id="SOw-Mq-DiY"/>
+                        <outlet property="countTextField" destination="iQ1-St-r3q" id="zNw-QV-FxN"/>
+                        <outlet property="slider" destination="1Qi-EC-vOZ" id="jGk-ec-sf0"/>
+                        <outlet property="stepper" destination="8lL-g8-MYH" id="h8q-Zs-Sx9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="f7a-gf-WbF"/>
+                <tapGestureRecognizer id="f7a-gf-WbF">
+                    <connections>
+                        <action selector="viewTapped:" destination="vXZ-lx-hvc" id="oVr-SR-ga5"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>

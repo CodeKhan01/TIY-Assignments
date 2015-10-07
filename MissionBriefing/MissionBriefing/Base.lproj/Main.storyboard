@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -58,13 +59,26 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xRi-RL-2uz">
-                                <rect key="frame" x="60" y="171" width="480" height="258"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xRi-RL-2uz">
+                                <rect key="frame" x="60" y="171" width="480" height="147"/>
                                 <animations/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="t0K-uM-0BF">
+                                <rect key="frame" x="181" y="326" width="240" height="212"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TIYLogo" translatesAutoresizingMaskIntoConstraints="NO" id="gRl-g3-gje">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="212"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="gRl-g3-gje" firstAttribute="centerX" secondItem="t0K-uM-0BF" secondAttribute="centerX" id="Dam-14-Szc"/>
+                                </constraints>
+                            </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lzi-AZ-ZCT">
                                 <rect key="frame" x="180" y="171" width="240" height="128"/>
                                 <animations/>
@@ -98,12 +112,14 @@
                             <constraint firstItem="UEF-um-zcA" firstAttribute="trailing" secondItem="rzs-AD-Wb6" secondAttribute="trailing" id="4bs-i0-g7l"/>
                             <constraint firstItem="Ncf-4o-1bL" firstAttribute="trailing" secondItem="tOg-tB-BbP" secondAttribute="trailing" id="5Mh-Ei-OIO"/>
                             <constraint firstItem="Khk-P2-EdM" firstAttribute="width" secondItem="IsX-vU-0yc" secondAttribute="width" id="6bg-TA-wgp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gRl-g3-gje" secondAttribute="trailing" constant="159" id="9kj-9c-yq4"/>
                             <constraint firstItem="jkK-wS-Jda" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="I5F-yW-bBw"/>
                             <constraint firstItem="xRi-RL-2uz" firstAttribute="top" secondItem="IsX-vU-0yc" secondAttribute="bottom" constant="75" id="QA3-id-nYm"/>
                             <constraint firstItem="IsX-vU-0yc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="TXT-aU-fgK"/>
                             <constraint firstItem="s9o-F6-KvN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UeX-0P-iVC"/>
                             <constraint firstItem="Ncf-4o-1bL" firstAttribute="top" secondItem="tOg-tB-BbP" secondAttribute="bottom" constant="8" id="bV7-M8-iUT"/>
                             <constraint firstItem="s9o-F6-KvN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eFV-Ju-nTf"/>
+                            <constraint firstItem="gRl-g3-gje" firstAttribute="top" secondItem="xRi-RL-2uz" secondAttribute="bottom" constant="8" id="ely-K3-E0b"/>
                             <constraint firstItem="env-2R-Wqp" firstAttribute="top" secondItem="IsX-vU-0yc" secondAttribute="bottom" constant="8" id="gn3-Ww-blq"/>
                             <constraint firstItem="xRi-RL-2uz" firstAttribute="centerX" secondItem="IsX-vU-0yc" secondAttribute="centerX" id="ktC-j5-qRS"/>
                             <constraint firstItem="rzs-AD-Wb6" firstAttribute="top" secondItem="s9o-F6-KvN" secondAttribute="bottom" constant="8" id="mWD-CE-BdR"/>
@@ -140,4 +156,7 @@
             <point key="canvasLocation" x="127" y="301"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TIYLogo" width="240" height="212"/>
+    </resources>
 </document>

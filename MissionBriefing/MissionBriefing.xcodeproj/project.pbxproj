@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B708BF0D1BC59EB8009B9172 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B708BF0C1BC59EB8009B9172 /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
 		B761512A1BC57F6600093FBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76151291BC57F6600093FBE /* AppDelegate.swift */; };
 		B761512C1BC57F6600093FBE /* MissionBriefingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B761512B1BC57F6600093FBE /* MissionBriefingViewController.swift */; };
 		B761512F1BC57F6600093FBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B761512D1BC57F6600093FBE /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B708BF0C1BC59EB8009B9172 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "../../../2015--FALL--iOS/00--This-is-Heavy/Counter/Counter/Images.xcassets"; sourceTree = "<group>"; };
 		B76151261BC57F6600093FBE /* MissionBriefing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissionBriefing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76151291BC57F6600093FBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B761512B1BC57F6600093FBE /* MissionBriefingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionBriefingViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		B76151281BC57F6600093FBE /* MissionBriefing */ = {
 			isa = PBXGroup;
 			children = (
+				B708BF0C1BC59EB8009B9172 /* Images.xcassets */,
 				B76151291BC57F6600093FBE /* AppDelegate.swift */,
 				B761512B1BC57F6600093FBE /* MissionBriefingViewController.swift */,
 				B761512D1BC57F6600093FBE /* Main.storyboard */,
@@ -122,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B76151341BC57F6600093FBE /* LaunchScreen.storyboard in Resources */,
+				B708BF0D1BC59EB8009B9172 /* Images.xcassets in Resources */,
 				B76151311BC57F6600093FBE /* Assets.xcassets in Resources */,
 				B761512F1BC57F6600093FBE /* Main.storyboard in Resources */,
 			);

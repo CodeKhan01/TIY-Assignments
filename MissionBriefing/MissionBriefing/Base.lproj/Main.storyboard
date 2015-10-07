@@ -51,6 +51,13 @@
                                 <animations/>
                                 <state key="normal" title="Authenticate"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOg-tB-BbP">
+                                <rect key="frame" x="279" y="142" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -66,8 +73,10 @@
                             <constraint firstItem="env-2R-Wqp" firstAttribute="top" secondItem="IsX-vU-0yc" secondAttribute="bottom" constant="8" id="gn3-Ww-blq"/>
                             <constraint firstItem="rzs-AD-Wb6" firstAttribute="top" secondItem="s9o-F6-KvN" secondAttribute="bottom" constant="8" id="mWD-CE-BdR"/>
                             <constraint firstItem="jkK-wS-Jda" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="nLc-PW-YHf"/>
+                            <constraint firstItem="tOg-tB-BbP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oEl-Wf-NZQ"/>
                             <constraint firstItem="rzs-AD-Wb6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pN3-5l-Swz"/>
                             <constraint firstItem="jkK-wS-Jda" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="qQ4-RW-23m"/>
+                            <constraint firstItem="tOg-tB-BbP" firstAttribute="top" secondItem="env-2R-Wqp" secondAttribute="bottom" constant="8" id="tDi-fy-BeH"/>
                             <constraint firstItem="UEF-um-zcA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tFe-mX-MAU"/>
                             <constraint firstItem="rzs-AD-Wb6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="uUp-My-v5h"/>
                             <constraint firstItem="UEF-um-zcA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wT4-PB-s57"/>

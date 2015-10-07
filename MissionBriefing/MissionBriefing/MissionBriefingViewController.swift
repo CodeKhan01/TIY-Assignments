@@ -19,6 +19,8 @@ import UIKit
 class MissionBriefingViewController: UIViewController
 {
     // Place IBOutlet properties below
+    @IBOutlet var firstTextField: UITextField!
+    @IBOutlet var secondTextField: UITextField!
     
     
     override func viewDidLoad()

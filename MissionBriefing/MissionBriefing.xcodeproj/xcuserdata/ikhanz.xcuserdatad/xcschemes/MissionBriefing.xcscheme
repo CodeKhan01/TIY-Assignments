@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B75C207C1BC57C3E00F15BCC"
-               BuildableName = "mission-briefing.app"
-               BlueprintName = "mission-briefing"
-               ReferencedContainer = "container:mission-briefing.xcodeproj">
+               BlueprintIdentifier = "B76151251BC57F6600093FBE"
+               BuildableName = "MissionBriefing.app"
+               BlueprintName = "MissionBriefing"
+               ReferencedContainer = "container:MissionBriefing.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B75C207C1BC57C3E00F15BCC"
-            BuildableName = "mission-briefing.app"
-            BlueprintName = "mission-briefing"
-            ReferencedContainer = "container:mission-briefing.xcodeproj">
+            BlueprintIdentifier = "B76151251BC57F6600093FBE"
+            BuildableName = "MissionBriefing.app"
+            BlueprintName = "MissionBriefing"
+            ReferencedContainer = "container:MissionBriefing.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B75C207C1BC57C3E00F15BCC"
-            BuildableName = "mission-briefing.app"
-            BlueprintName = "mission-briefing"
-            ReferencedContainer = "container:mission-briefing.xcodeproj">
+            BlueprintIdentifier = "B76151251BC57F6600093FBE"
+            BuildableName = "MissionBriefing.app"
+            BlueprintName = "MissionBriefing"
+            ReferencedContainer = "container:MissionBriefing.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B75C207C1BC57C3E00F15BCC"
-            BuildableName = "mission-briefing.app"
-            BlueprintName = "mission-briefing"
-            ReferencedContainer = "container:mission-briefing.xcodeproj">
+            BlueprintIdentifier = "B76151251BC57F6600093FBE"
+            BuildableName = "MissionBriefing.app"
+            BlueprintName = "MissionBriefing"
+            ReferencedContainer = "container:MissionBriefing.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

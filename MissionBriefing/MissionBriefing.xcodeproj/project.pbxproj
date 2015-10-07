@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B75C20811BC57C3E00F15BCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75C20801BC57C3E00F15BCC /* AppDelegate.swift */; };
-		B75C20831BC57C3E00F15BCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75C20821BC57C3E00F15BCC /* ViewController.swift */; };
-		B75C20861BC57C3E00F15BCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B75C20841BC57C3E00F15BCC /* Main.storyboard */; };
-		B75C20881BC57C3E00F15BCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B75C20871BC57C3E00F15BCC /* Assets.xcassets */; };
-		B75C208B1BC57C3E00F15BCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B75C20891BC57C3E00F15BCC /* LaunchScreen.storyboard */; };
+		B761512A1BC57F6600093FBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76151291BC57F6600093FBE /* AppDelegate.swift */; };
+		B761512C1BC57F6600093FBE /* MissionBriefingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B761512B1BC57F6600093FBE /* MissionBriefingViewController.swift */; };
+		B761512F1BC57F6600093FBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B761512D1BC57F6600093FBE /* Main.storyboard */; };
+		B76151311BC57F6600093FBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76151301BC57F6600093FBE /* Assets.xcassets */; };
+		B76151341BC57F6600093FBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B76151321BC57F6600093FBE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B75C207D1BC57C3E00F15BCC /* mission-briefing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mission-briefing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B75C20801BC57C3E00F15BCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B75C20821BC57C3E00F15BCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B75C20851BC57C3E00F15BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B75C20871BC57C3E00F15BCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B75C208A1BC57C3E00F15BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B75C208C1BC57C3E00F15BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B76151261BC57F6600093FBE /* MissionBriefing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissionBriefing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B76151291BC57F6600093FBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B761512B1BC57F6600093FBE /* MissionBriefingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionBriefingViewController.swift; sourceTree = "<group>"; };
+		B761512E1BC57F6600093FBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B76151301BC57F6600093FBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B76151331BC57F6600093FBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B76151351BC57F6600093FBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B75C207A1BC57C3E00F15BCC /* Frameworks */ = {
+		B76151231BC57F6600093FBE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,70 +35,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B75C20741BC57C3E00F15BCC = {
+		B761511D1BC57F6600093FBE = {
 			isa = PBXGroup;
 			children = (
-				B75C207F1BC57C3E00F15BCC /* mission-briefing */,
-				B75C207E1BC57C3E00F15BCC /* Products */,
+				B76151281BC57F6600093FBE /* MissionBriefing */,
+				B76151271BC57F6600093FBE /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B75C207E1BC57C3E00F15BCC /* Products */ = {
+		B76151271BC57F6600093FBE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B75C207D1BC57C3E00F15BCC /* mission-briefing.app */,
+				B76151261BC57F6600093FBE /* MissionBriefing.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B75C207F1BC57C3E00F15BCC /* mission-briefing */ = {
+		B76151281BC57F6600093FBE /* MissionBriefing */ = {
 			isa = PBXGroup;
 			children = (
-				B75C20801BC57C3E00F15BCC /* AppDelegate.swift */,
-				B75C20821BC57C3E00F15BCC /* ViewController.swift */,
-				B75C20841BC57C3E00F15BCC /* Main.storyboard */,
-				B75C20871BC57C3E00F15BCC /* Assets.xcassets */,
-				B75C20891BC57C3E00F15BCC /* LaunchScreen.storyboard */,
-				B75C208C1BC57C3E00F15BCC /* Info.plist */,
+				B76151291BC57F6600093FBE /* AppDelegate.swift */,
+				B761512B1BC57F6600093FBE /* MissionBriefingViewController.swift */,
+				B761512D1BC57F6600093FBE /* Main.storyboard */,
+				B76151301BC57F6600093FBE /* Assets.xcassets */,
+				B76151321BC57F6600093FBE /* LaunchScreen.storyboard */,
+				B76151351BC57F6600093FBE /* Info.plist */,
 			);
-			path = "mission-briefing";
+			path = MissionBriefing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B75C207C1BC57C3E00F15BCC /* mission-briefing */ = {
+		B76151251BC57F6600093FBE /* MissionBriefing */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B75C208F1BC57C3E00F15BCC /* Build configuration list for PBXNativeTarget "mission-briefing" */;
+			buildConfigurationList = B76151381BC57F6600093FBE /* Build configuration list for PBXNativeTarget "MissionBriefing" */;
 			buildPhases = (
-				B75C20791BC57C3E00F15BCC /* Sources */,
-				B75C207A1BC57C3E00F15BCC /* Frameworks */,
-				B75C207B1BC57C3E00F15BCC /* Resources */,
+				B76151221BC57F6600093FBE /* Sources */,
+				B76151231BC57F6600093FBE /* Frameworks */,
+				B76151241BC57F6600093FBE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "mission-briefing";
-			productName = "mission-briefing";
-			productReference = B75C207D1BC57C3E00F15BCC /* mission-briefing.app */;
+			name = MissionBriefing;
+			productName = MissionBriefing;
+			productReference = B76151261BC57F6600093FBE /* MissionBriefing.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B75C20751BC57C3E00F15BCC /* Project object */ = {
+		B761511E1BC57F6600093FBE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "The Iron Yard";
 				TargetAttributes = {
-					B75C207C1BC57C3E00F15BCC = {
+					B76151251BC57F6600093FBE = {
 						CreatedOnToolsVersion = 7.0.1;
 					};
 				};
 			};
-			buildConfigurationList = B75C20781BC57C3E00F15BCC /* Build configuration list for PBXProject "mission-briefing" */;
+			buildConfigurationList = B76151211BC57F6600093FBE /* Build configuration list for PBXProject "MissionBriefing" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -106,54 +106,54 @@
 				en,
 				Base,
 			);
-			mainGroup = B75C20741BC57C3E00F15BCC;
-			productRefGroup = B75C207E1BC57C3E00F15BCC /* Products */;
+			mainGroup = B761511D1BC57F6600093FBE;
+			productRefGroup = B76151271BC57F6600093FBE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B75C207C1BC57C3E00F15BCC /* mission-briefing */,
+				B76151251BC57F6600093FBE /* MissionBriefing */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B75C207B1BC57C3E00F15BCC /* Resources */ = {
+		B76151241BC57F6600093FBE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B75C208B1BC57C3E00F15BCC /* LaunchScreen.storyboard in Resources */,
-				B75C20881BC57C3E00F15BCC /* Assets.xcassets in Resources */,
-				B75C20861BC57C3E00F15BCC /* Main.storyboard in Resources */,
+				B76151341BC57F6600093FBE /* LaunchScreen.storyboard in Resources */,
+				B76151311BC57F6600093FBE /* Assets.xcassets in Resources */,
+				B761512F1BC57F6600093FBE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B75C20791BC57C3E00F15BCC /* Sources */ = {
+		B76151221BC57F6600093FBE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B75C20831BC57C3E00F15BCC /* ViewController.swift in Sources */,
-				B75C20811BC57C3E00F15BCC /* AppDelegate.swift in Sources */,
+				B761512C1BC57F6600093FBE /* MissionBriefingViewController.swift in Sources */,
+				B761512A1BC57F6600093FBE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B75C20841BC57C3E00F15BCC /* Main.storyboard */ = {
+		B761512D1BC57F6600093FBE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B75C20851BC57C3E00F15BCC /* Base */,
+				B761512E1BC57F6600093FBE /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		B75C20891BC57C3E00F15BCC /* LaunchScreen.storyboard */ = {
+		B76151321BC57F6600093FBE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B75C208A1BC57C3E00F15BCC /* Base */,
+				B76151331BC57F6600093FBE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -161,7 +161,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B75C208D1BC57C3E00F15BCC /* Debug */ = {
+		B76151361BC57F6600093FBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -205,7 +205,7 @@
 			};
 			name = Debug;
 		};
-		B75C208E1BC57C3E00F15BCC /* Release */ = {
+		B76151371BC57F6600093FBE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -242,24 +242,24 @@
 			};
 			name = Release;
 		};
-		B75C20901BC57C3E00F15BCC /* Debug */ = {
+		B76151391BC57F6600093FBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "mission-briefing/Info.plist";
+				INFOPLIST_FILE = MissionBriefing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tiy.mission-briefing";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiy.MissionBriefing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		B75C20911BC57C3E00F15BCC /* Release */ = {
+		B761513A1BC57F6600093FBE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "mission-briefing/Info.plist";
+				INFOPLIST_FILE = MissionBriefing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tiy.mission-briefing";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiy.MissionBriefing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -267,24 +267,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B75C20781BC57C3E00F15BCC /* Build configuration list for PBXProject "mission-briefing" */ = {
+		B76151211BC57F6600093FBE /* Build configuration list for PBXProject "MissionBriefing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B75C208D1BC57C3E00F15BCC /* Debug */,
-				B75C208E1BC57C3E00F15BCC /* Release */,
+				B76151361BC57F6600093FBE /* Debug */,
+				B76151371BC57F6600093FBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B75C208F1BC57C3E00F15BCC /* Build configuration list for PBXNativeTarget "mission-briefing" */ = {
+		B76151381BC57F6600093FBE /* Build configuration list for PBXNativeTarget "MissionBriefing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B75C20901BC57C3E00F15BCC /* Debug */,
-				B75C20911BC57C3E00F15BCC /* Release */,
+				B76151391BC57F6600093FBE /* Debug */,
+				B761513A1BC57F6600093FBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B75C20751BC57C3E00F15BCC /* Project object */;
+	rootObject = B761511E1BC57F6600093FBE /* Project object */;
 }

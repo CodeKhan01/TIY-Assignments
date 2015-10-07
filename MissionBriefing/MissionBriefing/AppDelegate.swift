@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  mission-briefing
+//  MissionBriefing
 //
 //  Created by Isaiah Khan on 10/7/15.
 //  Copyright © 2015 The Iron Yard. All rights reserved.

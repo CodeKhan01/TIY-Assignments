@@ -55,7 +55,13 @@ class MissionBriefingViewController: UIViewController
     @IBAction func authenticateAgent(sender: UIButton)
     {
         // This will cause the keyboard to dismiss when the authenticate button is tapped
-        
+    // signInAgent()
+    }
+        if firstTextField.text != "" && secondTextField.text !=""
+        {
+            let nameComponents = firstTextField.text!. characters.split("").
+        }
+    
         if firstTextField.isFirstResponder()
         {
             firstTextField.resignFirstResponder()
@@ -131,3 +137,16 @@ class MissionBriefingViewController: UIViewController
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

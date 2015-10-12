@@ -1,16 +1,15 @@
 //
 //  AppDelegate.swift
-//  OutaTime
+//  S.H.I.E.L.D. Hero Tracker
 //
-//  Created by Isaiah Khan on 10/8/15.
+//  Created by Isaiah Khan on 10/12/15.
 //  Copyright © 2015 The Iron Yard. All rights reserved.
 //
 
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate
-{
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 

@@ -14,10 +14,10 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Count Down View Controller-->
+        <!--Time Circuit View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CountDownViewController" customModule="OutaTime" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TimeCircuitViewController" customModule="OutaTime" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -81,7 +81,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="SET DESTINATION TIME"/>
                                 <connections>
-                                    <segue destination="Seq-d6-ny2" kind="show" id="EJp-nE-g22"/>
+                                    <segue destination="Seq-d6-ny2" kind="show" id="L0P-Vb-lbs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAr-Wv-yVI">
@@ -153,6 +153,12 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="pVZ-jP-ssQ"/>
+                    <connections>
+                        <outlet property="destinationTime2" destination="vNj-lp-Uex" id="K7j-e3-fRB"/>
+                        <outlet property="mphLabel" destination="zVW-M5-NB3" id="xT8-O6-PdK"/>
+                        <outlet property="setDestinationTime" destination="vNj-lp-Uex" id="BZh-go-TMj"/>
+                        <outlet property="travelBack" destination="PAr-Wv-yVI" id="zwm-II-1lz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -177,16 +183,35 @@
                                     <!--2015-10-08 20:23:12 +0000-->
                                 </date>
                             </datePicker>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ilr-aZ-zC9">
+                                <rect key="frame" x="20" y="253" width="560" height="216"/>
+                                <animations/>
+                                <date key="date" timeIntervalSinceReferenceDate="466108945.39533597">
+                                    <!--2015-10-09 18:42:25 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ilr-aZ-zC9" firstAttribute="top" secondItem="4fC-qX-aWr" secondAttribute="bottom" constant="189" id="2kt-d1-06r"/>
                             <constraint firstItem="qA8-n0-OVJ" firstAttribute="leading" secondItem="9ld-O7-9xK" secondAttribute="leading" id="HqO-5g-7Bz"/>
+                            <constraint firstItem="ilr-aZ-zC9" firstAttribute="leading" secondItem="9ld-O7-9xK" secondAttribute="leadingMargin" id="P6F-8i-Vkw"/>
                             <constraint firstAttribute="trailing" secondItem="qA8-n0-OVJ" secondAttribute="trailing" id="Qwr-7r-dLg"/>
+                            <constraint firstItem="ilr-aZ-zC9" firstAttribute="centerX" secondItem="9ld-O7-9xK" secondAttribute="centerX" id="Ve2-j3-X0y"/>
                             <constraint firstItem="qA8-n0-OVJ" firstAttribute="centerX" secondItem="9ld-O7-9xK" secondAttribute="centerX" id="fsU-ao-o7S"/>
                             <constraint firstItem="qA8-n0-OVJ" firstAttribute="centerY" secondItem="9ld-O7-9xK" secondAttribute="centerY" id="hQW-bq-GFj"/>
+                            <constraint firstItem="ilr-aZ-zC9" firstAttribute="trailing" secondItem="9ld-O7-9xK" secondAttribute="trailingMargin" id="u9c-gP-THc"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="qA8-n0-OVJ"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="picker" destination="qA8-n0-OVJ" id="ARX-kd-BX3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uul-Pj-7Sc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

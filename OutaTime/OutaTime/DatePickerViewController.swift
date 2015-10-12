@@ -8,10 +8,15 @@
 
 import UIKit
 
-class DatePickerViewController: UIViewController {
-
+class DatePickerViewController: UIViewController
+{
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+     datePicker.addTarget(self, action: Selector("dataPickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
 
         // Do any additional setup after loading the view.
     }
@@ -31,5 +36,5 @@ class DatePickerViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

@@ -8,11 +8,16 @@
 
 import UIKit
 
-class HeroTrackerTableViewController: UITableViewController {
+class HeroTableViewController: UITableViewController
+    
+{
+    
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
+        
+        title = "Heros"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -36,25 +41,31 @@ class HeroTrackerTableViewController: UITableViewController {
     
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 10
     }
 
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+    // This is going to create a cell and load data to the cell.
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        // This allows you to re-use the 10 cells that are displayed on your iphone screen to display data that the user is scrolling through.
+        let cell = tableView.dequeueReusableCellWithIdentifier("HerosCell", forIndexPath: indexPath)
 
         // Configure the cell...
+        cell.textLabel?.text = "Hero Name \(indexPath.row)"
+        cell.detailTextLabel?.text = "Real Name"
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

@@ -11,4 +11,22 @@ import UIKit
 class HeroDetailViewController: UIViewController
 {
     
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+    }
+    
+    override func didReceiveMemoryWarning()
+    {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    @IBOutlet weak var heroName: UILabel!
+    @IBOutlet weak var heroHomeWorld: UILabel!
+    @IBOutlet weak var heroPowers: UILabel!
+    
+
+    
+    
 }

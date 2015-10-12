@@ -10,6 +10,9 @@ import UIKit
 
 class HeroDetailViewController: UIViewController
 {
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var homeworldLabel: UILabel!
+    @IBOutlet weak var powersLabel: UILabel!
     
     override func viewDidLoad()
     {
@@ -22,9 +25,7 @@ class HeroDetailViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var heroName: UILabel!
-    @IBOutlet weak var heroHomeWorld: UILabel!
-    @IBOutlet weak var heroPowers: UILabel!
+    
     
 
     

@@ -100,6 +100,11 @@
                             <constraint firstItem="NJy-U7-3zu" firstAttribute="top" secondItem="HpC-Zb-m4A" secondAttribute="bottom" constant="20" id="x1A-St-JPW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="heroName" destination="HpC-Zb-m4A" id="B3N-Ne-8SO"/>
+                        <outlet property="heroPowers" destination="7dR-xe-hlQ" id="c3L-ig-dDQ"/>
+                        <outlet property="herosHomeWorld" destination="NJy-U7-3zu" id="115-dl-XZL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VRh-1h-b2l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

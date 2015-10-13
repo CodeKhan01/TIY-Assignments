@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		B729A7051BCD711E003DA76A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B729A7041BCD711E003DA76A /* AppDelegate.swift */; };
-		B729A7071BCD711E003DA76A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B729A7061BCD711E003DA76A /* ViewController.swift */; };
 		B729A70A1BCD711E003DA76A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B729A7081BCD711E003DA76A /* Main.storyboard */; };
 		B729A70C1BCD711E003DA76A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B729A70B1BCD711E003DA76A /* Assets.xcassets */; };
 		B729A70F1BCD711E003DA76A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B729A70D1BCD711E003DA76A /* LaunchScreen.storyboard */; };
+		B7EBF2391BCD99F90063F454 /* JackpotTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EBF2381BCD99F90063F454 /* JackpotTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B729A7011BCD711E003DA76A /* Jackpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jackpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B729A7041BCD711E003DA76A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B729A7061BCD711E003DA76A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B729A7091BCD711E003DA76A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B729A70B1BCD711E003DA76A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B729A70E1BCD711E003DA76A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B729A7101BCD711E003DA76A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7EBF2381BCD99F90063F454 /* JackpotTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JackpotTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +55,11 @@
 			isa = PBXGroup;
 			children = (
 				B729A7041BCD711E003DA76A /* AppDelegate.swift */,
-				B729A7061BCD711E003DA76A /* ViewController.swift */,
 				B729A7081BCD711E003DA76A /* Main.storyboard */,
 				B729A70B1BCD711E003DA76A /* Assets.xcassets */,
 				B729A70D1BCD711E003DA76A /* LaunchScreen.storyboard */,
 				B729A7101BCD711E003DA76A /* Info.plist */,
+				B7EBF2381BCD99F90063F454 /* JackpotTableViewController.swift */,
 			);
 			path = Jackpot;
 			sourceTree = "<group>";
@@ -134,7 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B729A7071BCD711E003DA76A /* ViewController.swift in Sources */,
+				B7EBF2391BCD99F90063F454 /* JackpotTableViewController.swift in Sources */,
 				B729A7051BCD711E003DA76A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +283,7 @@
 				B729A7151BCD711E003DA76A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

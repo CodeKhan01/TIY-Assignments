@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+class Hero
+{
+    var name: String
+    var homeWorld: String
+    var powers: String
+    
+    init(heroDictionary:NSDictionary)
+    {
+        name = heroDictionary["name"] as! String
+        homeWorld = heroDictionary["homeworld"] as! String
+        powers = heroDictionary["powers"] as! String
+    }
+}

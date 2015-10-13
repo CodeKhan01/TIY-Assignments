@@ -11,13 +11,16 @@ import UIKit
 class HeroTableViewController: UITableViewController
     
 {
-    
+    var heroes = Array<Hero>()
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        title = "Heros"
+        title = "SHIELD Hero Tracker"
+        loadHeroes()
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -50,7 +53,7 @@ class HeroTableViewController: UITableViewController
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return heroes.count
     }
 
     // This is going to create a cell and load data to the cell.
@@ -60,10 +63,10 @@ class HeroTableViewController: UITableViewController
         let cell = tableView.dequeueReusableCellWithIdentifier("HerosCell", forIndexPath: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = "Hero Name \(indexPath.row)"
-        cell.detailTextLabel?.text = "Real Name"
-
-        return cell
+        let aHero = heroes[indexPath.row]
+        cell.textLabel?.text = heroes[indexPath.row]
+        cell.detailTextLabel?.text = aHero
+                return cell
     }
     
 
@@ -111,5 +114,11 @@ class HeroTableViewController: UITableViewController
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    private func loadHeroes()
+    {
+        
+    }
 
 }

@@ -11,6 +11,7 @@
 		B729A70A1BCD711E003DA76A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B729A7081BCD711E003DA76A /* Main.storyboard */; };
 		B729A70C1BCD711E003DA76A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B729A70B1BCD711E003DA76A /* Assets.xcassets */; };
 		B729A70F1BCD711E003DA76A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B729A70D1BCD711E003DA76A /* LaunchScreen.storyboard */; };
+		B7393FA81BCEE64100AB8CE4 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7393FA71BCEE64100AB8CE4 /* Ticket.swift */; settings = {ASSET_TAGS = (); }; };
 		B7EBF2391BCD99F90063F454 /* JackpotTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EBF2381BCD99F90063F454 /* JackpotTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -21,6 +22,7 @@
 		B729A70B1BCD711E003DA76A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B729A70E1BCD711E003DA76A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B729A7101BCD711E003DA76A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7393FA71BCEE64100AB8CE4 /* Ticket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		B7EBF2381BCD99F90063F454 /* JackpotTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JackpotTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,11 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				B729A7041BCD711E003DA76A /* AppDelegate.swift */,
+				B7EBF2381BCD99F90063F454 /* JackpotTableViewController.swift */,
+				B7393FA71BCEE64100AB8CE4 /* Ticket.swift */,
 				B729A7081BCD711E003DA76A /* Main.storyboard */,
 				B729A70B1BCD711E003DA76A /* Assets.xcassets */,
 				B729A70D1BCD711E003DA76A /* LaunchScreen.storyboard */,
 				B729A7101BCD711E003DA76A /* Info.plist */,
-				B7EBF2381BCD99F90063F454 /* JackpotTableViewController.swift */,
 			);
 			path = Jackpot;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7EBF2391BCD99F90063F454 /* JackpotTableViewController.swift in Sources */,
+				B7393FA81BCEE64100AB8CE4 /* Ticket.swift in Sources */,
 				B729A7051BCD711E003DA76A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

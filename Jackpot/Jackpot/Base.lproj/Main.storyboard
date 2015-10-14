@@ -14,7 +14,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="8Tt-67-ms5">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TicketCell" textLabel="C9X-dA-NrI" detailTextLabel="5ur-0T-588" style="IBUITableViewCellStyleValue1" id="8Tt-67-ms5">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Tt-67-ms5" id="20G-Y2-EL5">
@@ -26,16 +26,34 @@
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <state key="normal" title="Add"/>
-                                            <connections>
-                                                <segue destination="9Yf-9f-Cfg" kind="show" id="4vY-fu-gdE"/>
-                                            </connections>
                                         </button>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="C9X-dA-NrI">
+                                            <rect key="frame" x="15" y="12" width="32" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5ur-0T-588">
+                                            <rect key="frame" x="543" y="12" width="42" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <animations/>
                                     <constraints>
                                         <constraint firstItem="2N9-8f-sdv" firstAttribute="centerX" secondItem="20G-Y2-EL5" secondAttribute="centerX" id="LRb-RW-5cS"/>
                                         <constraint firstItem="2N9-8f-sdv" firstAttribute="centerY" secondItem="20G-Y2-EL5" secondAttribute="centerY" id="cvd-Pn-Mvq"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="2N9-8f-sdv"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <animations/>
                             </tableViewCell>
@@ -45,10 +63,18 @@
                             <outlet property="delegate" destination="PFq-YJ-r1j" id="dGF-ag-wTq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="BQT-GG-rro"/>
-                    <connections>
-                        <outlet property="addButton" destination="2N9-8f-sdv" id="U8b-ll-Smx"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="BQT-GG-rro">
+                        <barButtonItem key="leftBarButtonItem" title="winning" id="cwj-Fh-Hd3">
+                            <connections>
+                                <segue destination="9Yf-9f-Cfg" kind="show" id="4oY-T9-SiV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vEV-6Z-lJp">
+                            <connections>
+                                <action selector="addTapped:" destination="PFq-YJ-r1j" id="mBX-mn-uha"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2qQ-6R-axz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

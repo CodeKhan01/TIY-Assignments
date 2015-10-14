@@ -8,11 +8,12 @@
 
 import UIKit
 
-class JackpotTableViewController: UITableViewController {
-
-    @IBOutlet weak var addButton: UIButton!
+class JackpotTableViewController: UITableViewController
+{
+    var tickets = Array<Ticket>()
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -20,6 +21,11 @@ class JackpotTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        func pressAdd (sender: UIButton!)
+        {
+        
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,23 +37,26 @@ class JackpotTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return tickets.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("TicketCell", forIndexPath: indexPath)
 
         // Configure the cell...
-
+        let aNumber = tickets[indexPath.row]
+        cell.textLabel?.text = "\(aNumber)"
+        
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -94,4 +103,14 @@ class JackpotTableViewController: UITableViewController {
     }
     */
 
+    @IBAction func addTapped(sender: UIBarButtonItem)
+    {
+       //let randomNumber = Int(arc4random())
+       //tickets.append(randomNumber)
+        //tableView.reloadData()
+    }
+    
+    
+    
+    
 }

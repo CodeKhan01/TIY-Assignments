@@ -55,11 +55,11 @@
 			isa = PBXGroup;
 			children = (
 				B729A7041BCD711E003DA76A /* AppDelegate.swift */,
+				B7EBF2381BCD99F90063F454 /* JackpotTableViewController.swift */,
 				B729A7081BCD711E003DA76A /* Main.storyboard */,
 				B729A70B1BCD711E003DA76A /* Assets.xcassets */,
 				B729A70D1BCD711E003DA76A /* LaunchScreen.storyboard */,
 				B729A7101BCD711E003DA76A /* Info.plist */,
-				B7EBF2381BCD99F90063F454 /* JackpotTableViewController.swift */,
 			);
 			path = Jackpot;
 			sourceTree = "<group>";

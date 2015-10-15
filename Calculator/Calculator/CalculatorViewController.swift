@@ -8,8 +8,31 @@
 
 import UIKit
 
-class CalculatorViewController: UIViewController {
-
+class CalculatorViewController: UIViewController
+{
+    @IBOutlet weak var displayLabel: UILabel!
+    
+    @IBAction func tapNumber(sender: AnyObject)
+    {
+        
+    }
+    
+    @IBAction func tapOperator(sender: AnyObject)
+    {
+        
+    }
+    
+    @IBAction func tapEquals(sender: AnyObject)
+    {
+        
+    }
+    
+    @IBAction func clearData(sender: AnyObject)
+    {
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +43,6 @@ class CalculatorViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    
 }
 

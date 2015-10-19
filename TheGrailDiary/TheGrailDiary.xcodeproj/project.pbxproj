@@ -13,6 +13,7 @@
 		B70D500F1BD537040089BC2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B70D500D1BD537040089BC2D /* LaunchScreen.storyboard */; };
 		B76661A11BD55CDD00ACDE20 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76661A01BD55CDD00ACDE20 /* ListTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		B76661A31BD55DED00ACDE20 /* Site.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76661A21BD55DED00ACDE20 /* Site.swift */; settings = {ASSET_TAGS = (); }; };
+		B76661A51BD5662100ACDE20 /* myfile.json in Resources */ = {isa = PBXBuildFile; fileRef = B76661A41BD5662100ACDE20 /* myfile.json */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B70D50101BD537040089BC2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B76661A01BD55CDD00ACDE20 /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		B76661A21BD55DED00ACDE20 /* Site.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Site.swift; sourceTree = "<group>"; };
+		B76661A41BD5662100ACDE20 /* myfile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = myfile.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				B70D500B1BD537040089BC2D /* Assets.xcassets */,
 				B70D500D1BD537040089BC2D /* LaunchScreen.storyboard */,
 				B70D50101BD537040089BC2D /* Info.plist */,
+				B76661A41BD5662100ACDE20 /* myfile.json */,
 			);
 			path = TheGrailDiary;
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B70D500F1BD537040089BC2D /* LaunchScreen.storyboard in Resources */,
+				B76661A51BD5662100ACDE20 /* myfile.json in Resources */,
 				B70D500C1BD537040089BC2D /* Assets.xcassets in Resources */,
 				B70D500A1BD537040089BC2D /* Main.storyboard in Resources */,
 			);

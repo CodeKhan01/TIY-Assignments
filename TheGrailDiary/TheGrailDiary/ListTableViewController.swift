@@ -10,7 +10,7 @@ import UIKit
 
 class ListTableViewController: UITableViewController
 {
-    
+    var sites = Array<Site>()
     
 
     override func viewDidLoad() {
@@ -37,7 +37,8 @@ class ListTableViewController: UITableViewController
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return sites.count
+        //returns the attributes that are on the json file, that are stored in this swift file.
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

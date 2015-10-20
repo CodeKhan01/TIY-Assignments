@@ -10,10 +10,22 @@ import UIKit
 
 class ToDoListTableViewController: UITableViewController
 {
+    
+    @IBOutlet weak var textField: UITextField! //Declares the textfield object in the view controller.
+    @IBAction func addButton(sender: AnyObject)
+    {
+        
+    }
+    
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    var tasks = Array<ToDoList>()
+    
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        title = "To Do List"
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -33,23 +45,30 @@ class ToDoListTableViewController: UITableViewController
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return tasks.count //takes whatever is in the array of tasks, counts it, and displays each piece of the array in the cell if there is data.
+        
     }
 
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+ 
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCellWithIdentifier("ToDoListCell", forIndexPath: indexPath) as! ToDoListCell
+        
 
         // Configure the cell...
-
         return cell
     }
-    */
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        <#code#>
+    }
+
 
     /*
     // Override to support conditional editing of the table view.

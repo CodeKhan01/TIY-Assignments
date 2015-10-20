@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B7AE23FA1BD6B137009739C0"
+               BlueprintIdentifier = "B7AE24181BD6B69D009739C0"
                BuildableName = "InDueTime.app"
                BlueprintName = "InDueTime"
                ReferencedContainer = "container:InDueTime.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B7AE23FA1BD6B137009739C0"
+            BlueprintIdentifier = "B7AE24181BD6B69D009739C0"
             BuildableName = "InDueTime.app"
             BlueprintName = "InDueTime"
             ReferencedContainer = "container:InDueTime.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B7AE23FA1BD6B137009739C0"
+            BlueprintIdentifier = "B7AE24181BD6B69D009739C0"
             BuildableName = "InDueTime.app"
             BlueprintName = "InDueTime"
             ReferencedContainer = "container:InDueTime.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B7AE23FA1BD6B137009739C0"
+            BlueprintIdentifier = "B7AE24181BD6B69D009739C0"
             BuildableName = "InDueTime.app"
             BlueprintName = "InDueTime"
             ReferencedContainer = "container:InDueTime.xcodeproj">

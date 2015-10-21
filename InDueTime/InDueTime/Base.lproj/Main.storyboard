@@ -50,6 +50,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
+                                    <outlet property="checkedButton" destination="Jtn-JM-upP" id="DEI-ok-Q5c"/>
                                     <outlet property="textField" destination="JHv-p0-s85" id="juJ-gc-tmL"/>
                                 </connections>
                             </tableViewCell>

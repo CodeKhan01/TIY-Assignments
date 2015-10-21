@@ -66,6 +66,7 @@ class ToDoListTableViewController: UITableViewController, UITextFieldDelegate
         if aSingleTask.title == nil
         {
             cell.textField.becomeFirstResponder()
+            
            
         }
         else
@@ -82,6 +83,15 @@ class ToDoListTableViewController: UITableViewController, UITextFieldDelegate
         let task = NSEntityDescription.insertNewObjectForEntityForName("ToDoList", inManagedObjectContext: managedObjectContext) as! ToDoList
         tasks.append(task)
         tableView.reloadData()
+    }
+    
+    @IBAction func pressButton(sender:UIButton)
+    {
+        let contentView = sender.superview
+        let cell = contentView?.superview as! ToDoListCell
+        let indexPath = tableView.indexPathForCell(cell)
+        let task = tasks[indexPath!.row]
+        saveToDo()
     }
     
     

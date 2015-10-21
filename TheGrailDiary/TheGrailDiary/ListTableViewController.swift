@@ -13,8 +13,11 @@ class ListTableViewController: UITableViewController
     var sites = Array<Site>()
     
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        title = "Website List"
+        loadWebsiteList()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -23,7 +26,8 @@ class ListTableViewController: UITableViewController
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -41,14 +45,36 @@ class ListTableViewController: UITableViewController
         //returns the attributes that are on the json file, that are stored in this swift file.
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Site", forIndexPath: indexPath) as! Site
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCellWithIdentifier("SiteCell", forIndexPath: indexPath) as! SiteCell
 
+        let website = sites[indexPath.row]
+        
         // Configure the cell...
-        cell.leftLabel.text =  "\(indexPath.row)"
-        cell.rightLabel.text = "Cell Made By IKHANZ"
+        cell.leftLabel.text =  website.name
+        cell.rightLabel.text = website.country
         
         return cell
+    }
+    
+    func loadWebsiteList()
+    {
+        do
+        {
+         let filePath = NSBundle.mainBundle().pathForResource("myfile", ofType: "json")
+        let dataFromFile = NSData(contentsOfFile: filePath!)
+        let websiteData: NSArray! = try NSJSONSerialization.JSONObjectWithData(dataFromFile!, options: []) as! NSArray
+            for x in websiteData
+            {
+                let websiteInfo = Site(siteDictionary: x as! NSDictionary)
+                sites.append(websiteInfo)
+            }
+        }
+        catch let error as NSError
+        {
+            print(error)
+        }
     }
     
 

@@ -1,62 +1,62 @@
 [
  {
     "Name": "Google",
-    "Website type":"Search Engine"
-    "Website ranking":"1"
+    "Website type":"Search Engine",
+    "Website ranking":"1",
     "Country":"U.S."
  },
  {
-    "Name":"Facebook"
-    "Website type":"Social Network"
-    "Website ranking":"2"
+    "Name":"Facebook",
+    "Website type":"Social Network",
+    "Website ranking":"2",
     "Country":"U.S."
  },
  {
-    "Name":"Youtube"
-    "Website type":"Video Sharing"
-    "Website ranking":"3"
+    "Name":"Youtube",
+    "Website type":"Video Sharing",
+    "Website ranking":"3",
     "Country":"U.S."
  },
  {
-    "Name":"Baidu"
-    "Website type":"Search Engine"
-    "Website ranking":"4"
+    "Name":"Baidu",
+    "Website type":"Search Engine",
+    "Website ranking":"4",
     "Country":"China"
  },
  {
-    "Name":"Yahoo"
-    "Website type":"Portal"
-    "Website ranking":"5"
+    "Name":"Yahoo",
+    "Website type":"Portal",
+    "Website ranking":"5",
+    "Country":"U.S.",
+ },
+ {
+    "Name":"Amazon",
+    "Website type":"Retail",
+    "Website ranking":"6",
     "Country":"U.S."
  },
  {
-    "Name":"Amazon"
-    "Website type":"Retail"
-    "Website ranking":"6"
+    "Name":"Wikipedia",
+    "Website type":"Encyclopedia",
+    "Website ranking":"7",
     "Country":"U.S."
  },
  {
-    "Name":"Wikipedia"
-    "Website type":"Encyclopedia"
-    "Website ranking":"7"
-    "Country":"U.S."
- },
- {
-    "Name":"TencentQQ"
-    "Website type":"Portal"
-    "Website ranking":"8"
+    "Name":"TencentQQ",
+    "Website type":"Portal",
+    "Website ranking":"8",
     "Country":"China"
  },
  {
-    "Name":"Twitter"
-    "Website type":"Social Network"
-    "Website ranking":"9"
+    "Name":"Twitter",
+    "Website type":"Social Network",
+    "Website ranking":"9",
     "Country":"U.S."
  },
  {
-    "Name":"Taobao"
-    "Website type":"Retail"
-    "Website ranking":"11"
+    "Name":"Taobao",
+    "Website type":"Retail",
+    "Website ranking":"11",
     "Country":"China"
  },
  ]

@@ -2,27 +2,27 @@
 //  Site.swift
 //  TheGrailDiary
 //
-//  Created by Isaiah Khan on 10/19/15.
+//  Created by Isaiah Khan on 10/21/15.
 //  Copyright © 2015 The Iron Yard. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class Site: UITableViewCell
+class Site
 {
-    @IBOutlet weak var leftLabel: UILabel!
-    @IBOutlet weak var rightLabel: UILabel!
+    var name: String
+    var websiteType: String
+    var websiteRank: String
+    var country: String
     
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    init(siteDictionary: NSDictionary)
+    {
+        name = siteDictionary["Name"] as! String
+        websiteType = siteDictionary["Website type"] as! String
+        websiteRank = siteDictionary["Website ranking"] as! String
+        country = siteDictionary["Country"] as! String
+        
     }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    
 
 }

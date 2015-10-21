@@ -63,19 +63,50 @@ class ToDoListTableViewController: UITableViewController, UITextFieldDelegate
         // Configure the cell...
         let aSingleTask = tasks[indexPath.row]
         
+        
+        let selectedRow = tableView.cellForRowAtIndexPath(indexPath)
+            
+        
+        //Handles TextField & Accessory Type: (Checked or Unchecked)
         if aSingleTask.title == nil
         {
             cell.textField.becomeFirstResponder()
             
-           
+            //checkbox when row is selected and turns checkmark red
+            selectedRow!.accessoryType = UITableViewCellAccessoryType.Checkmark
+            selectedRow!.tintColor = UIColor.redColor()
         }
         else
         {
             cell.textField.text = aSingleTask.title
+            selectedRow!.accessoryType == UITableViewCellAccessoryType.None
+            
         }
-        
         return cell
     }
+    
+/*    override func tableView(tableView: UITableViewCell, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        let selectedRow = tableView.cellForRowAtIndexpath(indexPath)!
+        
+        //Handles TextField & Accessory Type: (Checked or Unchecked)
+        if selectedRow.accessoryType == UITableViewCellAccessoryType.None
+        {
+            selectedRow.accessoryType = UITableViewCellAccessoryType.Checkmark
+            selectedRow.tintColor = UIColor.redColor()
+        }
+        else
+        {
+            selectedRow.accessoryType == UITableViewCellAccessoryType.None
+            
+        }
+
+    }
+    
+  */
+    
+    
+    
     
     //MARK: Action Handlers
     @IBAction func addButton(sender: UIButton)
@@ -94,7 +125,7 @@ class ToDoListTableViewController: UITableViewController, UITextFieldDelegate
         saveToDo()
     }
     
-    
+   
     
     
     //MARK - Private Functions
@@ -126,7 +157,7 @@ class ToDoListTableViewController: UITableViewController, UITextFieldDelegate
         catch
         {
             let nserror = error as NSError
-            NSLog("NOT WORKING BRO \(nserror.userInfo)")
+            NSLog("NOT WORKING \(nserror.userInfo)")
             abort()
         }
     }

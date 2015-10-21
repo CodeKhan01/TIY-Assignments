@@ -11,7 +11,7 @@ import UIKit
 class ToDoListCell: UITableViewCell
 {
     @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var checkedButton: UIButton!
+    //@IBOutlet weak var checkedButton: UIButton!
     
     override func awakeFromNib()
     {

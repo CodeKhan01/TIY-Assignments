@@ -31,26 +31,17 @@
                                                 <outlet property="delegate" destination="FjY-9p-6zC" id="iOs-oR-I6l"/>
                                             </connections>
                                         </textField>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtn-JM-upP">
-                                            <rect key="frame" x="537" y="5" width="63" height="34"/>
-                                            <animations/>
-                                            <state key="normal" image="CheckBox-Checked.png"/>
-                                        </button>
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="Jtn-JM-upP" secondAttribute="trailing" id="1sD-5K-Mcn"/>
                                         <constraint firstAttribute="trailing" secondItem="JHv-p0-s85" secondAttribute="trailing" constant="100" id="Gae-z8-D6S"/>
                                         <constraint firstAttribute="bottom" secondItem="JHv-p0-s85" secondAttribute="bottom" constant="6" id="NqH-JR-FB4"/>
-                                        <constraint firstItem="Jtn-JM-upP" firstAttribute="leading" secondItem="JHv-p0-s85" secondAttribute="trailing" constant="37" id="U3k-56-JPa"/>
-                                        <constraint firstItem="Jtn-JM-upP" firstAttribute="centerY" secondItem="JHv-p0-s85" secondAttribute="centerY" id="jzH-8s-gmt"/>
                                         <constraint firstItem="JHv-p0-s85" firstAttribute="leading" secondItem="nhw-xv-ILo" secondAttribute="leading" constant="8" id="naZ-Zm-930"/>
                                         <constraint firstItem="JHv-p0-s85" firstAttribute="top" secondItem="nhw-xv-ILo" secondAttribute="top" constant="7" id="vUP-jq-Hbw"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <outlet property="checkedButton" destination="Jtn-JM-upP" id="DEI-ok-Q5c"/>
                                     <outlet property="textField" destination="JHv-p0-s85" id="juJ-gc-tmL"/>
                                 </connections>
                             </tableViewCell>
@@ -93,7 +84,4 @@
             <point key="canvasLocation" x="98" y="273"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="CheckBox-Checked.png" width="34" height="34"/>
-    </resources>
 </document>

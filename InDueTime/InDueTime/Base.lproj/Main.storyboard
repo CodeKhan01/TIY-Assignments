@@ -21,22 +21,20 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1DS-uT-EFy">
-                                            <rect key="frame" x="8" y="7" width="517" height="30"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter to do item" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JHv-p0-s85">
+                                            <rect key="frame" x="8" y="7" width="584" height="30"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstItem="1DS-uT-EFy" firstAttribute="leading" secondItem="nhw-xv-ILo" secondAttribute="leading" constant="8" id="6UE-h4-k2t"/>
-                                        <constraint firstItem="1DS-uT-EFy" firstAttribute="top" secondItem="nhw-xv-ILo" secondAttribute="top" constant="7" id="FGB-U6-Qm1"/>
-                                        <constraint firstAttribute="bottom" secondItem="1DS-uT-EFy" secondAttribute="bottom" constant="6" id="Rk3-pj-Iaq"/>
-                                        <constraint firstAttribute="bottom" secondItem="1DS-uT-EFy" secondAttribute="bottom" constant="6" id="RuP-5y-JGB"/>
-                                        <constraint firstAttribute="trailing" secondItem="1DS-uT-EFy" secondAttribute="trailing" constant="75" id="bLx-Cc-36C"/>
-                                        <constraint firstItem="1DS-uT-EFy" firstAttribute="centerY" secondItem="nhw-xv-ILo" secondAttribute="centerY" id="j2E-Ea-RNn"/>
-                                        <constraint firstItem="1DS-uT-EFy" firstAttribute="top" secondItem="nhw-xv-ILo" secondAttribute="top" constant="7" id="rIV-iY-kpZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="JHv-p0-s85" secondAttribute="trailing" constant="8" id="Gae-z8-D6S"/>
+                                        <constraint firstAttribute="bottom" secondItem="JHv-p0-s85" secondAttribute="bottom" constant="6" id="NqH-JR-FB4"/>
+                                        <constraint firstItem="JHv-p0-s85" firstAttribute="leading" secondItem="nhw-xv-ILo" secondAttribute="leading" constant="8" id="naZ-Zm-930"/>
+                                        <constraint firstItem="JHv-p0-s85" firstAttribute="top" secondItem="nhw-xv-ILo" secondAttribute="top" constant="7" id="vUP-jq-Hbw"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
@@ -48,19 +46,17 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="P0e-j1-5SO">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="s7d-vu-8BS">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Uoh-Xc-nT3">
                             <connections>
-                                <action selector="addButton:" destination="FjY-9p-6zC" id="RHD-1R-5gU"/>
+                                <action selector="addButton:" destination="FjY-9p-6zC" id="Whn-Zy-dsI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="textField" destination="1DS-uT-EFy" id="q6V-rr-rtV"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZp-ch-lgD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="910" y="273"/>
+            <point key="canvasLocation" x="779" y="230"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nqW-7M-TkM">

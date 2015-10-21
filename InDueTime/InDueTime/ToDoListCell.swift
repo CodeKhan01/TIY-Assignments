@@ -10,7 +10,8 @@ import UIKit
 
 class ToDoListCell: UITableViewCell
 {
-
+    @IBOutlet weak var textField: UITextField!
+    
     override func awakeFromNib()
     {
         super.awakeFromNib()
@@ -23,5 +24,5 @@ class ToDoListCell: UITableViewCell
 
         // Configure the view for the selected state
     }
-
+    
 }

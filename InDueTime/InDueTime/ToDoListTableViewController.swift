@@ -8,19 +8,17 @@
 
 import UIKit
 
-class ToDoListTableViewController: UITableViewController
+class ToDoListTableViewController: UITableViewController, UITextFieldDelegate
 {
     
-    @IBOutlet weak var textField: UITextField! //Declares the textfield object in the view controller.
-    @IBAction func addButton(sender: AnyObject)
-    {
-        
-    }
+    //local declaration
     
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    
     var tasks = Array<ToDoList>()
     
-
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -50,7 +48,9 @@ class ToDoListTableViewController: UITableViewController
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return tasks.count //takes whatever is in the array of tasks, counts it, and displays each piece of the array in the cell if there is data.
+        
+        return tasks.count
+        //takes whatever is in the array of tasks, counts it, and displays each piece of the array in the cell if there is data.
         
     }
 
@@ -59,17 +59,24 @@ class ToDoListTableViewController: UITableViewController
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("ToDoListCell", forIndexPath: indexPath) as! ToDoListCell
         
-
         // Configure the cell...
+        let aSingleTask = tasks[indexPath.row]
+        if aSingleTask.title == nil
+        {
+            cell.textField.becomeFirstResponder()
+        }
+        else
+        {
+            cell.textField.text = aSingleTask.title
+        }
+        
         return cell
     }
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath)
-    {
-        <#code#>
-    }
-
-
+    //MARK: Action Handlers
+    
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

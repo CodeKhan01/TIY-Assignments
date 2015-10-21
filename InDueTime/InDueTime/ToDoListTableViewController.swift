@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ToDoListTableViewController: UITableViewController, UITextFieldDelegate
 {
@@ -61,9 +62,11 @@ class ToDoListTableViewController: UITableViewController, UITextFieldDelegate
         
         // Configure the cell...
         let aSingleTask = tasks[indexPath.row]
+        
         if aSingleTask.title == nil
         {
             cell.textField.becomeFirstResponder()
+           
         }
         else
         {
@@ -74,6 +77,50 @@ class ToDoListTableViewController: UITableViewController, UITextFieldDelegate
     }
     
     //MARK: Action Handlers
+    @IBAction func addButton(sender: UIButton)
+    {
+        let task = NSEntityDescription.insertNewObjectForEntityForName("ToDoList", inManagedObjectContext: managedObjectContext) as! ToDoList
+        tasks.append(task)
+        tableView.reloadData()
+    }
+    
+    
+    
+    
+    //MARK - Private Functions
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool
+    {
+        var rc = false
+        if textField.text != ""
+        {
+            rc = true
+            let contentView = textField.superview
+            let cell = contentView?.superview as! ToDoListCell
+            let indexPath = tableView.indexPathForCell(cell)
+            let task = tasks[indexPath!.row]
+            task.title = textField.text
+            textField.resignFirstResponder()
+            saveToDo()
+            
+        }
+        return rc
+    }
+    
+    func saveToDo()
+    {
+        do
+        {
+            try managedObjectContext.save()
+        }
+        catch
+        {
+            let nserror = error as NSError
+            NSLog("NOT WORKING BRO \(nserror.userInfo)")
+            abort()
+        }
+    }
+    
     
     
     

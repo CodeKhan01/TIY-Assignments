@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B771C3EE1BD80A65001A43A3 /* CheckBox-Checked.png in Resources */ = {isa = PBXBuildFile; fileRef = B771C3ED1BD80A65001A43A3 /* CheckBox-Checked.png */; settings = {ASSET_TAGS = (); }; };
 		B7A835D01BD6E9DC00498381 /* ToDoList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A835CE1BD6E9DC00498381 /* ToDoList+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
 		B7A835D11BD6E9DC00498381 /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A835CF1BD6E9DC00498381 /* ToDoList.swift */; settings = {ASSET_TAGS = (); }; };
 		B7A835D31BD6EEE600498381 /* ToDoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A835D21BD6EEE600498381 /* ToDoListCell.swift */; settings = {ASSET_TAGS = (); }; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B771C3ED1BD80A65001A43A3 /* CheckBox-Checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CheckBox-Checked.png"; path = "../../../../../Downloads/CheckBox-Checked.png"; sourceTree = "<group>"; };
 		B7A835CE1BD6E9DC00498381 /* ToDoList+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ToDoList+CoreDataProperties.swift"; path = "../ToDoList+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B7A835CF1BD6E9DC00498381 /* ToDoList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToDoList.swift; path = ../ToDoList.swift; sourceTree = "<group>"; };
 		B7A835D21BD6EEE600498381 /* ToDoListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListCell.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		B7AE241B1BD6B69D009739C0 /* InDueTime */ = {
 			isa = PBXGroup;
 			children = (
+				B771C3ED1BD80A65001A43A3 /* CheckBox-Checked.png */,
 				B7AE241C1BD6B69D009739C0 /* AppDelegate.swift */,
 				B7AE24391BD6D50A009739C0 /* ToDoListTableViewController.swift */,
 				B7A835CE1BD6E9DC00498381 /* ToDoList+CoreDataProperties.swift */,
@@ -139,6 +142,7 @@
 			files = (
 				B7AE242A1BD6B69D009739C0 /* LaunchScreen.storyboard in Resources */,
 				B7AE24271BD6B69D009739C0 /* Assets.xcassets in Resources */,
+				B771C3EE1BD80A65001A43A3 /* CheckBox-Checked.png in Resources */,
 				B7AE24221BD6B69D009739C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

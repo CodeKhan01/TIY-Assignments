@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		B7859C391BD9125B003AB2D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7859C381BD9125B003AB2D6 /* AppDelegate.swift */; };
-		B7859C3B1BD9125B003AB2D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7859C3A1BD9125B003AB2D6 /* ViewController.swift */; };
 		B7859C3E1BD9125B003AB2D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7859C3C1BD9125B003AB2D6 /* Main.storyboard */; };
 		B7859C411BD9125B003AB2D6 /* High_Voltage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7859C3F1BD9125B003AB2D6 /* High_Voltage.xcdatamodeld */; };
 		B7859C431BD9125B003AB2D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7859C421BD9125B003AB2D6 /* Assets.xcassets */; };
 		B7859C461BD9125B003AB2D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7859C441BD9125B003AB2D6 /* LaunchScreen.storyboard */; };
+		B79FCB611BD95CDF0079DB1B /* VoltageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79FCB601BD95CDF0079DB1B /* VoltageTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B79FCB631BD966DE0079DB1B /* VoltageListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79FCB621BD966DE0079DB1B /* VoltageListTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B7859C351BD9125B003AB2D6 /* High-Voltage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "High-Voltage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7859C381BD9125B003AB2D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7859C3A1BD9125B003AB2D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B7859C3D1BD9125B003AB2D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7859C401BD9125B003AB2D6 /* High_Voltage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = High_Voltage.xcdatamodel; sourceTree = "<group>"; };
 		B7859C421BD9125B003AB2D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7859C451BD9125B003AB2D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7859C471BD9125B003AB2D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B79FCB601BD95CDF0079DB1B /* VoltageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoltageTableViewController.swift; sourceTree = "<group>"; };
+		B79FCB621BD966DE0079DB1B /* VoltageListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoltageListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				B7859C381BD9125B003AB2D6 /* AppDelegate.swift */,
-				B7859C3A1BD9125B003AB2D6 /* ViewController.swift */,
+				B79FCB601BD95CDF0079DB1B /* VoltageTableViewController.swift */,
+				B79FCB621BD966DE0079DB1B /* VoltageListTableViewController.swift */,
 				B7859C3C1BD9125B003AB2D6 /* Main.storyboard */,
 				B7859C421BD9125B003AB2D6 /* Assets.xcassets */,
 				B7859C441BD9125B003AB2D6 /* LaunchScreen.storyboard */,
@@ -137,9 +140,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7859C3B1BD9125B003AB2D6 /* ViewController.swift in Sources */,
+				B79FCB631BD966DE0079DB1B /* VoltageListTableViewController.swift in Sources */,
 				B7859C411BD9125B003AB2D6 /* High_Voltage.xcdatamodeld in Sources */,
 				B7859C391BD9125B003AB2D6 /* AppDelegate.swift in Sources */,
+				B79FCB611BD95CDF0079DB1B /* VoltageTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +291,7 @@
 				B7859C4C1BD9125B003AB2D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

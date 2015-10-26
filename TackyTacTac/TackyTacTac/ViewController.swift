@@ -20,22 +20,39 @@ class ViewController: UIViewController
     
     let gameStatusLabel = UILabel(frame: CGRect(x: 0, y: 80, width: 200, height: 50))
     
-    let player1WinningsLabel = UILabel(frame: CGRect(x: 0, y: 30, width: 200, height: 50))
-    let player2WinningsLabel = UILabel(frame: CGRect(x: 0, y: 20, width: 200, height: 50))
-    let stalemateWinningsLabel = UILabel(frame: CGRect(x: 0, y: 10, width: 200, height: 50))
+    let player1WinningsLabel = UILabel(frame: CGRect(x: 0, y: 440, width: 200, height: 50))
+    let player2WinningsLabel = UILabel(frame: CGRect(x: 0, y: 460, width: 200, height: 50))
+    let stalemateWinningsLabel = UILabel(frame: CGRect(x: 0, y: 480, width: 200, height: 50))
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         view.backgroundColor = UIColor.whiteColor()
         
-        gameStatusLabel.text = "Player 1 Turn" //tells which player to go
+        //Label Properties
+        gameStatusLabel.text = "Player 1 Turn"
         gameStatusLabel.textAlignment = .Center
-        
         gameStatusLabel.center.x = view.center.x
         
-        view.addSubview(gameStatusLabel)
+        player1WinningsLabel.text = "Player 1 Score:"
+        player1WinningsLabel.textAlignment = .Center
+        player1WinningsLabel.center.x = view.center.x
         
+        player2WinningsLabel.text = "Player 2 Score:"
+        player2WinningsLabel.textAlignment = .Center
+        player2WinningsLabel.center.x = view.center.x
+        
+        stalemateWinningsLabel.text = "Stalemate:"
+        stalemateWinningsLabel.textAlignment = .Center
+        stalemateWinningsLabel.center.x = view.center.x
+        
+        //Calling your Label to the view controller
+        view.addSubview(gameStatusLabel)
+        view.addSubview(player1WinningsLabel)
+        view.addSubview(player2WinningsLabel)
+        view.addSubview(stalemateWinningsLabel)
+        
+        //Setting your grid buttons correctly to display on the screen.
         let screenHeight = Int(UIScreen.mainScreen().bounds.height)
         let screenWidth = Int(UIScreen.mainScreen().bounds.width)
         
@@ -90,6 +107,7 @@ class ViewController: UIViewController
                 gameStatusLabel.text = "Player 1 Turn"
             }
             //button.player = isPlayer1Turn ? 1:2 //ternary operater, checks to see if whats left of the question mark is a boolean. If its true then it uses 1 and if its false it goes to 2 which is right of the colon.
+            
             grid[button.row][button.col] = isPlayer1Turn ? 1:2
             
             isPlayer1Turn = !isPlayer1Turn
@@ -101,6 +119,8 @@ class ViewController: UIViewController
     //MARK: - Misc
     func checkForWinner()
     {
+        var possibilitiesChecked = 0
+        
         let possibilities = [
             ((0,0),(0,1),(0,2)),
             ((1,0),(1,1),(1,2)),
@@ -124,6 +144,7 @@ class ViewController: UIViewController
                 if value1 != 0
                 {
                     print("Player \(value1) wins!")
+                    gameStatusLabel.text = "Player \(value1) wins!"
                 }
                 else
                 {
@@ -133,15 +154,18 @@ class ViewController: UIViewController
             else
             {
                 print("Does not match")
+                if value1 != 0 && value2 != 0 && value3 != 0
+                {
+                    possibilitiesChecked++
+                }
             }
+        }
+        if possibilitiesChecked == 8
+        {
+            gameStatusLabel.text = "Stalemate"
         }
     }
     
-    func updateGameStatusLabel()
-    {
-        gameStatusLabel.text = "Player 1 Turn"
-        gameStatusLabel.text = "Player 2 Turn"
-    }
 }
 
 class TTTButton: UIButton

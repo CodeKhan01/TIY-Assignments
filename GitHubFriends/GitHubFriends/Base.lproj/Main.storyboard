@@ -37,6 +37,11 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="m9b-sr-jcf" id="JI6-Jf-ozv"/>
+                        <outlet property="searchButton" destination="ePV-tx-nZR" id="pnt-Yw-Bj1"/>
+                        <outlet property="userTextField" destination="3pN-2o-1y7" id="A3T-AQ-OdS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,10 +90,16 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="fnV-1W-7Xu" id="Ioq-dS-Bqb"/>
+                        <outlet property="followersLabel" destination="5kX-mt-dqZ" id="TwR-VN-O1r"/>
+                        <outlet property="nameLabel" destination="8sY-WE-fKD" id="6hf-WL-Xoe"/>
+                        <outlet property="userNameLabel" destination="b2f-ts-rHU" id="s3T-aF-0xR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DmY-7l-JMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1018" y="297"/>
+            <point key="canvasLocation" x="1168" y="957"/>
         </scene>
     </scenes>
 </document>

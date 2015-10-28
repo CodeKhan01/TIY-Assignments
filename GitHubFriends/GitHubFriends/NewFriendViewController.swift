@@ -15,6 +15,13 @@ protocol APIControllerProtocol
 
 class NewFriendViewController: UIViewController, APIControllerProtocol
 {
+    
+    @IBOutlet weak var userTextField: UITextField!
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
+    
+    
+    
     var api: APIController!
     var friends = [Friend]()
 

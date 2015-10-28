@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>MuttCuttsHitstheRoad.xcscheme</key>
+		<key>MuttCutts.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>B719711B1BE106C20078D6C5</key>
+		<key>DFE909251BE106CE0066B1EA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

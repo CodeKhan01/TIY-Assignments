@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  MuttCuttsHitstheRoad
+//  MuttCutts
 //
-//  Created by Isaiah Khan on 10/28/15.
+//  Created by Ben Gohlke on 10/28/15.
 //  Copyright © 2015 The Iron Yard. All rights reserved.
 //
 

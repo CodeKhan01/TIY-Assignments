@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B719711B1BE106C20078D6C5"
-               BuildableName = "MuttCuttsHitstheRoad.app"
-               BlueprintName = "MuttCuttsHitstheRoad"
-               ReferencedContainer = "container:MuttCuttsHitstheRoad.xcodeproj">
+               BlueprintIdentifier = "DFE909251BE106CE0066B1EA"
+               BuildableName = "MuttCutts.app"
+               BlueprintName = "MuttCutts"
+               ReferencedContainer = "container:MuttCutts.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B719711B1BE106C20078D6C5"
-            BuildableName = "MuttCuttsHitstheRoad.app"
-            BlueprintName = "MuttCuttsHitstheRoad"
-            ReferencedContainer = "container:MuttCuttsHitstheRoad.xcodeproj">
+            BlueprintIdentifier = "DFE909251BE106CE0066B1EA"
+            BuildableName = "MuttCutts.app"
+            BlueprintName = "MuttCutts"
+            ReferencedContainer = "container:MuttCutts.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B719711B1BE106C20078D6C5"
-            BuildableName = "MuttCuttsHitstheRoad.app"
-            BlueprintName = "MuttCuttsHitstheRoad"
-            ReferencedContainer = "container:MuttCuttsHitstheRoad.xcodeproj">
+            BlueprintIdentifier = "DFE909251BE106CE0066B1EA"
+            BuildableName = "MuttCutts.app"
+            BlueprintName = "MuttCutts"
+            ReferencedContainer = "container:MuttCutts.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B719711B1BE106C20078D6C5"
-            BuildableName = "MuttCuttsHitstheRoad.app"
-            BlueprintName = "MuttCuttsHitstheRoad"
-            ReferencedContainer = "container:MuttCuttsHitstheRoad.xcodeproj">
+            BlueprintIdentifier = "DFE909251BE106CE0066B1EA"
+            BuildableName = "MuttCutts.app"
+            BlueprintName = "MuttCutts"
+            ReferencedContainer = "container:MuttCutts.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

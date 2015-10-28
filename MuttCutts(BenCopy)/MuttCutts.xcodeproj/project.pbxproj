@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B71971201BE106C20078D6C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B719711F1BE106C20078D6C5 /* AppDelegate.swift */; };
-		B71971221BE106C20078D6C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71971211BE106C20078D6C5 /* ViewController.swift */; };
-		B71971251BE106C20078D6C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B71971231BE106C20078D6C5 /* Main.storyboard */; };
-		B71971271BE106C20078D6C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B71971261BE106C20078D6C5 /* Assets.xcassets */; };
-		B719712A1BE106C20078D6C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B71971281BE106C20078D6C5 /* LaunchScreen.storyboard */; };
+		DFE9092A1BE106CE0066B1EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE909291BE106CE0066B1EA /* AppDelegate.swift */; };
+		DFE9092C1BE106CE0066B1EA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE9092B1BE106CE0066B1EA /* MapViewController.swift */; };
+		DFE9092F1BE106CE0066B1EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE9092D1BE106CE0066B1EA /* Main.storyboard */; };
+		DFE909311BE106CE0066B1EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE909301BE106CE0066B1EA /* Assets.xcassets */; };
+		DFE909341BE106CE0066B1EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE909321BE106CE0066B1EA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B719711C1BE106C20078D6C5 /* MuttCuttsHitstheRoad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuttCuttsHitstheRoad.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B719711F1BE106C20078D6C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B71971211BE106C20078D6C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B71971241BE106C20078D6C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B71971261BE106C20078D6C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B71971291BE106C20078D6C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B719712B1BE106C20078D6C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFE909261BE106CE0066B1EA /* MuttCutts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuttCutts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE909291BE106CE0066B1EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DFE9092B1BE106CE0066B1EA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		DFE9092E1BE106CE0066B1EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DFE909301BE106CE0066B1EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DFE909331BE106CE0066B1EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DFE909351BE106CE0066B1EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B71971191BE106C20078D6C5 /* Frameworks */ = {
+		DFE909231BE106CE0066B1EA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,71 +35,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B71971131BE106C20078D6C5 = {
+		DFE9091D1BE106CE0066B1EA = {
 			isa = PBXGroup;
 			children = (
-				B719711E1BE106C20078D6C5 /* MuttCuttsHitstheRoad */,
-				B719711D1BE106C20078D6C5 /* Products */,
+				DFE909281BE106CE0066B1EA /* MuttCutts */,
+				DFE909271BE106CE0066B1EA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B719711D1BE106C20078D6C5 /* Products */ = {
+		DFE909271BE106CE0066B1EA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B719711C1BE106C20078D6C5 /* MuttCuttsHitstheRoad.app */,
+				DFE909261BE106CE0066B1EA /* MuttCutts.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B719711E1BE106C20078D6C5 /* MuttCuttsHitstheRoad */ = {
+		DFE909281BE106CE0066B1EA /* MuttCutts */ = {
 			isa = PBXGroup;
 			children = (
-				B719711F1BE106C20078D6C5 /* AppDelegate.swift */,
-				B71971211BE106C20078D6C5 /* ViewController.swift */,
-				B71971231BE106C20078D6C5 /* Main.storyboard */,
-				B71971261BE106C20078D6C5 /* Assets.xcassets */,
-				B71971281BE106C20078D6C5 /* LaunchScreen.storyboard */,
-				B719712B1BE106C20078D6C5 /* Info.plist */,
+				DFE909291BE106CE0066B1EA /* AppDelegate.swift */,
+				DFE9092B1BE106CE0066B1EA /* MapViewController.swift */,
+				DFE9092D1BE106CE0066B1EA /* Main.storyboard */,
+				DFE909301BE106CE0066B1EA /* Assets.xcassets */,
+				DFE909321BE106CE0066B1EA /* LaunchScreen.storyboard */,
+				DFE909351BE106CE0066B1EA /* Info.plist */,
 			);
-			path = MuttCuttsHitstheRoad;
+			path = MuttCutts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B719711B1BE106C20078D6C5 /* MuttCuttsHitstheRoad */ = {
+		DFE909251BE106CE0066B1EA /* MuttCutts */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B719712E1BE106C20078D6C5 /* Build configuration list for PBXNativeTarget "MuttCuttsHitstheRoad" */;
+			buildConfigurationList = DFE909381BE106CE0066B1EA /* Build configuration list for PBXNativeTarget "MuttCutts" */;
 			buildPhases = (
-				B71971181BE106C20078D6C5 /* Sources */,
-				B71971191BE106C20078D6C5 /* Frameworks */,
-				B719711A1BE106C20078D6C5 /* Resources */,
+				DFE909221BE106CE0066B1EA /* Sources */,
+				DFE909231BE106CE0066B1EA /* Frameworks */,
+				DFE909241BE106CE0066B1EA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MuttCuttsHitstheRoad;
-			productName = MuttCuttsHitstheRoad;
-			productReference = B719711C1BE106C20078D6C5 /* MuttCuttsHitstheRoad.app */;
+			name = MuttCutts;
+			productName = MuttCutts;
+			productReference = DFE909261BE106CE0066B1EA /* MuttCutts.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B71971141BE106C20078D6C5 /* Project object */ = {
+		DFE9091E1BE106CE0066B1EA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "The Iron Yard";
 				TargetAttributes = {
-					B719711B1BE106C20078D6C5 = {
+					DFE909251BE106CE0066B1EA = {
 						CreatedOnToolsVersion = 7.1;
 					};
 				};
 			};
-			buildConfigurationList = B71971171BE106C20078D6C5 /* Build configuration list for PBXProject "MuttCuttsHitstheRoad" */;
+			buildConfigurationList = DFE909211BE106CE0066B1EA /* Build configuration list for PBXProject "MuttCutts" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -107,54 +107,54 @@
 				en,
 				Base,
 			);
-			mainGroup = B71971131BE106C20078D6C5;
-			productRefGroup = B719711D1BE106C20078D6C5 /* Products */;
+			mainGroup = DFE9091D1BE106CE0066B1EA;
+			productRefGroup = DFE909271BE106CE0066B1EA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B719711B1BE106C20078D6C5 /* MuttCuttsHitstheRoad */,
+				DFE909251BE106CE0066B1EA /* MuttCutts */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B719711A1BE106C20078D6C5 /* Resources */ = {
+		DFE909241BE106CE0066B1EA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B719712A1BE106C20078D6C5 /* LaunchScreen.storyboard in Resources */,
-				B71971271BE106C20078D6C5 /* Assets.xcassets in Resources */,
-				B71971251BE106C20078D6C5 /* Main.storyboard in Resources */,
+				DFE909341BE106CE0066B1EA /* LaunchScreen.storyboard in Resources */,
+				DFE909311BE106CE0066B1EA /* Assets.xcassets in Resources */,
+				DFE9092F1BE106CE0066B1EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B71971181BE106C20078D6C5 /* Sources */ = {
+		DFE909221BE106CE0066B1EA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B71971221BE106C20078D6C5 /* ViewController.swift in Sources */,
-				B71971201BE106C20078D6C5 /* AppDelegate.swift in Sources */,
+				DFE9092C1BE106CE0066B1EA /* MapViewController.swift in Sources */,
+				DFE9092A1BE106CE0066B1EA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B71971231BE106C20078D6C5 /* Main.storyboard */ = {
+		DFE9092D1BE106CE0066B1EA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B71971241BE106C20078D6C5 /* Base */,
+				DFE9092E1BE106CE0066B1EA /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		B71971281BE106C20078D6C5 /* LaunchScreen.storyboard */ = {
+		DFE909321BE106CE0066B1EA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B71971291BE106C20078D6C5 /* Base */,
+				DFE909331BE106CE0066B1EA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -162,7 +162,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B719712C1BE106C20078D6C5 /* Debug */ = {
+		DFE909361BE106CE0066B1EA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -203,10 +203,11 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		B719712D1BE106C20078D6C5 /* Release */ = {
+		DFE909371BE106CE0066B1EA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -239,28 +240,29 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		B719712F1BE106C20078D6C5 /* Debug */ = {
+		DFE909391BE106CE0066B1EA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = MuttCuttsHitstheRoad/Info.plist;
+				INFOPLIST_FILE = MuttCutts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiy.MuttCuttsHitstheRoad;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiy.MuttCutts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		B71971301BE106C20078D6C5 /* Release */ = {
+		DFE9093A1BE106CE0066B1EA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = MuttCuttsHitstheRoad/Info.plist;
+				INFOPLIST_FILE = MuttCutts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiy.MuttCuttsHitstheRoad;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiy.MuttCutts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -268,24 +270,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B71971171BE106C20078D6C5 /* Build configuration list for PBXProject "MuttCuttsHitstheRoad" */ = {
+		DFE909211BE106CE0066B1EA /* Build configuration list for PBXProject "MuttCutts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B719712C1BE106C20078D6C5 /* Debug */,
-				B719712D1BE106C20078D6C5 /* Release */,
+				DFE909361BE106CE0066B1EA /* Debug */,
+				DFE909371BE106CE0066B1EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B719712E1BE106C20078D6C5 /* Build configuration list for PBXNativeTarget "MuttCuttsHitstheRoad" */ = {
+		DFE909381BE106CE0066B1EA /* Build configuration list for PBXNativeTarget "MuttCutts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B719712F1BE106C20078D6C5 /* Debug */,
-				B71971301BE106C20078D6C5 /* Release */,
+				DFE909391BE106CE0066B1EA /* Debug */,
+				DFE9093A1BE106CE0066B1EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B71971141BE106C20078D6C5 /* Project object */;
+	rootObject = DFE9091E1BE106CE0066B1EA /* Project object */;
 }

@@ -16,23 +16,18 @@ protocol PopoverViewControllerDelegate
 }
 
 class MapViewController: UIViewController, UIPopoverPresentationControllerDelegate, PopoverViewControllerDelegate
-    
 {
     @IBOutlet weak var mapView: MKMapView!
-        override func viewDidLoad()
+    
+    var citiesArray = Array<MKPointAnnotation>()
+    
+    
+    
+    
+    override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        let geocoder = CLGeocoder()
-        geocoder.geocodeAddressString("Lakeland, FL", completionHandler: {(placemarks: [CLPlacemark]?, error: NSError?) -> Void in
-            if let placemark = placemarks?[0]
-            {
-                let annotation = MKPointAnnotation()
-                annotation.coordinate = (placemark.location?.coordinate)!
-                annotation.title = "Lakeland, FL"
-                self.mapView.addAnnotation(annotation)
-            }
-        })
     }
         
 //        let tiyOrlando = CLLocationCoordinate2DMake(28.540923, -81.38216)
@@ -75,6 +70,8 @@ class MapViewController: UIViewController, UIPopoverPresentationControllerDelega
             let popoverVC = segue.destinationViewController as! PopoverViewController
             popoverVC.popoverPresentationController?.delegate = self
             popoverVC.delegate = self
+            popoverVC.preferredContentSize = CGSizeMake(200.0 , 180.0)
+
         }
     }
     
@@ -91,6 +88,35 @@ class MapViewController: UIViewController, UIPopoverPresentationControllerDelega
     {
         navigationController?.dismissViewControllerAnimated(true, completion:nil)
         
+        for city in cities
+        {
+            geoSearch(city)
+        }
+        
     }
+    
+    func geoSearch(city: String)
+    {
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(city, completionHandler: {(placemarks: [CLPlacemark]?, error: NSError?) -> Void in
+            if let placemark = placemarks?[0]
+            {
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = (placemark.location?.coordinate)!
+                annotation.title = city
+                self.citiesArray.append(annotation)
+                self.mapView.addAnnotations(self.citiesArray)
+                
+                if self.citiesArray.count == 2
+                {
+                    self.mapView.showAnnotations(self.citiesArray, animated: true)
+                }
+            }
+        })
+        print(citiesArray)
+
+    }
+    
+    
 }
 

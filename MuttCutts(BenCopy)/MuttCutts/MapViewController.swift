@@ -10,9 +10,10 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController
+class MapViewController: UIViewController, UIPopoverPresentationControllerDelegate
 {
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var barButtonForPopover: UIButton!
 
     override func viewDidLoad()
     {
@@ -59,6 +60,23 @@ class MapViewController: UIViewController
     {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: - Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "CityStatePopoverSegue"
+        {
+            let popoverVC = segue.destinationViewController as! PopoverViewController
+            popoverVC.popoverPresentationController?.delegate = self
+        }
+    }
+    
+    
+    //MARK: -UIPopoverPresentationControllerDelegate
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle
+    {
+       return UIModalPresentationStyle.None
     }
 
 

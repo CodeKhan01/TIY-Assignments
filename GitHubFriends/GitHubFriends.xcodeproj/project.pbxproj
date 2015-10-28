@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		B7A441CB1BE033E800528EA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A441CA1BE033E800528EA6 /* AppDelegate.swift */; };
-		B7A441CD1BE033E800528EA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A441CC1BE033E800528EA6 /* ViewController.swift */; };
+		B7A441CD1BE033E800528EA6 /* NewFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A441CC1BE033E800528EA6 /* NewFriendViewController.swift */; };
 		B7A441D01BE033E800528EA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A441CE1BE033E800528EA6 /* Main.storyboard */; };
 		B7A441D21BE033E800528EA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7A441D11BE033E800528EA6 /* Assets.xcassets */; };
 		B7A441D51BE033E800528EA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A441D31BE033E800528EA6 /* LaunchScreen.storyboard */; };
+		B7A441DD1BE037C700528EA6 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A441DC1BE037C700528EA6 /* APIController.swift */; };
+		B7A441DF1BE0607000528EA6 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A441DE1BE0607000528EA6 /* Friend.swift */; };
+		B7A441E51BE066EF00528EA6 /* FriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A441E41BE066EF00528EA6 /* FriendDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B7A441C71BE033E800528EA6 /* GitHubFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A441CA1BE033E800528EA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7A441CC1BE033E800528EA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B7A441CC1BE033E800528EA6 /* NewFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFriendViewController.swift; sourceTree = "<group>"; };
 		B7A441CF1BE033E800528EA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7A441D11BE033E800528EA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7A441D41BE033E800528EA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7A441D61BE033E800528EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7A441DC1BE037C700528EA6 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		B7A441DE1BE0607000528EA6 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		B7A441E41BE066EF00528EA6 /* FriendDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +61,14 @@
 			isa = PBXGroup;
 			children = (
 				B7A441CA1BE033E800528EA6 /* AppDelegate.swift */,
-				B7A441CC1BE033E800528EA6 /* ViewController.swift */,
+				B7A441CC1BE033E800528EA6 /* NewFriendViewController.swift */,
+				B7A441DC1BE037C700528EA6 /* APIController.swift */,
+				B7A441DE1BE0607000528EA6 /* Friend.swift */,
 				B7A441CE1BE033E800528EA6 /* Main.storyboard */,
 				B7A441D11BE033E800528EA6 /* Assets.xcassets */,
 				B7A441D31BE033E800528EA6 /* LaunchScreen.storyboard */,
 				B7A441D61BE033E800528EA6 /* Info.plist */,
+				B7A441E41BE066EF00528EA6 /* FriendDetailViewController.swift */,
 			);
 			path = GitHubFriends;
 			sourceTree = "<group>";
@@ -135,8 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7A441CD1BE033E800528EA6 /* ViewController.swift in Sources */,
+				B7A441CD1BE033E800528EA6 /* NewFriendViewController.swift in Sources */,
 				B7A441CB1BE033E800528EA6 /* AppDelegate.swift in Sources */,
+				B7A441DD1BE037C700528EA6 /* APIController.swift in Sources */,
+				B7A441E51BE066EF00528EA6 /* FriendDetailViewController.swift in Sources */,
+				B7A441DF1BE0607000528EA6 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

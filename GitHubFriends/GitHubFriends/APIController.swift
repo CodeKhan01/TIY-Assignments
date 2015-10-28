@@ -33,9 +33,9 @@ class APIController
                 {
                     if let dictionary = self.parseJSON(data!)
                     {
-                        if let gitHubUser: NSDictionary = dictionary["embryoconcepts"] as? NSDictionary
+                        if let login: NSArray = dictionary["login"] as? NSArray
                         {
-                            self.delegate.didReceiveAPIResults(embryoconcepts)
+                            self.delegate.didReceiveAPIResults(login)
                         }
                     }
                 }

@@ -10,17 +10,19 @@ import UIKit
 
 protocol APIControllerProtocol
 {
-    func didReceiveAPIResults(embryoconcepts: NSDictionary)
+    func didReceiveAPIResults(login: NSArray)
 }
 
 class NewFriendViewController: UIViewController, APIControllerProtocol
 {
     var api: APIController!
+    var friends = [Friend]()
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
         api = APIController(delegate: self)
+        api.
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -31,9 +33,9 @@ class NewFriendViewController: UIViewController, APIControllerProtocol
     }
 
 //MARK: API Controller Protocol
-    func didReceiveAPIResults(embryoconcepts: NSDictionary)
+    func didReceiveAPIResults(login: NSArray)
     {
-        <#code#>
+        friends = Friend.propertiesWithJSON(login)
     }
     
 

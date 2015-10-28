@@ -8,14 +8,22 @@
 
 import UIKit
 
-class PopoverViewController: UIViewController
+class PopoverViewController: UIViewController, UITextFieldDelegate
 {
+    @IBOutlet weak var cS1TF: UITextField!//City State 1 TextField
+    @IBOutlet weak var cS2TF: UITextField!//City State 2 TextField
+    
+    var delegate: PopoverViewControllerDelegate?
+    
+    let inputTextField = InputTextField()
+    
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning()
@@ -23,6 +31,24 @@ class PopoverViewController: UIViewController
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool
+    {
+        if textField.text != ""
+        {
+            switch textField
+            {
+            case cS1TF:
+                cS2TF.becomeFirstResponder()
+            default:
+                textField.resignFirstResponder()
+            }
+        }
+        return true
+    }
+
+    
+    
     
 
     /*
@@ -34,5 +60,16 @@ class PopoverViewController: UIViewController
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //MARK: - Action Handlers
+    
+    @IBAction func searchButton(sender: AnyObject)
+    {
+        if cS1TF.text != "" && cS2TF.text != ""
+        {
+            delegate?.citiesWereFound([cS1TF.text!, cS2TF.text!])
+        }
+    }
+    
 
 }

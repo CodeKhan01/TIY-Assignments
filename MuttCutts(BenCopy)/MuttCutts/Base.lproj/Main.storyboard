@@ -65,17 +65,26 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="f0D-Yb-YON" id="Uy5-W9-GYF"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City, State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6xy-N7-3aG">
                                 <rect key="frame" x="15" y="92" width="570" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="f0D-Yb-YON" id="UIi-bc-MFg"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XiZ-cM-QpP">
                                 <rect key="frame" x="276" y="152" width="48" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="searchButton:" destination="f0D-Yb-YON" eventType="touchUpInside" id="v7f-Bp-K2h"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -93,6 +102,10 @@
                             <constraint firstItem="6xy-N7-3aG" firstAttribute="centerX" secondItem="Nl4-ct-Hos" secondAttribute="centerX" id="sKv-fc-JXF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cS1TF" destination="igp-06-Yd6" id="zlZ-7C-afx"/>
+                        <outlet property="cS2TF" destination="6xy-N7-3aG" id="CnX-1y-900"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZs-k4-czc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -61,7 +61,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City, State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="igp-06-Yd6">
-                                <rect key="frame" x="15" y="45" width="570" height="33"/>
+                                <rect key="frame" x="15" y="40" width="570" height="38"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -92,7 +92,7 @@
                         <constraints>
                             <constraint firstItem="6xy-N7-3aG" firstAttribute="leading" secondItem="Nl4-ct-Hos" secondAttribute="leading" constant="15" id="388-XD-TSg"/>
                             <constraint firstItem="XiZ-cM-QpP" firstAttribute="centerX" secondItem="Nl4-ct-Hos" secondAttribute="centerX" id="JBF-xO-Yd8"/>
-                            <constraint firstItem="igp-06-Yd6" firstAttribute="top" secondItem="gqd-QA-8eZ" secondAttribute="bottom" constant="25" id="QaH-Wf-pz0"/>
+                            <constraint firstItem="igp-06-Yd6" firstAttribute="top" secondItem="gqd-QA-8eZ" secondAttribute="bottom" constant="20" id="QaH-Wf-pz0"/>
                             <constraint firstItem="igp-06-Yd6" firstAttribute="centerX" secondItem="Nl4-ct-Hos" secondAttribute="centerX" id="RY5-qr-ppK"/>
                             <constraint firstItem="igp-06-Yd6" firstAttribute="width" secondItem="6xy-N7-3aG" secondAttribute="width" id="UNL-oD-98C"/>
                             <constraint firstItem="6xy-N7-3aG" firstAttribute="top" secondItem="gqd-QA-8eZ" secondAttribute="bottom" constant="72" id="Ybs-i3-amf"/>

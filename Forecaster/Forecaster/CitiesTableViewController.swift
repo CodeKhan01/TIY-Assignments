@@ -12,19 +12,41 @@ protocol ZipcodeViewControllerDelegate
 {
     func zipWasChosen(x: String)
 }
-//protocol APIControllerProtocol
-//{
-//    func didRecieveResults(
-//}
+protocol APIControllerDelegate
+{
+    func didReceiveAPIResults(arrayResults: NSArray)
+}
+protocol DarkSkyAPIControllerDelegate
+{
+    func didReceiveDarkSkyAPIResults(dictCurrently: NSDictionary, searchedForLocation: Location)
+}
 
-class CitiesTableViewController: UITableViewController, UIPopoverPresentationControllerDelegate,ZipcodeViewControllerDelegate
+
+class CitiesTableViewController: UITableViewController, UIPopoverPresentationControllerDelegate,ZipcodeViewControllerDelegate, APIControllerDelegate, DarkSkyAPIControllerDelegate
 {
 
-    var apiController = APIController()
+    var apiController: APIController!
+    var locations = [Location]()
+    
+    //we are assigning APIController "OBJECT" to apiController, and it has a bang because there is no value attached to it yet.
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        apiController = APIController(delegate: self)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // can't use self except inside a function
+        //delegate is no longer empty, it is attached to self, which is this "CitiesTableViewController"
+        //remember that this delegate means that its working on the behalf of another class, so in this project its delegating from class APIController.
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -50,18 +72,28 @@ class CitiesTableViewController: UITableViewController, UIPopoverPresentationCon
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return locations.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("CityInfoCell", forIndexPath: indexPath) as! CityInfoCell
+        
+        let location = locations[indexPath.row]
+        cell.cityLabel.text = location.city
+        
+        if location.weather != nil
+        {
+            cell.degreesLabel.text = String(location.weather!.temperature)
+            cell.conditionsLabel.text = location.weather!.summary
+        }
+        
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -121,6 +153,43 @@ class CitiesTableViewController: UITableViewController, UIPopoverPresentationCon
     func zipWasChosen(x: String)
     {
         apiController.useZipForCity(x)
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+    }
+    
+    //MARK: - API Controller Delegate
+    func didReceiveAPIResults(arrayResults: NSArray)
+    {
+        //print(arrayResults)
+        dispatch_async(dispatch_get_main_queue(),
+        {
+            let searchedForLocation = Location.locationWithJSON(arrayResults)
+            
+            self.locations.append(searchedForLocation)
+            self.tableView.reloadData()
+            
+            let darkSkyAPI = DarkSkyAPIController(delegate: self)
+            darkSkyAPI.useCityForWeather(searchedForLocation)
+        })
+    }
+    //MARK: - DarkSkyAPIController Delegate
+    func didReceiveDarkSkyAPIResults(dictCurrently: NSDictionary, searchedForLocation: Location)
+    {
+        dispatch_async(dispatch_get_main_queue(),
+        {
+            let searchedForWeather = Weather.weatherWithJSON(dictCurrently)
+            
+            for eachLocation in self.locations
+            {
+                if eachLocation.city == searchedForLocation.city
+                {
+                    eachLocation.weather = searchedForWeather
+                }
+            }
+            
+            self.tableView.reloadData()
+            
+        })
+
     }
     
     

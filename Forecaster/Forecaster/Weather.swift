@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Weather
+class Weather:
 {
     let summary: String
     let temperature: Double
@@ -31,4 +31,6 @@ class Weather
         let weather = Weather(summary: summary, temperature: temperature)
         return weather
     }
+    
+    
 }

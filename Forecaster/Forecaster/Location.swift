@@ -8,7 +8,13 @@
 
 import Foundation
 
-class Location
+//NSCoding Constants
+let kCityKey = "city"
+let kLatitudeKey = "lat"
+let kLongitudeKey = "lng"
+
+
+class Location: NSObject, NSCoding
 {
     let city: String
     let lat: Double
@@ -55,6 +61,21 @@ class Location
         
         location = Location(city: city, lat: lat, lng: lng, weather: nil)
         return location
+    }
+    
+    //MARK: - NSCoding
+    //Know that "struct" do not work with NSCoding
+    required convenience init?(coder aDecoder: NSCoder)
+    {
+        
+        
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder)
+    {
+        aCoder.encodeObject(self.city, forKey: kCityKey)
+        aCoder.encodeObject(self.lat, forKey: kLatitudeKey)
+        aCoder.encodeObject(self.lng, forKey: kLongitudeKey)
     }
     
 }

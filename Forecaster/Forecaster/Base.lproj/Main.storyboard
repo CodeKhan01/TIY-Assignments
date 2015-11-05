@@ -34,14 +34,14 @@
                                             <rect key="frame" x="20" y="53" width="151" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="70" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhC-bB-cQb">
                                             <rect key="frame" x="307" y="0.0" width="48" height="82"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -150,6 +150,14 @@
                                     <action selector="findCity:" destination="7ps-9Y-4Jd" eventType="touchUpInside" id="2Nt-Di-yvh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwX-f8-yFl">
+                                <rect key="frame" x="115" y="108" width="146" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Use Current Location"/>
+                                <connections>
+                                    <action selector="useLocationTapped:" destination="7ps-9Y-4Jd" eventType="touchUpInside" id="ioC-Cn-nmx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -157,14 +165,17 @@
                             <constraint firstItem="dOM-xw-KLQ" firstAttribute="top" secondItem="hRM-1Y-n87" secondAttribute="bottom" constant="8" id="0NB-d1-Z0s"/>
                             <constraint firstItem="dOM-xw-KLQ" firstAttribute="width" secondItem="iUr-FE-tNW" secondAttribute="width" id="0n1-qp-WcS"/>
                             <constraint firstItem="dOM-xw-KLQ" firstAttribute="top" secondItem="hRM-1Y-n87" secondAttribute="bottom" constant="8" id="4tp-vv-oDL"/>
+                            <constraint firstItem="kwX-f8-yFl" firstAttribute="centerX" secondItem="iUr-FE-tNW" secondAttribute="centerX" id="80O-iq-9o4"/>
                             <constraint firstItem="w6t-aa-XkR" firstAttribute="centerY" secondItem="iUr-FE-tNW" secondAttribute="centerY" id="MT1-th-4Wz"/>
                             <constraint firstItem="w6t-aa-XkR" firstAttribute="top" secondItem="dOM-xw-KLQ" secondAttribute="bottom" constant="8" id="Z2N-bb-57F"/>
                             <constraint firstItem="dOM-xw-KLQ" firstAttribute="centerX" secondItem="iUr-FE-tNW" secondAttribute="centerX" id="dIM-eN-BU0"/>
                             <constraint firstAttribute="trailing" secondItem="dOM-xw-KLQ" secondAttribute="trailing" constant="119" id="eG2-Yb-WyV"/>
                             <constraint firstItem="w6t-aa-XkR" firstAttribute="centerX" secondItem="dOM-xw-KLQ" secondAttribute="centerX" id="ejL-0b-W0w"/>
+                            <constraint firstItem="kwX-f8-yFl" firstAttribute="top" secondItem="w6t-aa-XkR" secondAttribute="bottom" constant="8" id="fVm-e4-Vt2"/>
                             <constraint firstItem="w6t-aa-XkR" firstAttribute="width" secondItem="dOM-xw-KLQ" secondAttribute="width" id="fy0-Du-yS6"/>
                             <constraint firstItem="dOM-xw-KLQ" firstAttribute="leading" secondItem="iUr-FE-tNW" secondAttribute="leadingMargin" constant="119" id="jfF-E6-hUd"/>
                             <constraint firstItem="dOM-xw-KLQ" firstAttribute="leading" secondItem="iUr-FE-tNW" secondAttribute="leading" constant="119" id="lXF-du-s86"/>
+                            <constraint firstItem="kwX-f8-yFl" firstAttribute="top" secondItem="hRM-1Y-n87" secondAttribute="bottom" constant="88" id="tMY-gQ-Y2K"/>
                             <constraint firstItem="w6t-aa-XkR" firstAttribute="leading" secondItem="iUr-FE-tNW" secondAttribute="leadingMargin" constant="144" id="w0k-sF-Np3"/>
                             <constraint firstItem="dOM-xw-KLQ" firstAttribute="centerX" secondItem="iUr-FE-tNW" secondAttribute="centerX" id="yRz-7c-GY4"/>
                         </constraints>
@@ -183,6 +194,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="currentLocationButton" destination="kwX-f8-yFl" id="uMP-PS-ALg"/>
                         <outlet property="findCityLabel" destination="w6t-aa-XkR" id="EXT-id-hTk"/>
                         <outlet property="zipcodeTextField" destination="dOM-xw-KLQ" id="RWv-dA-Exy"/>
                     </connections>
@@ -207,14 +219,14 @@
                                 <rect key="frame" x="208" y="20" width="147" height="26"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="degrees" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p11-jV-L9b">
                                 <rect key="frame" x="208" y="54" width="147" height="100"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="w0P-qk-l6s">

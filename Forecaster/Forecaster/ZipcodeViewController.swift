@@ -70,14 +70,18 @@ class ZipcodeViewController: UIViewController, UITextFieldDelegate, CLLocationMa
         return rc
 
     }
-    //MARK: CLLocation related methods
+    //MARK: CLLocation related methods (functions)
     
     func configureLocationManager()
     {
         if CLLocationManager.authorizationStatus() != CLAuthorizationStatus.Denied && CLLocationManager.authorizationStatus() != CLAuthorizationStatus.Restricted
         {
             locationManager.delegate = self
+            // once the location manager recieves updates, it tells our class that we are in now to update itself.
             locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+            //we are telling the location manager to update every 100 meters.
+            
+            //if statement allows the currentLocationButton is enabled once everything is authorized.
             if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.NotDetermined
             {
                 locationManager.requestWhenInUseAuthorization()
@@ -89,7 +93,7 @@ class ZipcodeViewController: UIViewController, UITextFieldDelegate, CLLocationMa
         }
     }
     
-    // this function says that the user gave you permission to use their location, and when they do then you are enabling to use the Current Location Button in your popover view controller.
+    // this function says that the user gave your app permission to use their location, and when they do, then you are enabling to use the Current Location Button in your popover view controller.
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus)
     {
         if status == CLAuthorizationStatus.AuthorizedWhenInUse
@@ -104,11 +108,12 @@ class ZipcodeViewController: UIViewController, UITextFieldDelegate, CLLocationMa
         print(error.localizedDescription)
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])// function returns CLLlocationManager as a parameter, and an Array of CLLocations as its second parameter.
     {
         let location = locations.last
-        // ".last pulls out the last update of your location in the last element of your array.
+        // ".last pulls out the last update of your location in the last element of your array [CLLocations]
         geocoder.reverseGeocodeLocation(location!, completionHandler: {(placemark: [CLPlacemark]?, error: NSError?) -> Void in
+//geocoder is where you take lat & lng and convert it to an actual address, and reverse Geocode is when you get the address and convert it back to lat & lng.
             
             if error != nil
             {
@@ -117,13 +122,11 @@ class ZipcodeViewController: UIViewController, UITextFieldDelegate, CLLocationMa
             else
             {
                 self.locationManager.stopUpdatingLocation()
-                let cityName = placemark?[0].locality
-                let zipCode = placemark?[0].postalCode
-                self.zipcodeTextField.text = zipCode!
+                let city = placemark?[0].locality
                 let lat = location?.coordinate.latitude
                 let lng = location?.coordinate.longitude
-                //let aCity = Location(name: cityName!, zip: zipCode!, lat: lat!, lng: lng!)
-                //self.delegate?.cityWasFound(aCity), cityWasFound is a bens function, you have to put your function there.
+                let aCity = Location(city: city!, lat: lat!, lng: lng!, weather: nil)
+                self.delegate?.locationWasFound(aCity)
             }
         })
     }

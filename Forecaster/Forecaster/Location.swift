@@ -9,7 +9,7 @@
 import Foundation
 
 //NSCoding Constants
-let kCityKey = "city"
+//let kCityKey = "city"
 let kLatitudeKey = "lat"
 let kLongitudeKey = "lng"
 
@@ -64,10 +64,12 @@ class Location: NSObject, NSCoding
     }
     
     //MARK: - NSCoding
-    //Know that "struct" do not work with NSCoding
+    //"Struct" do not work with NSCoding, only Classes
     required convenience init?(coder aDecoder: NSCoder)
     {
-        
+        guard let city = aDecoder.decodeObjectForKey(kCityKey) as? String
+                    else { return nil }
+        self.init(city: city,lat: aDecoder.decodeDoubleForKey(kLatitudeKey), lng: aDecoder.decodeDoubleForKey(kLongitudeKey),weather: nil)
         
     }
     

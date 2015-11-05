@@ -8,9 +8,14 @@
 
 import UIKit
 
+//NSCoding Constants
+let kCityKey = "city"
+
+
 protocol ZipcodeViewControllerDelegate
 {
     func zipWasChosen(x: String)
+    func locationWasFound(aLocation: Location)
 }
 protocol APIControllerDelegate
 {
@@ -35,14 +40,6 @@ class CitiesTableViewController: UITableViewController, UIPopoverPresentationCon
         super.viewDidLoad()
         
         apiController = APIController(delegate: self)
-        
-        
-        
-        
-        
-        
-        
-        
         
         // can't use self except inside a function
         //delegate is no longer empty, it is attached to self, which is this "CitiesTableViewController"
@@ -141,7 +138,7 @@ class CitiesTableViewController: UITableViewController, UIPopoverPresentationCon
             let popoverVC = segue.destinationViewController as! ZipcodeViewController
             popoverVC.popoverPresentationController?.delegate = self
             popoverVC.delegate = self
-            popoverVC.preferredContentSize = CGSizeMake(200.0, 100.0)
+            popoverVC.preferredContentSize = CGSizeMake(200.0, 150.0)
         }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
@@ -154,6 +151,15 @@ class CitiesTableViewController: UITableViewController, UIPopoverPresentationCon
     {
         apiController.useZipForCity(x)
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+    }
+    
+    func locationWasFound(aLocation: Location)
+    {
+        self.locations.append(aLocation)
+        self.tableView.reloadData()
+        
+        let darkSkyAPI = DarkSkyAPIController(delegate: self)
+        darkSkyAPI.useCityForWeather(aLocation)
     }
     
     //MARK: - API Controller Delegate
@@ -201,8 +207,25 @@ class CitiesTableViewController: UITableViewController, UIPopoverPresentationCon
         return UIModalPresentationStyle.None
     }
     
+    //MARK: - Misc.
+    func saveCityData()
+    {
+        let cityData = NSKeyedArchiver.archivedDataWithRootObject(Location)
+        NSUserDefaults.standardUserDefaults().setObject(cityData, forKey: kCityKey)
+    }
     
-    
+    func loadCityData()
+    {
+        if let data = NSUserDefaults.standardUserDefaults().objectForKey(kCityKey) as? NSData
+        {
+            if let savedCity = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [Location]
+            {
+                locations = savedCity
+                tableView.reloadData()
+            }
+        }
+    }
+
     
     
     

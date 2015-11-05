@@ -245,7 +245,7 @@
                     <connections>
                         <outlet property="degreesLabel" destination="p11-jV-L9b" id="APw-IG-xUl"/>
                         <outlet property="imageView" destination="gAh-YT-f3R" id="zPK-gm-vVz"/>
-                        <outlet property="mapView" destination="w0P-qk-l6s" id="I8k-In-c6g"/>
+                        <outlet property="mapView" destination="w0P-qk-l6s" id="h3I-EW-RER"/>
                         <outlet property="temperatureLabel" destination="LCM-M2-mpj" id="ZT8-3I-f5R"/>
                     </connections>
                 </viewController>

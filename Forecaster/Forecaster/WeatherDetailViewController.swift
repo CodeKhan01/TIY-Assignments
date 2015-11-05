@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
 class WeatherDetailViewController: UIViewController
 {
@@ -16,7 +18,8 @@ class WeatherDetailViewController: UIViewController
     
     @IBOutlet weak var degreesLabel: UILabel!
     
-   // @IBOutlet var showMap: MKMapView!
+    @IBOutlet weak var mapView: MKMapView!
+ 
     
     override func viewDidLoad()
     {
@@ -41,5 +44,22 @@ class WeatherDetailViewController: UIViewController
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func geoSearch(city: String)
+    {
+        let geocoder = CLGeocoder()
+       
+        geocoder.geocodeAddressString(city, completionHandler: {(placemarks: [CLPlacemark]?, error: NSError?) -> Void in
+            
+            if let placemark = placemarks?[0]
+            {
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = (placemark.location?.coordinate)!
+                annotation.title = city
+                self.citiesArray.append(annotation)
+                self.mapView.addAnnotations(self.citiesArray)
+    
+    
+    
 
 }

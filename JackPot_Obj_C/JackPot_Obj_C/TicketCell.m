@@ -10,7 +10,9 @@
 
 @implementation TicketCell
 
-- (void)awakeFromNib {
+
+- (void)awakeFromNib
+{
     // Initialization code
 }
 

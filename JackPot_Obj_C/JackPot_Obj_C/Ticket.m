@@ -18,21 +18,20 @@
 - (instancetype)init
 {
     self = [super init];
-    _picks = [[NSArray alloc] init];
+    _picks = [[NSMutableArray alloc] init];
     _winner = NO;
     _payout = @"";
     return self;
 }
 
--(void)createQuickPick
++(instancetype)createQuickPick
 {
-    _winner = NO;
-    _payout = @"";
-    
+    Ticket *aTicket = [[Ticket alloc] init];
     for (int x = 0;x < 6; x++)
     {
-        [self createPick];
+        [aTicket createPick];
     }
+    return aTicket;
 }
 
 -(void)createPick
@@ -40,14 +39,30 @@
     _Bool pickFound;
     
     pickFound = NO;
+    do //may need break function if loop forever
     {
         NSInteger aPick = arc4random_uniform(53) + 1;
         NSNumber *pickAsNumber = [NSNumber numberWithInteger:aPick];
         if (![_picks containsObject:pickAsNumber])
         {
             
+          [_picks addObject: pickAsNumber];
+            pickFound = YES;
         }
-    }
+    } while(!pickFound);
 }
+
+-(NSString*)description
+{
+    NSMutableString *numbers = [[NSMutableString alloc] init];
+    
+    for (NSNumber *pick in _picks)
+    {
+        [numbers appendString:[NSString stringWithFormat:@" %@ ", pick]];
+    }
+    return numbers;
+}
+
+
 
 @end

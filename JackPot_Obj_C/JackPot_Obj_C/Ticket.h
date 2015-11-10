@@ -12,8 +12,8 @@
 
 @property (assign) BOOL winner;
 @property (nonatomic) NSString *payout;
-@property (nonatomic) NSArray *picks;
+@property (nonatomic) NSMutableArray *picks;
 
-
++(instancetype)createQuickPick;
 
 @end

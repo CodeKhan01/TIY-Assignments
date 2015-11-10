@@ -64,9 +64,11 @@
 {
     TicketCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TicketCell" forIndexPath:indexPath];
     
-    // Configure the cell...
-    //NSString *aTicket = tickets[indexPath.row];
     
+    // Configure the cell...
+    
+    NSString *aTicket = tickets[indexPath.row];
+    cell.numbersLabel.text = [aTicket description];
     return cell;
 }
 
@@ -120,5 +122,13 @@
 {
     
 }
+
+- (IBAction)createTicket:(id)sender
+{
+    Ticket *aTicket = [Ticket createQuickPick];
+    [tickets addObject:aTicket];
+    [self.tableView reloadData];
+}
+
 
 @end

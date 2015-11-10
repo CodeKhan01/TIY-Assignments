@@ -10,4 +10,8 @@
 
 @interface TicketCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *payoutLabel;
+@property (weak, nonatomic) IBOutlet UILabel *numbersLabel;
+
+
 @end

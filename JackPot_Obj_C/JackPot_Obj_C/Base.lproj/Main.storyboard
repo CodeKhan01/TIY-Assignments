@@ -16,7 +16,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TicketCell" id="AJm-eF-xjX">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TicketCell" id="AJm-eF-xjX" customClass="TicketCell">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AJm-eF-xjX" id="iaC-SL-lib">
@@ -47,6 +47,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="numbersLabel" destination="25a-1G-KNb" id="aet-3j-PcC"/>
+                                    <outlet property="payoutLabel" destination="DeI-lB-wcm" id="YZi-Vp-yz9"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -58,7 +62,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Check Ticket" id="8e8-Qr-UCz"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="VLE-ss-oX2">
                             <connections>
-                                <segue destination="osu-4b-LjL" kind="presentation" id="dPK-mY-oBw"/>
+                                <action selector="createTicket:" destination="cJw-qs-zMu" id="MoO-7V-pQZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

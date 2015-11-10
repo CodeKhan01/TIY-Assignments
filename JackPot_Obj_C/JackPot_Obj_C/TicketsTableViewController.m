@@ -7,15 +7,30 @@
 //
 
 #import "TicketsTableViewController.h"
+#import "Ticket.h"
+#import "TicketCell.h"
 
-@interface TicketsTableViewController ()
+@interface TicketsTableViewController () 
+{
+    NSMutableArray *tickets;
+}
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addButton;
+
+
+
 
 @end
 
 @implementation TicketsTableViewController
 
-- (void)viewDidLoad {
+
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
+    tickets = [[NSMutableArray alloc]init];
+    //[self loadtickets];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -24,32 +39,37 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return tickets.count;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    TicketCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TicketCell" forIndexPath:indexPath];
     
     // Configure the cell...
+    //NSString *aTicket = tickets[indexPath.row];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -94,5 +114,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark - Winning Ticket Delegate
+
+-(void)winningTicketWasAdded:(Ticket *)ticket;
+{
+    
+}
 
 @end

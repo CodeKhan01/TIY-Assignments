@@ -10,4 +10,10 @@
 
 @interface Ticket : NSObject
 
+@property (assign) BOOL winner;
+@property (nonatomic) NSString *payout;
+@property (nonatomic) NSArray *picks;
+
+
+
 @end

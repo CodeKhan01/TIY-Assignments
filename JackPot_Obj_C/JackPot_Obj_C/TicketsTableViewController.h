@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TicketsTableViewController : UITableViewController
+@protocol WinningTicketProtocol
+
+//-(void)winningTicketWasAdded:(Ticket *)ticket;
+
+@end
+
+
+
+
+@interface TicketsTableViewController : UITableViewController <WinningTicketProtocol>
 
 @end

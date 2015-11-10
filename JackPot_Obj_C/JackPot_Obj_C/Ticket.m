@@ -10,6 +10,7 @@
 
 @interface Ticket ()
 
++(instancetype)compareWithTicket:(NSMutableArray*) anotherTicket;
 
 @end
 
@@ -63,6 +64,24 @@
     return numbers;
 }
 
+-(NSMutableArray*)PickArray
+{
+    NSMutableArray *picksArray;
+    
+    for (NSNumber *pick in _picks)
+    {
+        [picksArray addObject:[NSNumber numberWithInt:pick]];
+    }
+    return picksArray;
+}
+
++(instancetype)compareWithTicket:(NSMutableArray*) anotherTicket
+{
+    NSMutableArray *anotherTicketPicks =[anotherTicket ];
+    int matchCount = 0;
+    
+    for aPossiblePick in
+}
 
 
 @end

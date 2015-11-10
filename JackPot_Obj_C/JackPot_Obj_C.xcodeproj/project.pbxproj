@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		B7FF214D1BF265A80090FF22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FF214C1BF265A80090FF22 /* main.m */; };
 		B7FF21501BF265A80090FF22 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FF214F1BF265A80090FF22 /* AppDelegate.m */; };
-		B7FF21531BF265A80090FF22 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FF21521BF265A80090FF22 /* ViewController.m */; };
 		B7FF21561BF265A80090FF22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7FF21541BF265A80090FF22 /* Main.storyboard */; };
 		B7FF21581BF265A80090FF22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7FF21571BF265A80090FF22 /* Assets.xcassets */; };
 		B7FF215B1BF265A80090FF22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7FF21591BF265A80090FF22 /* LaunchScreen.storyboard */; };
+		B7FF21641BF266A40090FF22 /* TicketsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FF21631BF266A40090FF22 /* TicketsTableViewController.m */; };
+		B7FF21671BF266E40090FF22 /* WinningTicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FF21661BF266E40090FF22 /* WinningTicketViewController.m */; };
+		B7FF216A1BF267600090FF22 /* TicketCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FF21691BF267600090FF22 /* TicketCell.m */; };
+		B7FF21701BF268860090FF22 /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FF216F1BF268860090FF22 /* Ticket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +23,18 @@
 		B7FF214C1BF265A80090FF22 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B7FF214E1BF265A80090FF22 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B7FF214F1BF265A80090FF22 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B7FF21511BF265A80090FF22 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B7FF21521BF265A80090FF22 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B7FF21551BF265A80090FF22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7FF21571BF265A80090FF22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7FF215A1BF265A80090FF22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7FF215C1BF265A80090FF22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7FF21621BF266A40090FF22 /* TicketsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketsTableViewController.h; sourceTree = "<group>"; };
+		B7FF21631BF266A40090FF22 /* TicketsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketsTableViewController.m; sourceTree = "<group>"; };
+		B7FF21651BF266E40090FF22 /* WinningTicketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinningTicketViewController.h; sourceTree = "<group>"; };
+		B7FF21661BF266E40090FF22 /* WinningTicketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinningTicketViewController.m; sourceTree = "<group>"; };
+		B7FF21681BF267600090FF22 /* TicketCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketCell.h; sourceTree = "<group>"; };
+		B7FF21691BF267600090FF22 /* TicketCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketCell.m; sourceTree = "<group>"; };
+		B7FF216E1BF268860090FF22 /* Ticket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
+		B7FF216F1BF268860090FF22 /* Ticket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +69,14 @@
 			children = (
 				B7FF214E1BF265A80090FF22 /* AppDelegate.h */,
 				B7FF214F1BF265A80090FF22 /* AppDelegate.m */,
-				B7FF21511BF265A80090FF22 /* ViewController.h */,
-				B7FF21521BF265A80090FF22 /* ViewController.m */,
+				B7FF21621BF266A40090FF22 /* TicketsTableViewController.h */,
+				B7FF21631BF266A40090FF22 /* TicketsTableViewController.m */,
+				B7FF21651BF266E40090FF22 /* WinningTicketViewController.h */,
+				B7FF21661BF266E40090FF22 /* WinningTicketViewController.m */,
+				B7FF21681BF267600090FF22 /* TicketCell.h */,
+				B7FF21691BF267600090FF22 /* TicketCell.m */,
+				B7FF216E1BF268860090FF22 /* Ticket.h */,
+				B7FF216F1BF268860090FF22 /* Ticket.m */,
 				B7FF21541BF265A80090FF22 /* Main.storyboard */,
 				B7FF21571BF265A80090FF22 /* Assets.xcassets */,
 				B7FF21591BF265A80090FF22 /* LaunchScreen.storyboard */,
@@ -150,9 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7FF21531BF265A80090FF22 /* ViewController.m in Sources */,
 				B7FF21501BF265A80090FF22 /* AppDelegate.m in Sources */,
+				B7FF21671BF266E40090FF22 /* WinningTicketViewController.m in Sources */,
+				B7FF216A1BF267600090FF22 /* TicketCell.m in Sources */,
 				B7FF214D1BF265A80090FF22 /* main.m in Sources */,
+				B7FF21641BF266A40090FF22 /* TicketsTableViewController.m in Sources */,
+				B7FF21701BF268860090FF22 /* Ticket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

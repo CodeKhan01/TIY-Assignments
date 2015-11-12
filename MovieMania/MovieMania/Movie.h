@@ -10,4 +10,12 @@
 
 @interface Movie : NSObject
 
+@property (nonatomic) NSString *title;
+@property (nonatomic) NSString *year;
+@property (nonatomic) NSString *director;
+@property (nonatomic) NSString *runtime;
+@property (nonatomic) NSString *genre;
+@property (nonatomic) NSString *poster;
+@property (nonatomic) NSString *imdbRating;
+
 @end

@@ -10,17 +10,21 @@
 
 @implementation Movie
 
-NSString *title;
-NSString *year;
-NSString *director;
-NSString *runtime;
-NSString *genre;
-NSString *poster;
-NSString *imdbRating;
 
 -(id)init:(NSString *)title :(NSString *)year :(NSString *)director :(NSString *)runtime :(NSString *)genre :(NSString *)poster :(NSString *)imdbRating
 {
-    
+    self = [super init];
+    if (self)
+    {
+        _title = [[NSString alloc] initWithString:title];
+        _director = [[NSString alloc] initWithString:director];
+        _year = [[NSString alloc]initWithString:year];
+        _runtime = [[NSString alloc]initWithString:runtime];
+        _genre = [[NSString alloc]initWithString:genre];
+        _poster = [[NSString alloc]initWithString:poster];
+        _imdbRating = [[NSString alloc]initWithString:imdbRating];
+    }
+    return self;
 }
 
 

@@ -41,6 +41,9 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,23 +55,29 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return _moviesArray.count;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MoviesCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MoviesCell" forIndexPath:indexPath];
     
     // Configure the cell...
+    cell.textLabel.text = _moviesArray[indexPath.row];
     
     return cell;
 }
-*/
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -113,5 +122,36 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark - Search Bar Methods
+-(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    
+}
+
+-(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    
+}
+
+-(void)searchBarBookmarkButtonClicked:(UISearchBar *)searchBar
+{
+    
+}
+
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    
+}
+
+-(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
+{
+    
+}
+
+-(void)updateSearchResultsForSearchController:(UISearchController *)searchController
+{
+    
+}
+
 
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B79FF0291BF52606005D5713 /* MoviesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B79FF0281BF52606005D5713 /* MoviesCell.m */; };
+		B79FF02C1BF529D7005D5713 /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B79FF02B1BF529D7005D5713 /* SearchTableViewController.m */; };
 		B7FAE13F1BF51B4C00E99DC6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FAE13E1BF51B4C00E99DC6 /* main.m */; };
 		B7FAE1421BF51B4C00E99DC6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FAE1411BF51B4C00E99DC6 /* AppDelegate.m */; };
 		B7FAE14A1BF51B4C00E99DC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7FAE1491BF51B4C00E99DC6 /* Assets.xcassets */; };
@@ -15,6 +17,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B79FF0271BF52606005D5713 /* MoviesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesCell.h; sourceTree = "<group>"; };
+		B79FF0281BF52606005D5713 /* MoviesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesCell.m; sourceTree = "<group>"; };
+		B79FF02A1BF529D7005D5713 /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
+		B79FF02B1BF529D7005D5713 /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
 		B7FAE13A1BF51B4C00E99DC6 /* MovieMania.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieMania.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FAE13E1BF51B4C00E99DC6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B7FAE1401BF51B4C00E99DC6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,6 +66,10 @@
 				B7FAE1411BF51B4C00E99DC6 /* AppDelegate.m */,
 				B7FAE1541BF51BBB00E99DC6 /* MovieManiaTableViewController.h */,
 				B7FAE1551BF51BBB00E99DC6 /* MovieManiaTableViewController.m */,
+				B79FF0271BF52606005D5713 /* MoviesCell.h */,
+				B79FF0281BF52606005D5713 /* MoviesCell.m */,
+				B79FF02A1BF529D7005D5713 /* SearchTableViewController.h */,
+				B79FF02B1BF529D7005D5713 /* SearchTableViewController.m */,
 				B7FAE1491BF51B4C00E99DC6 /* Assets.xcassets */,
 				B7FAE14B1BF51B4C00E99DC6 /* LaunchScreen.storyboard */,
 				B7FAE14E1BF51B4C00E99DC6 /* Info.plist */,
@@ -148,6 +158,8 @@
 			files = (
 				B7FAE1421BF51B4C00E99DC6 /* AppDelegate.m in Sources */,
 				B7FAE1561BF51BBB00E99DC6 /* MovieManiaTableViewController.m in Sources */,
+				B79FF0291BF52606005D5713 /* MoviesCell.m in Sources */,
+				B79FF02C1BF529D7005D5713 /* SearchTableViewController.m in Sources */,
 				B7FAE13F1BF51B4C00E99DC6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +299,7 @@
 				B7FAE1531BF51B4C00E99DC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

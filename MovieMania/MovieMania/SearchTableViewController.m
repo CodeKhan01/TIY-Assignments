@@ -1,70 +1,74 @@
 //
-//  MovieManiaTableViewController.m
+//  SearchTableViewController.m
 //  MovieMania
 //
 //  Created by Isaiah Khan on 11/12/15.
 //  Copyright © 2015 The Iron Yard. All rights reserved.
 //
 
-#import "MovieManiaTableViewController.h"
+#import "SearchTableViewController.h"
 #import "MoviesCell.h"
 
-@interface MovieManiaTableViewController ()
+@interface SearchTableViewController ()<UISearchBarDelegate,UISearchDisplayDelegate,UISearchResultsUpdating>
 
 @end
 
-@implementation MovieManiaTableViewController
+@implementation SearchTableViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.title = @"Movie Mania";
+    self.title = @"Search Movie";
     
-    _moviesArray = [[NSMutableArray alloc]init];
-    _moviesRegisterArray = [[NSMutableArray alloc] init];
-    _rightAddButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd  target:self action:@selector(addButtonActionTapped:)];
-    _moviesForSearch = [NSString stringWithFormat:@""];
+    _moviesArray = [[NSMutableArray alloc] init];
+    _shouldShowSearchResults = NO;
+    _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     
-    //[self.navigationItem setRightBarButtonItems:@[_rightAddButton] animated:YES];
-
-    
-     self.navigationItem.rightBarButtonItem = _rightAddButton;
     [self.tableView registerClass:MoviesCell.self forCellReuseIdentifier:@"MoviesCell"];
     
     
-    //test
-    [_moviesArray addObject:@"hola mundo"];
+    _searchController.searchResultsUpdater = self;
+    _searchController.dimsBackgroundDuringPresentation = NO;
+    _searchController.hidesNavigationBarDuringPresentation = NO;
+    _searchController.searchBar.delegate = self;
+    [_searchController.searchBar sizeToFit];
+    [self.tableView.tableHeaderView copy:_searchController.searchBar];
+    
+    
+    //[_searchController.searchResultsUpdater self];
+    
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+#warning Incomplete implementation, return the number of sections
+    return 0;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-
-    return _moviesArray.count;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#warning Incomplete implementation, return the number of rows
+    return 0;
 }
 
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MoviesCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MoviesCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = _moviesArray[indexPath.row];
+    
     return cell;
 }
-
+*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -109,11 +113,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-#pragma mark - Handle Actions
--(void)addButtonActionTapped:(UIButton *)sender
-{
-    
-}
 
 @end

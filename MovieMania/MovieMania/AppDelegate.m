@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MovieManiaTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -15,8 +16,20 @@
 @implementation AppDelegate
 
 
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    UINavigationController *navController = [[UINavigationController alloc] init];
+    
+    MovieManiaTableViewController *moviesTVC = [[MovieManiaTableViewController alloc] init];
+    navController.viewControllers = @[moviesTVC];
+    
+    self.window.rootViewController = navController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

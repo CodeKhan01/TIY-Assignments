@@ -224,7 +224,9 @@
     {
         NSLog(@"Download successful");
         //_moviesArray = [[NSJSONSerialization JSONObjectWithData:_receivedData options:0 error:nil] mutableCopy];
+        
         NSDictionary * aDictionary = [[NSJSONSerialization JSONObjectWithData:_receivedData options:0 error:nil] mutableCopy];
+        
         //be very carefull with the object returned from here because isn't mutable, so you have create a mutable copy of that object if you want do any operation in your class with that object.
         
         

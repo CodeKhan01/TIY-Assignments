@@ -8,6 +8,8 @@
 
 #import "MovieManiaTableViewController.h"
 #import "MoviesCell.h"
+#import "SearchTableViewController.h"
+
 
 @interface MovieManiaTableViewController ()
 
@@ -113,7 +115,18 @@
 #pragma mark - Handle Actions
 -(void)addButtonActionTapped:(UIButton *)sender
 {
+    SearchTableViewController *searchTableVC = [[SearchTableViewController alloc]init];
+    UINavigationController *navigationConroller = [[UINavigationController alloc]initWithRootViewController:searchTableVC];
+    searchTableVC.delegator = self;
+    [self presentViewController:navigationConroller animated:YES completion:nil];
     
 }
+
+#pragma mark - Search Table Protocol
+-(void)movieWasFound:(Movie *)aMovie
+{
+    
+}
+
 
 @end

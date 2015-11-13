@@ -23,25 +23,20 @@
     _shouldShowSearchResults = NO;
     _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     
+    
     [self.tableView registerClass:MoviesCell.self forCellReuseIdentifier:@"MoviesCell"];
     
-    
+    //Customize the view controller bar
     _searchController.searchResultsUpdater = self;
     _searchController.dimsBackgroundDuringPresentation = NO;
     _searchController.hidesNavigationBarDuringPresentation = NO;
     _searchController.searchBar.delegate = self;
     [_searchController.searchBar sizeToFit];
-    [self.tableView.tableHeaderView copy:_searchController.searchBar];
+    self.tableView.tableHeaderView = _searchController.searchBar;
     
     
     //[_searchController.searchResultsUpdater self];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
+   
     self.view.backgroundColor = [UIColor whiteColor];
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
@@ -55,13 +50,14 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     return _moviesArray.count;
 }
 
@@ -69,17 +65,20 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MoviesCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MoviesCell" forIndexPath:indexPath];
-    
+
     // Configure the cell...
-    cell.textLabel.text = _moviesArray[indexPath.row];
+        cell.textLabel.text = [_moviesArray[indexPath.row] title];
+
+    
+
     
     return cell;
 }
 
--(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-}
+//-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    
+//}
 
 /*
 // Override to support conditional editing of the table view.
@@ -127,32 +126,52 @@
 #pragma mark - Search Bar Methods
 -(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
 {
-    
+    _shouldShowSearchResults = YES;
+    [self.tableView reloadData];
 }
 
 -(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
 {
+    _shouldShowSearchResults = YES;
+ 
+    [self.moviesArray removeAllObjects];
+    [self.tableView reloadData];
+
+    
+    [self dismissViewControllerAnimated:true completion:nil];
     
 }
 
--(void)searchBarBookmarkButtonClicked:(UISearchBar *)searchBar
-{
-    
-}
+//-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+//{
+//    if (!_shouldShowSearchResults)
+//    {
+//        _shouldShowSearchResults = YES;
+//        [self omdbAPIRequest:searchBar.text];
+//        [self.tableView reloadData];
+//        
+//    }
+//    [_searchController.searchBar resignFirstResponder];
+//}
 
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
-    
+    _shouldShowSearchResults = NO;
+    [self.moviesArray removeAllObjects];
+    [self.tableView reloadData];
 }
 
 -(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
 {
-    
+    _shouldShowSearchResults = YES;
+    [self.moviesArray removeAllObjects];
+    [self omdbAPIRequest:searchBar.text];
+    [self.tableView reloadData];
 }
 
 -(void)updateSearchResultsForSearchController:(UISearchController *)searchController
 {
-    
+    [self.tableView reloadData];
 }
 
 
@@ -165,7 +184,7 @@
     NSString * searchTermProcesed = [searchTerm stringByReplacingOccurrencesOfString:@" " withString: @"+"];
 
     
-    NSString *urlString = [NSString stringWithFormat:@"http://www.omdbapi.com/?t=%@",searchTermProcesed];
+    NSString *urlString = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@",searchTermProcesed];
     NSURL *url = [NSURL URLWithString:urlString];
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -198,7 +217,22 @@
     if (!error)
     {
         NSLog(@"Download successful");
-        _repos = [NSJSONSerialization JSONObjectWithData:_receivedData options:0 error:nil];
+        //_moviesArray = [[NSJSONSerialization JSONObjectWithData:_receivedData options:0 error:nil] mutableCopy];
+        NSDictionary * aDictionary = [[NSJSONSerialization JSONObjectWithData:_receivedData options:0 error:nil] mutableCopy];
+        //be very carefull with the object returned from here because isn't mutable, so you have create a mutable copy of that object if you want do any operation in your class with that object.
+        
+        
+        
+        Movie * newMovie = [[Movie alloc] init:aDictionary];
+        
+        [_moviesArray addObject:newMovie];
+              
+
+        
+       // cell.imageView.image = image;
+        
+        
+        NSLog(@"the information from omdb: %@", _moviesArray);
         [self.tableView reloadData];
     }
 }

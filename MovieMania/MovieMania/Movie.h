@@ -18,4 +18,6 @@
 @property (nonatomic) NSString *poster;
 @property (nonatomic) NSString *imdbRating;
 
+-(id)init:(NSDictionary *)movieDictionary;
+
 @end

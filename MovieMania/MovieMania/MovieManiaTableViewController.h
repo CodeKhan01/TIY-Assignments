@@ -7,6 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Movie.h"
+
+@protocol SearchTableViewProtocol <NSObject>
+
+-(void)movieWasFound:(Movie *)aMovie;
+
+
+@end
 
 @interface MovieManiaTableViewController : UITableViewController
 

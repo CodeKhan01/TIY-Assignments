@@ -11,18 +11,18 @@
 @implementation Movie
 
 
--(id)init:(NSString *)title :(NSString *)year :(NSString *)director :(NSString *)runtime :(NSString *)genre :(NSString *)poster :(NSString *)imdbRating
+-(id)init:(NSDictionary *)movieDictionary
 {
     self = [super init];
     if (self)
     {
-        _title = [[NSString alloc] initWithString:title];
-        _director = [[NSString alloc] initWithString:director];
-        _year = [[NSString alloc]initWithString:year];
-        _runtime = [[NSString alloc]initWithString:runtime];
-        _genre = [[NSString alloc]initWithString:genre];
-        _poster = [[NSString alloc]initWithString:poster];
-        _imdbRating = [[NSString alloc]initWithString:imdbRating];
+        _title = [[NSString alloc] initWithFormat:@"%@",movieDictionary[@"Title"]];
+        _director = [[NSString alloc] initWithFormat:@"%@",movieDictionary[@"Director"]];
+        _year = [[NSString alloc]initWithFormat:@"%@",movieDictionary[@"Year"]];
+        _runtime = [[NSString alloc]initWithFormat:@"%@",movieDictionary[@"Runtime"]];
+        _genre = [[NSString alloc]initWithFormat:@"%@",movieDictionary[@"Genre"]];
+        _poster = [[NSString alloc]initWithFormat:@"%@",movieDictionary[@"Poster"]];
+        _imdbRating = [[NSString alloc]initWithFormat:@"%@",movieDictionary[@"imdbRating"]];
     }
     return self;
 }

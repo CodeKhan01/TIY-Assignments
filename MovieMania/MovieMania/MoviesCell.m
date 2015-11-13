@@ -20,5 +20,9 @@
     // Configure the view for the selected state
 }
 
+-(void)loadImage:(NSString *)ImagePath
+{
+    
+}
 
 @end

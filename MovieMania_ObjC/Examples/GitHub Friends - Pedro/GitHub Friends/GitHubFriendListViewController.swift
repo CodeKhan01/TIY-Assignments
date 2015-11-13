@@ -37,6 +37,7 @@ class GitHubFriendListViewController: UITableViewController, APIControllerProtoc
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         
         rigthAddButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addButtonActionTapped:")
+        
          self.navigationItem.setRightBarButtonItems([rigthAddButtonItem], animated: true)
         
         self.tableView.registerClass(GitHubFriendCell.self, forCellReuseIdentifier: "GitHubFriendCell")

@@ -14,8 +14,8 @@ class SearchTableViewController: UITableViewController, APIControllerProtocol, U
     var gitHubFriends = Array<GitHubFriend>()
     var apiSearch: APIController!
     var delegator:SearchTableViewProtocol!
-    var cancelSearch = true
-    var filteredTableData = [String]()
+    //var cancelSearch = true
+    //var filteredTableData = [String]()
     var shouldShowSearchResults = false
     var searchController = UISearchController(searchResultsController: nil)
 

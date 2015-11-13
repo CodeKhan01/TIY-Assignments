@@ -16,6 +16,9 @@
 @property (nonatomic) BOOL shouldShowSearchResults;
 @property (nonatomic) UISearchController *searchController;
 
+@property (nonatomic)  NSArray * repos;
+@property (nonatomic)  NSMutableData *receivedData;
 
+@property (nonatomic)  UITableView *theTableView;
 
 @end

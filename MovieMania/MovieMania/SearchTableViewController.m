@@ -9,7 +9,7 @@
 #import "SearchTableViewController.h"
 #import "MoviesCell.h"
 
-@interface SearchTableViewController ()<UISearchBarDelegate,UISearchDisplayDelegate,UISearchResultsUpdating>
+@interface SearchTableViewController ()<UISearchBarDelegate,UISearchDisplayDelegate,UISearchResultsUpdating,UITableViewDataSource, NSURLSessionDataDelegate>
 
 @end
 
@@ -41,6 +41,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.view.backgroundColor = [UIColor whiteColor];
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     [self.tableView reloadData];
@@ -152,6 +154,55 @@
 {
     
 }
+
+
+#pragma mark - NSURLSessionData delegate
+
+
+-(void) omdbAPIRequest:(NSString * )searchTerm
+{
+    
+    NSString * searchTermProcesed = [searchTerm stringByReplacingOccurrencesOfString:@" " withString: @"+"];
+
+    
+    NSString *urlString = [NSString stringWithFormat:@"http://www.omdbapi.com/?t=%@",searchTermProcesed];
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+    
+    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url];
+    
+    [dataTask resume];
+}
+
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler
+{
+    completionHandler(NSURLSessionResponseAllow);
+}
+
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
+{
+    if (!_receivedData)
+    {
+        _receivedData = [[NSMutableData alloc] initWithData:data];
+    }
+    else
+    {
+        [_receivedData appendData:data];
+    }
+}
+
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
+{
+    if (!error)
+    {
+        NSLog(@"Download successful");
+        _repos = [NSJSONSerialization JSONObjectWithData:_receivedData options:0 error:nil];
+        [self.tableView reloadData];
+    }
+}
+
 
 
 @end

@@ -61,13 +61,19 @@
     return _moviesArray.count;
 }
 
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 150;
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MoviesCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MoviesCell" forIndexPath:indexPath];
 
     // Configure the cell...
-        cell.textLabel.text = [_moviesArray[indexPath.row] title];
+    cell.textLabel.text = [_moviesArray[indexPath.row] title];
+    [cell loadImage:[_moviesArray[indexPath.row] poster]];
 
     
 
@@ -75,10 +81,10 @@
     return cell;
 }
 
-//-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    
-//}
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.delegator movieWasFound:_moviesArray[indexPath.row]];
+}
 
 /*
 // Override to support conditional editing of the table view.

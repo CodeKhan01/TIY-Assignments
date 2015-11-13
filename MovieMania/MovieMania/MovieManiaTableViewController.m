@@ -36,7 +36,7 @@
     
     
     //test
-    [_moviesArray addObject:@"hola mundo"];
+    //[_moviesArray addObject:@"hola mundo"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,12 +58,19 @@
     return _moviesArray.count;
 }
 
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100;
+}
+
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MoviesCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MoviesCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = _moviesArray[indexPath.row];
+    cell.textLabel.text = [_moviesArray[indexPath.row] title];
+    [cell loadImage:[_moviesArray[indexPath.row] poster]];
     return cell;
 }
 
@@ -125,7 +132,9 @@
 #pragma mark - Search Table Protocol
 -(void)movieWasFound:(Movie *)aMovie
 {
-    
+    [_moviesArray addObject:aMovie];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.tableView reloadData];
 }
 
 

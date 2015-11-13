@@ -11,5 +11,6 @@
 @interface MoviesCell : UITableViewCell
 
 
+-(void)loadImage:(NSString *)ImagePath;
 
 @end

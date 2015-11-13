@@ -22,6 +22,23 @@
 
 -(void)loadImage:(NSString *)ImagePath
 {
+    NSString *defaultImagePath = [[NSString alloc ] initWithFormat: @"gravatar.png"];
+    
+    if ([ImagePath  isEqual: @""] || [ImagePath  isEqual: @"N/A"] )
+    {
+        [ImagePath copy:defaultImagePath];
+    }
+    
+    NSURL *posterURL = [NSURL URLWithString:ImagePath];
+    
+    NSData *imageData = [NSData dataWithContentsOfURL:posterURL];
+    
+    UIImage *image = [UIImage imageWithData:imageData];
+    
+    self.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    
+    //self.imageView.image = image;
+    [self.imageView setImage: image];
     
 }
 

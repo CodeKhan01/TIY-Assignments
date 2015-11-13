@@ -22,23 +22,38 @@
 
 -(void)loadImage:(NSString *)ImagePath
 {
-    NSString *defaultImagePath = [[NSString alloc ] initWithFormat: @"gravatar.png"];
+    NSString *defaultImagePath = @"gravatar.png";
+    NSString *path;
     
     if ([ImagePath  isEqual: @""] || [ImagePath  isEqual: @"N/A"] )
     {
-        [ImagePath copy:defaultImagePath];
+        path = defaultImagePath;
+        
+        UIImage *image = [UIImage imageNamed:path];
+        
+        self.imageView.contentMode = UIViewContentModeScaleAspectFill;
+
+        [self.imageView setImage: image];
+    }
+    else
+    {
+        path = ImagePath;
+        
+        NSURL *posterURL = [NSURL URLWithString:path];
+        
+        NSData *imageData = [NSData dataWithContentsOfURL:posterURL];
+        
+        UIImage *image = [UIImage imageWithData:imageData];
+        
+        self.imageView.contentMode = UIViewContentModeScaleAspectFill;
+
+        [self.imageView setImage: image];
     }
     
-    NSURL *posterURL = [NSURL URLWithString:ImagePath];
     
-    NSData *imageData = [NSData dataWithContentsOfURL:posterURL];
-    
-    UIImage *image = [UIImage imageWithData:imageData];
-    
-    self.imageView.contentMode = UIViewContentModeScaleAspectFill;
     
     //self.imageView.image = image;
-    [self.imageView setImage: image];
+    
     
 }
 

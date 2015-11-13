@@ -226,22 +226,24 @@
         //_moviesArray = [[NSJSONSerialization JSONObjectWithData:_receivedData options:0 error:nil] mutableCopy];
         
         NSDictionary * aDictionary = [[NSJSONSerialization JSONObjectWithData:_receivedData options:0 error:nil] mutableCopy];
-        
         //be very carefull with the object returned from here because isn't mutable, so you have create a mutable copy of that object if you want do any operation in your class with that object.
-        
-        
-        
-        Movie * newMovie = [[Movie alloc] init:aDictionary];
-        
-        [_moviesArray addObject:newMovie];
-              
+        NSLog(@"the information from aDict: %@", aDictionary);
+
+        if ([aDictionary[@"Response"] isEqualToString:@"True"])
+        {
+            Movie * newMovie = [[Movie alloc] init:aDictionary];
+            [_moviesArray addObject:newMovie];
+            [self.tableView reloadData];
+        }
+        _receivedData = nil;
 
         
-       // cell.imageView.image = image;
         
+        
+      
         
         NSLog(@"the information from omdb: %@", _moviesArray);
-        [self.tableView reloadData];
+        
     }
 }
 

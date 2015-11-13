@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Movie.h"
+#import "MoviesCell.h"
 
 @interface DetailTableViewController : UITableViewController
+
+@property (nonatomic) Movie *movie;
 
 @end

@@ -10,7 +10,8 @@
 
 @implementation MoviesCell
 
-- (void)awakeFromNib {
+- (void)awakeFromNib
+{
     // Initialization code
 }
 
@@ -56,5 +57,7 @@
     
     
 }
+
+-(void)
 
 @end

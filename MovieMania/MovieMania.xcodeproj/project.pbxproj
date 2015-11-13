@@ -80,13 +80,13 @@
 				B79FF02B1BF529D7005D5713 /* SearchTableViewController.m */,
 				B79FF02D1BF53902005D5713 /* Movie.h */,
 				B79FF02E1BF53902005D5713 /* Movie.m */,
+				B7CE2A401BF67D2C006B7455 /* DetailTableViewController.h */,
+				B7CE2A411BF67D2C006B7455 /* DetailTableViewController.m */,
 				B7CE2A3E1BF6529B006B7455 /* gravatar.png */,
 				B7FAE1491BF51B4C00E99DC6 /* Assets.xcassets */,
 				B7FAE14B1BF51B4C00E99DC6 /* LaunchScreen.storyboard */,
 				B7FAE14E1BF51B4C00E99DC6 /* Info.plist */,
 				B7FAE13D1BF51B4C00E99DC6 /* Supporting Files */,
-				B7CE2A401BF67D2C006B7455 /* DetailTableViewController.h */,
-				B7CE2A411BF67D2C006B7455 /* DetailTableViewController.m */,
 			);
 			path = MovieMania;
 			sourceTree = "<group>";

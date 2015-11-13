@@ -9,6 +9,7 @@
 #import "MovieManiaTableViewController.h"
 #import "MoviesCell.h"
 #import "SearchTableViewController.h"
+#import "DetailTableViewController.h"
 
 
 @interface MovieManiaTableViewController ()
@@ -72,6 +73,16 @@
     cell.textLabel.text = [_moviesArray[indexPath.row] title];
     [cell loadImage:[_moviesArray[indexPath.row] poster]];
     return cell;
+}
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DetailTableViewController *detailTableVC = [[DetailTableViewController alloc]init];
+    
+    detailTableVC.movie = _moviesArray[indexPath.row];
+    
+    [self.navigationController pushViewController:detailTableVC animated:YES];
+    
 }
 
 

@@ -181,17 +181,44 @@
 }
 
 
-#pragma mark - NSURLSessionData delegate
-
+#pragma mark - Request to OMDB API
 
 -(void) omdbAPIRequest:(NSString * )searchTerm
 {
     
-    NSString * searchTermProcesed = [searchTerm stringByReplacingOccurrencesOfString:@" " withString: @"+"];
+     NSString * searchTermProcesed = [searchTerm stringByReplacingOccurrencesOfString:@" " withString: @"+"];
 
+    [self search:searchTermProcesed]; // normal
+    [self searchByType:searchTermProcesed]; // by type
     
-    NSString *urlString = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@",searchTermProcesed];
-    NSURL *url = [NSURL URLWithString:urlString];
+}
+
+-(void) search:(NSString * )searchTerm
+{
+   
+    NSString *urlString = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@",searchTerm ];
+    [self requestAPI:urlString];
+}
+
+-(void) searchByType:(NSString * )searchTerm
+{
+    
+    NSString *urlStringMovie = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@",searchTerm,@"&type=movie"];
+    [self requestAPI:urlStringMovie];
+    
+    NSString *urlStringSeries = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@",searchTerm,@"&type=series"];
+    [self requestAPI:urlStringSeries];
+    
+    NSString *urlStringEpisode = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@",searchTerm,@"&type=episode"];
+    [self requestAPI:urlStringEpisode];
+}
+
+#pragma mark - NSURLSessionData delegate
+
+-(void) requestAPI:(NSString * )searchTerm
+{
+    
+    NSURL *url = [NSURL URLWithString:searchTerm];
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:[NSOperationQueue mainQueue]];
@@ -199,6 +226,7 @@
     NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url];
     
     [dataTask resume];
+
 }
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler
@@ -237,9 +265,6 @@
         }
         _receivedData = nil;
 
-        
-        
-        
       
         
         NSLog(@"the information from omdb: %@", _moviesArray);

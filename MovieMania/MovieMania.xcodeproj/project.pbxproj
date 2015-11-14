@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68F805781BF7C786004351A8 /* gravatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68F805771BF7C785004351A8 /* gravatar.jpg */; settings = {ASSET_TAGS = (); }; };
 		B79FF0291BF52606005D5713 /* MoviesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B79FF0281BF52606005D5713 /* MoviesCell.m */; };
 		B79FF02C1BF529D7005D5713 /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B79FF02B1BF529D7005D5713 /* SearchTableViewController.m */; };
 		B79FF02F1BF53902005D5713 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = B79FF02E1BF53902005D5713 /* Movie.m */; };
-		B7CE2A3F1BF6529B006B7455 /* gravatar.png in Resources */ = {isa = PBXBuildFile; fileRef = B7CE2A3E1BF6529B006B7455 /* gravatar.png */; };
 		B7CE2A421BF67D2C006B7455 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CE2A411BF67D2C006B7455 /* DetailTableViewController.m */; };
 		B7FAE13F1BF51B4C00E99DC6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FAE13E1BF51B4C00E99DC6 /* main.m */; };
 		B7FAE1421BF51B4C00E99DC6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FAE1411BF51B4C00E99DC6 /* AppDelegate.m */; };
@@ -20,13 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68F805771BF7C785004351A8 /* gravatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gravatar.jpg; sourceTree = "<group>"; };
 		B79FF0271BF52606005D5713 /* MoviesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesCell.h; sourceTree = "<group>"; };
 		B79FF0281BF52606005D5713 /* MoviesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesCell.m; sourceTree = "<group>"; };
 		B79FF02A1BF529D7005D5713 /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
 		B79FF02B1BF529D7005D5713 /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
 		B79FF02D1BF53902005D5713 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
 		B79FF02E1BF53902005D5713 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
-		B7CE2A3E1BF6529B006B7455 /* gravatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gravatar.png; sourceTree = "<group>"; };
 		B7CE2A401BF67D2C006B7455 /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
 		B7CE2A411BF67D2C006B7455 /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
 		B7FAE13A1BF51B4C00E99DC6 /* MovieMania.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieMania.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,7 +82,7 @@
 				B79FF02E1BF53902005D5713 /* Movie.m */,
 				B7CE2A401BF67D2C006B7455 /* DetailTableViewController.h */,
 				B7CE2A411BF67D2C006B7455 /* DetailTableViewController.m */,
-				B7CE2A3E1BF6529B006B7455 /* gravatar.png */,
+				68F805771BF7C785004351A8 /* gravatar.jpg */,
 				B7FAE1491BF51B4C00E99DC6 /* Assets.xcassets */,
 				B7FAE14B1BF51B4C00E99DC6 /* LaunchScreen.storyboard */,
 				B7FAE14E1BF51B4C00E99DC6 /* Info.plist */,
@@ -157,9 +157,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7CE2A3F1BF6529B006B7455 /* gravatar.png in Resources */,
 				B7FAE14D1BF51B4C00E99DC6 /* LaunchScreen.storyboard in Resources */,
 				B7FAE14A1BF51B4C00E99DC6 /* Assets.xcassets in Resources */,
+				68F805781BF7C786004351A8 /* gravatar.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

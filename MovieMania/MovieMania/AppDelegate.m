@@ -23,7 +23,11 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     UINavigationController *navController = [[UINavigationController alloc] init];
+    //[[navController navigationBar] setBarTintColor:[UIColor colorWithRed:0.58 green:0.01 blue:0.01 alpha:1.0]];//reference[1] RED
+    [[navController navigationBar] setBarTintColor:[UIColor colorWithRed:0.1 green:0.00 blue:0.00 alpha:1.0]];//reference[1] RED
+
     
+
     MovieManiaTableViewController *moviesTVC = [[MovieManiaTableViewController alloc] init];
     navController.viewControllers = @[moviesTVC];
     

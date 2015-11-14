@@ -30,8 +30,7 @@
     [self setLabelsProperties];
     
 }
-//http://stackoverflow.com/questions/24131805/uitableviewcell-subtitle-not-showing-up
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier//reference[1]
 {
     // overwrite style
     self = [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
@@ -76,7 +75,7 @@
     }
     else
     {
-        self.detailTextLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:(14.0)];
+        self.detailTextLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:(13.0)];
     }
     
     self.detailTextLabel.text = text;
@@ -84,16 +83,33 @@
 
 -(void) stars:(NSString * )text
 {
-    NSLog(@"number stars: %@",text);
     
     int numberStars = [text intValue];
     
+    int totalStars = 1;
+    
     NSString * starsEmoji = @"";
     
-    while (numberStars >0 )
+    if (numberStars < 1)
     {
-        starsEmoji = [starsEmoji stringByAppendingString:@"⭐️"];
-        numberStars--;
+        starsEmoji = [starsEmoji stringByAppendingString:@"☆☆☆☆☆☆☆☆☆☆"];
+    }
+    else
+    {
+        
+        while (totalStars < 11 )
+        {
+            if(totalStars > numberStars)
+            {
+                starsEmoji = [starsEmoji stringByAppendingString:@"☆"];//⭐️"];
+            }
+            else
+            {
+                starsEmoji = [starsEmoji stringByAppendingString:@"⭐️"];
+            }
+            
+            totalStars++;
+        }
     }
     
     [self textDetail:starsEmoji];
@@ -117,7 +133,7 @@
 
 -(void)loadImage:(NSString *)ImagePath
 {
-    NSString *defaultImagePath = @"gravatar.png";
+    NSString *defaultImagePath = @"gravatar.jpg";
     NSString *path;
     
     if ([ImagePath  isEqual: @""] || [ImagePath  isEqual: @"N/A"] )
@@ -153,3 +169,5 @@
 }
 
 @end
+
+///reference[1]://http://stackoverflow.com/questions/24131805/uitableviewcell-subtitle-not-showing-up

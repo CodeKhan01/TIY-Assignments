@@ -75,7 +75,7 @@
     // Configure the cell...
     cell.textLabel.text = [_moviesArray[indexPath.row] title];
     [cell loadImage:[_moviesArray[indexPath.row] poster]];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
 
     
@@ -191,7 +191,7 @@
     
      NSString * searchTermProcesed = [searchTerm stringByReplacingOccurrencesOfString:@" " withString: @"+"];
 
-    [self search:searchTermProcesed]; // normal
+    //[self search:searchTermProcesed]; // normal
     [self searchByType:searchTermProcesed]; // by type
     
 }
@@ -206,8 +206,8 @@
 -(void) searchByType:(NSString * )searchTerm
 {
     
-   // NSString *urlStringMovie = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@",searchTerm,@"&type=movie"];
-   // [self requestAPI:urlStringMovie];
+   NSString *urlStringMovie = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@",searchTerm,@"&type=movie"];
+   [self requestAPI:urlStringMovie];
     
     //NSString *urlStringSeries = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@",searchTerm,@"&type=series"];
     //[self requestAPI:urlStringSeries];

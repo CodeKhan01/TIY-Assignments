@@ -21,9 +21,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Movie Mania";
+    self.title = @"CineMania! 🎬";
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor redColor]};
     self.view.backgroundColor = [UIColor blackColor];
     self.tableView.separatorColor = [UIColor clearColor];
+
 
     
     _moviesArray = [[NSMutableArray alloc]init];
@@ -37,6 +39,8 @@
      self.navigationItem.rightBarButtonItem = _rightAddButton;
     
     [self.tableView registerClass:MoviesCell.self forCellReuseIdentifier:@"MoviesCell"];
+    
+
     
     
     //test
@@ -80,6 +84,7 @@
     //cell.detailTextLabel.text = [_moviesArray[indexPath.row] plot];
     
     [cell stars:[_moviesArray[indexPath.row] imdbRating]];
+    cell.detailTextLabel.text = [cell.detailTextLabel.text stringByAppendingString:@"\r"];
     cell.detailTextLabel.text = [cell.detailTextLabel.text stringByAppendingString:[_moviesArray[indexPath.row] imdbRating]];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     [cell loadImage:[_moviesArray[indexPath.row] poster]];
@@ -164,3 +169,6 @@
 
 
 @end
+
+
+///reference [1]: http://stackoverflow.com/questions/5577390/how-to-add-custom-color-to-navigation-bar-in-iphone

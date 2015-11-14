@@ -15,4 +15,8 @@
 @property (strong,nonatomic) UILabel * labelText;
 @property (strong,nonatomic) UILabel * detailLabelText;
 
+-(void) textTitle:(NSString * )text;
+-(void) textDetail:(NSString * )text;
+-(void) stars:(NSString * )text;
+
 @end

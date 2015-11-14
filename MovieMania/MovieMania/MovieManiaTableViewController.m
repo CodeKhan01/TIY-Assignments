@@ -74,12 +74,16 @@
     MoviesCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MoviesCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = [_moviesArray[indexPath.row] title];
+    [cell textTitle:[_moviesArray[indexPath.row] title]]; //= [_moviesArray[indexPath.row] title];
     
     
-    cell.detailTextLabel.text = [_moviesArray[indexPath.row] plot];
+    //cell.detailTextLabel.text = [_moviesArray[indexPath.row] plot];
     
+    [cell stars:[_moviesArray[indexPath.row] imdbRating]];
+    cell.detailTextLabel.text = [cell.detailTextLabel.text stringByAppendingString:[_moviesArray[indexPath.row] imdbRating]];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     [cell loadImage:[_moviesArray[indexPath.row] poster]];
+    
     return cell;
 }
 

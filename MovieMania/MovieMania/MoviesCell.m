@@ -26,11 +26,11 @@
     
 
     // Configure the view for the selected state
-    
+    //self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     [self setLabelsProperties];
     
 }
-
+//http://stackoverflow.com/questions/24131805/uitableviewcell-subtitle-not-showing-up
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     // overwrite style
@@ -46,7 +46,7 @@
     self.textLabel.numberOfLines = 3;
     
     self.detailTextLabel.textColor = [UIColor whiteColor];
-    self.detailTextLabel.font = [UIFont fontWithName:@"Verdana" size:(12.0)];
+    self.detailTextLabel.font = [UIFont fontWithName:@"Verdana" size:(14.0)];
     self.detailTextLabel.textAlignment = NSTextAlignmentLeft;
     self.detailTextLabel.numberOfLines = 4;
 }
@@ -54,12 +54,50 @@
 
 
 
--(void) text:(NSString * )text
+-(void) textTitle:(NSString * )text
 {
-//    if ([text length] > )
-//    {
-//        
-//    }
+    if ([text length] > 10)
+    {
+        self.textLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:(20.0)];
+    }
+    else
+    {
+        self.textLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:(30.0)];
+    }
+    
+    self.textLabel.text = text;
+}
+
+-(void) textDetail:(NSString * )text
+{
+    if ([text length] > 80)
+    {
+        self.detailTextLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:(10.0)];
+    }
+    else
+    {
+        self.detailTextLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:(14.0)];
+    }
+    
+    self.detailTextLabel.text = text;
+}
+
+-(void) stars:(NSString * )text
+{
+    NSLog(@"number stars: %@",text);
+    
+    int numberStars = [text intValue];
+    
+    NSString * starsEmoji = @"";
+    
+    while (numberStars >0 )
+    {
+        starsEmoji = [starsEmoji stringByAppendingString:@"⭐️"];
+        numberStars--;
+    }
+    
+    [self textDetail:starsEmoji];
+    
 }
 
 

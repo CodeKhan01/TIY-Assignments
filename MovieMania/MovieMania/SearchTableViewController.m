@@ -75,6 +75,8 @@
     // Configure the cell...
     cell.textLabel.text = [_moviesArray[indexPath.row] title];
     [cell loadImage:[_moviesArray[indexPath.row] poster]];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
 
     
 

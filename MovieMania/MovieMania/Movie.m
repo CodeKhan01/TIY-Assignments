@@ -24,13 +24,13 @@
         _poster = [[NSString alloc]initWithFormat:@"%@",movieDictionary[@"Poster"]];
         _imdbRating = [[NSString alloc]initWithFormat:@"%@",movieDictionary[@"imdbRating"]];
         
-        NSLog(@"title: %@",_title);
-        NSLog(@"director: %@",_director);
-        NSLog(@"year: %@",_year);
-        NSLog(@"runtime: %@",_runtime);
-        NSLog(@"genre: %@",_genre);
-        NSLog(@"poster: %@",_poster);
-        NSLog(@"imdbRating: %@",_imdbRating);
+//        NSLog(@"title: %@",_title);
+//        NSLog(@"director: %@",_director);
+//        NSLog(@"year: %@",_year);
+//        NSLog(@"runtime: %@",_runtime);
+//        NSLog(@"genre: %@",_genre);
+//        NSLog(@"poster: %@",_poster);
+//        NSLog(@"imdbRating: %@",_imdbRating);
     }
     return self;
 }

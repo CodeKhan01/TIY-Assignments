@@ -19,7 +19,8 @@
     [super viewDidLoad];
     
     self.title =  _movie.title;
-    
+    self.view.backgroundColor = [UIColor blackColor];
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -62,7 +63,8 @@
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 300;
+    
+    return 200;
 }
 
 

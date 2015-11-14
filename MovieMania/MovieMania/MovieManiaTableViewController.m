@@ -21,8 +21,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"Movie Mania";
+    self.view.backgroundColor = [UIColor blackColor];
+    self.tableView.separatorColor = [UIColor clearColor];
+
     
     _moviesArray = [[NSMutableArray alloc]init];
     _moviesRegisterArray = [[NSMutableArray alloc] init];
@@ -33,6 +35,7 @@
 
     
      self.navigationItem.rightBarButtonItem = _rightAddButton;
+    
     [self.tableView registerClass:MoviesCell.self forCellReuseIdentifier:@"MoviesCell"];
     
     
@@ -61,7 +64,7 @@
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100;
+    return 120;
 }
 
 
@@ -71,6 +74,7 @@
     
     // Configure the cell...
     cell.textLabel.text = [_moviesArray[indexPath.row] title];
+    
     [cell loadImage:[_moviesArray[indexPath.row] poster]];
     return cell;
 }
@@ -136,6 +140,8 @@
     SearchTableViewController *searchTableVC = [[SearchTableViewController alloc]init];
     UINavigationController *navigationConroller = [[UINavigationController alloc]initWithRootViewController:searchTableVC];
     searchTableVC.delegator = self;
+    searchTableVC.view.backgroundColor = [UIColor blackColor];
+    searchTableVC.tableView.separatorColor = [UIColor clearColor];
     [self presentViewController:navigationConroller animated:YES completion:nil];
     
 }

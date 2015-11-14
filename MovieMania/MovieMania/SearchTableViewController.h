@@ -21,4 +21,6 @@
 
 @property (nonatomic)  UITableView *theTableView;
 
+@property (nonatomic) NSMutableArray * idObjectInMoviesDic;
+
 @end

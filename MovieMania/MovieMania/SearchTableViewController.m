@@ -18,10 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Search Movie";
-    
+
     _moviesArray = [[NSMutableArray alloc] init];
     _shouldShowSearchResults = NO;
     _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    _idObjectInMoviesDic = [[NSMutableArray alloc] init];
     
     
     [self.tableView registerClass:MoviesCell.self forCellReuseIdentifier:@"MoviesCell"];
@@ -206,11 +207,11 @@
     NSString *urlStringMovie = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@",searchTerm,@"&type=movie"];
     [self requestAPI:urlStringMovie];
     
-    NSString *urlStringSeries = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@",searchTerm,@"&type=series"];
-    [self requestAPI:urlStringSeries];
+    //NSString *urlStringSeries = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@",searchTerm,@"&type=series"];
+    //[self requestAPI:urlStringSeries];
     
-    NSString *urlStringEpisode = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@",searchTerm,@"&type=episode"];
-    [self requestAPI:urlStringEpisode];
+    //NSString *urlStringEpisode = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@",searchTerm,@"&type=episode"];
+    //[self requestAPI:urlStringEpisode];
 }
 
 #pragma mark - NSURLSessionData delegate
@@ -250,26 +251,44 @@
 {
     if (!error)
     {
-        NSLog(@"Download successful");
+        //NSLog(@"Download successful");
         //_moviesArray = [[NSJSONSerialization JSONObjectWithData:_receivedData options:0 error:nil] mutableCopy];
         
-        NSDictionary * aDictionary = [[NSJSONSerialization JSONObjectWithData:_receivedData options:0 error:nil] mutableCopy];
-        //be very carefull with the object returned from here because isn't mutable, so you have create a mutable copy of that object if you want do any operation in your class with that object.
-        NSLog(@"the information from aDict: %@", aDictionary);
-
-        if ([aDictionary[@"Response"] isEqualToString:@"True"])
-        {
-            Movie * newMovie = [[Movie alloc] init:aDictionary];
-            [_moviesArray addObject:newMovie];
-            [self.tableView reloadData];
-        }
-        _receivedData = nil;
-
-      
         
-        NSLog(@"the information from omdb: %@", _moviesArray);
+        //NSLog(@"/n the information from _receivedData: %@", _receivedData);
+        
+        if (_receivedData != nil)
+        {
+            NSDictionary * aDictionary = [[NSJSONSerialization JSONObjectWithData:_receivedData options:0 error:nil] mutableCopy];
+            //be very carefull with the object returned from here because isn't mutable, so you have create a mutable copy of that object if you want do any operation in your class with that object.
+            if (aDictionary !=nil)
+            {
+                NSLog(@"/n the information from aDict: %@", aDictionary);
+                
+                if ([aDictionary[@"Response"] isEqualToString:@"True"])
+                {
+                    //if (![_idObjectInMoviesDic containsObject: aDictionary[@"imdbID"]])
+                    //{
+                        Movie * newMovie = [[Movie alloc] init:aDictionary];
+                        [_moviesArray addObject:newMovie];
+                      //  [_idObjectInMoviesDic addObject:aDictionary[@"imdbID"]];
+                        [self.tableView reloadData];
+                         _receivedData = nil;
+                   // }
+                    
+                }
+                
+            }
+        }
+      
+
+       
+        
+        //NSLog(@"the information from omdb: %@", _moviesArray);
         
     }
+    _receivedData = nil;
+    
 }
 
 

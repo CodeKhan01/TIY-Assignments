@@ -12,5 +12,7 @@
 
 
 -(void)loadImage:(NSString *)ImagePath;
+@property (strong,nonatomic) UILabel * labelText;
+@property (strong,nonatomic) UILabel * detailLabelText;
 
 @end

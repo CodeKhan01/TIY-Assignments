@@ -204,8 +204,8 @@
 -(void) searchByType:(NSString * )searchTerm
 {
     
-    NSString *urlStringMovie = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@",searchTerm,@"&type=movie"];
-    [self requestAPI:urlStringMovie];
+   // NSString *urlStringMovie = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@",searchTerm,@"&type=movie"];
+   // [self requestAPI:urlStringMovie];
     
     //NSString *urlStringSeries = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@",searchTerm,@"&type=series"];
     //[self requestAPI:urlStringSeries];

@@ -10,25 +10,58 @@
 
 @implementation MoviesCell
 
+
+
+
+
 - (void)awakeFromNib
 {
     // Initialization code
-    
 
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
     [super setSelected:selected animated:animated];
+    
 
     // Configure the view for the selected state
+    
+    [self setLabelsProperties];
+    
+}
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    // overwrite style
+    self = [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
+    return self;
+}
+
+-(void)setLabelsProperties
+{
     self.backgroundColor = [UIColor blackColor];
     self.textLabel.textColor = [UIColor redColor];
-    self.textLabel.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(20.0)];
+    self.textLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:(30.0)];
     self.textLabel.numberOfLines = 3;
     
-    self.detailTextLabel.text = @"HELO";
-    self.detailTextLabel.textColor = [UIColor redColor];
+    self.detailTextLabel.textColor = [UIColor whiteColor];
+    self.detailTextLabel.font = [UIFont fontWithName:@"Verdana" size:(12.0)];
+    self.detailTextLabel.textAlignment = NSTextAlignmentLeft;
+    self.detailTextLabel.numberOfLines = 4;
 }
+
+
+
+
+-(void) text:(NSString * )text
+{
+//    if ([text length] > )
+//    {
+//        
+//    }
+}
+
 
 -(void) titleTextLabel:(NSString *)text
 {
@@ -41,17 +74,8 @@
     [self addSubview:_labelText];
     _labelText.text = [NSString stringWithFormat: @"%@", text];
 }
--(void) detailTextLabel:(NSString *)text
-{
-    
-    _detailLabelText = [ [UILabel alloc ] initWithFrame:CGRectMake(0.0, 43.0, (self.bounds.size.width / 2), 43.0) ];
-    _detailLabelText.textAlignment = NSTextAlignmentLeft;
-    _detailLabelText.textColor = [UIColor whiteColor];
-    //_detailLabelText.backgroundColor = [UIColor redColor];
-    _detailLabelText.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(36.0)];
-    [self addSubview:_detailLabelText];
-    _detailLabelText.text = [NSString stringWithFormat: @"%@", text];
-}
+
+
 
 -(void)loadImage:(NSString *)ImagePath
 {

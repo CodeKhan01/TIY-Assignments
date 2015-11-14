@@ -18,6 +18,7 @@
     {
         _title = [[NSString alloc] initWithFormat:@"%@",movieDictionary[@"Title"]];
         _director = [[NSString alloc] initWithFormat:@"%@",movieDictionary[@"Director"]];
+        _plot = [[NSString alloc] initWithFormat:@"%@",movieDictionary[@"Plot"]];
         _year = [[NSString alloc]initWithFormat:@"%@",movieDictionary[@"Year"]];
         _runtime = [[NSString alloc]initWithFormat:@"%@",movieDictionary[@"Runtime"]];
         _genre = [[NSString alloc]initWithFormat:@"%@",movieDictionary[@"Genre"]];

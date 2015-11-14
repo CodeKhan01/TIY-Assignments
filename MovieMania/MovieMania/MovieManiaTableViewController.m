@@ -69,11 +69,15 @@
 
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     MoviesCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MoviesCell" forIndexPath:indexPath];
     
     // Configure the cell...
     cell.textLabel.text = [_moviesArray[indexPath.row] title];
+    
+    
+    cell.detailTextLabel.text = [_moviesArray[indexPath.row] plot];
     
     [cell loadImage:[_moviesArray[indexPath.row] poster]];
     return cell;

@@ -36,6 +36,10 @@
     _searchController.dimsBackgroundDuringPresentation = NO;
     _searchController.hidesNavigationBarDuringPresentation = NO;
     _searchController.searchBar.delegate = self;
+    //_searchController.searchBar.backgroundColor = [UIColor redColor];
+    [[_searchController searchBar] setBarTintColor:[UIColor colorWithRed:0.4 green:0.00 blue:0.00 alpha:1.0]]; // to box search bar
+    [[_searchController searchBar] setTintColor:[UIColor redColor]]; // to texts and target bar
+    [[_searchController searchBar] setPlaceholder:@"Type name of movie "];
     [_searchController.searchBar sizeToFit];
     self.tableView.tableHeaderView = _searchController.searchBar;
     

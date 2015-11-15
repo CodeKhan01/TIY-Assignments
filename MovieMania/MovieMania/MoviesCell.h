@@ -18,5 +18,6 @@
 -(void) textTitle:(NSString * )text;
 -(void) textDetail:(NSString * )text;
 -(void) stars:(NSString * )text;
+-(void) textSubTitle:(NSString * )text;
 
 @end

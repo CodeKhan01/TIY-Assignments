@@ -18,6 +18,7 @@
 @property (nonatomic) NSString *genre;
 @property (nonatomic) NSString *poster;
 @property (nonatomic) NSString *imdbRating;
+@property (nonatomic) NSDictionary *completeInformationDict;
 
 
 -(id)init:(NSDictionary *)movieDictionary;

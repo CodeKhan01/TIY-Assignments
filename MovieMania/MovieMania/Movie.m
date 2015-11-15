@@ -25,6 +25,8 @@
         _poster = [[NSString alloc]initWithFormat:@"%@",movieDictionary[@"Poster"]];
         _imdbRating = [[NSString alloc]initWithFormat:@"%@",movieDictionary[@"imdbRating"]];
         
+        _completeInformationDict  = [[NSDictionary alloc] initWithDictionary:movieDictionary];
+        
 //        NSLog(@"title: %@",_title);
 //        NSLog(@"director: %@",_director);
 //        NSLog(@"year: %@",_year);

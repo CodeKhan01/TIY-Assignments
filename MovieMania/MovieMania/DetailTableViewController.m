@@ -21,6 +21,7 @@
     self.title =  _movie.title;
     self.view.backgroundColor = [UIColor blackColor];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor redColor]};
+    self.tableView.separatorColor = [UIColor clearColor];
 
 
     // Uncomment the following line to preserve selection between presentations.
@@ -47,27 +48,61 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 3;
 }
 
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row == 0)
+    {
+        return 15;
+    }
+    else
+    {
+        if(indexPath.row == 1)
+        {
+            return 205;
+        }
+        else
+        {
+            return 70;
+        }
+    }
+   
+        
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MoviesCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MoviesCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    //cell.textLabel.text = _movie.title;
-    //cell.textLabel.text = _movie.director;
-    [cell loadImage:_movie.poster];
+
+    cell.detailTextLabel.text = @"";
+    cell.textLabel.text = @"";
+    //int indexPathCellInMoviesArray =(int) indexPath.row/2;//inside if use this index path
+    
+    if(indexPath.row == 1)
+    {
+        [cell loadImage:_movie.poster];
+        [cell textTitle:_movie.title];
+        [cell textDetail:_movie.plot];
+    }
+    //else
+    if(indexPath.row == 2)
+    {
+        NSString * rateTitle = [NSString stringWithFormat:@"IMDB Rate: %@",_movie.imdbRating];
+        [cell textSubTitle:rateTitle];
+        [cell stars:_movie.imdbRating];
+
+    }
+    
+    
     
     return cell;
 }
 
--(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    return 200;
-}
+
 
 
 

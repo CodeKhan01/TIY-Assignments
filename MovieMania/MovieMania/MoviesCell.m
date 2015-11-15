@@ -47,14 +47,14 @@
     
     self.detailTextLabel.textColor = [UIColor whiteColor];
     //self.detailTextLabel.font = [UIFont fontWithName:@"Verdana" size:(14.0)];
-    self.detailTextLabel.textAlignment = NSTextAlignmentLeft;
-    self.detailTextLabel.numberOfLines = 4;
+    self.detailTextLabel.textAlignment = NSTextAlignmentJustified;// NSTextAlignmentLeft;
+    self.detailTextLabel.numberOfLines = 11;
 }
 
 
 
 
--(void) textTitle:(NSString * )text
+-(void) textTitle:(NSString * )text // for title
 {
     if ([text length] > 11)
     {
@@ -76,11 +76,27 @@
     self.textLabel.text = text;
 }
 
--(void) textDetail:(NSString * )text
+-(void) textSubTitle:(NSString * )text//for subtitles
 {
-    if ([text length] > 80)
+    if ([text length] > 25)
     {
-        self.detailTextLabel.font = [UIFont fontWithName:@"Verdana-Bold" size:(12.0)];
+       
+        self.textLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:(18.0)];
+        
+    }
+    else
+    {
+        self.textLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:(22.0)];
+    }
+    
+    self.textLabel.text = text;
+}
+
+-(void) textDetail:(NSString * )text //for detail
+{
+    if ([text length] > 50)
+    {
+        self.detailTextLabel.font = [UIFont fontWithName:@"Verdana" size:(11.5)];
     }
     else
     {

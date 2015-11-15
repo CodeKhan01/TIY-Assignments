@@ -16,6 +16,8 @@
 
 @end
 
+
+// validar que no se guarden repetidos 
 @implementation MovieManiaTableViewController
 
 - (void)viewDidLoad
@@ -137,7 +139,7 @@
         DetailTableViewController *detailTableVC = [[DetailTableViewController alloc]init];
         
         detailTableVC.movie = _moviesArray[indexPathCellInMoviesArray];
-        
+
         [self.navigationController pushViewController:detailTableVC animated:YES];
     }
     

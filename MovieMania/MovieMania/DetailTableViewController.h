@@ -13,5 +13,6 @@
 @interface DetailTableViewController : UITableViewController
 
 @property (nonatomic) Movie *movie;
+@property (nonatomic) NSMutableArray * allKeysInMovieDic;
 
 @end

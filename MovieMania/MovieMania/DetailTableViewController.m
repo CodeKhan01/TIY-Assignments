@@ -23,13 +23,41 @@
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor redColor]};
     self.tableView.separatorColor = [UIColor clearColor];
 
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    _allKeysInMovieDic = [[_movie.completeInformationDict allKeys] mutableCopy];
+    
+//    NSLog(@"lenght array of keys Before is = %lid",_allKeysInMovieDic.count);
+//    NSLog(@"array of keys is = %@",_allKeysInMovieDic);
+    [_allKeysInMovieDic removeObject:@"Title"];
+    [_allKeysInMovieDic removeObject:@"Plot"];
+    [_allKeysInMovieDic removeObject:@"Poster"];
+    [_allKeysInMovieDic removeObject:@"imdbRating"];
+//    
+//    NSLog(@"lenght array of keys After is = %lid",_allKeysInMovieDic.count);
+//    NSLog(@"array of keys is = %@",_allKeysInMovieDic);
+
+
      [self.tableView registerClass:MoviesCell.self forCellReuseIdentifier:@"MoviesCell"];
+    [self.tableView registerClass:UITableViewCell.self forCellReuseIdentifier:@"UITableViewCell"];
+    
+self.tableView.rowHeight = UITableViewAutomaticDimension;
+
+
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+
+    [self.tableView reloadData];
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+    self.tableView.estimatedRowHeight = 70.0;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    [self.tableView reloadData];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,8 +76,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return _allKeysInMovieDic.count+3;
 }
+
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -66,6 +95,7 @@
         else
         {
             return 70;
+                //return UITableViewAutomaticDimension;
         }
     }
    
@@ -74,32 +104,60 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MoviesCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MoviesCell" forIndexPath:indexPath];
     
     // Configure the cell...
 
-    cell.detailTextLabel.text = @"";
-    cell.textLabel.text = @"";
-    //int indexPathCellInMoviesArray =(int) indexPath.row/2;//inside if use this index path
+   
     
-    if(indexPath.row == 1)
+    
+    if (indexPath.row == 0) // a small separator
     {
-        [cell loadImage:_movie.poster];
-        [cell textTitle:_movie.title];
-        [cell textDetail:_movie.plot];
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+        cell.backgroundColor = [UIColor clearColor];
+        return cell;
     }
-    //else
-    if(indexPath.row == 2)
+    else
     {
-        NSString * rateTitle = [NSString stringWithFormat:@"IMDB Rate: %@",_movie.imdbRating];
-        [cell textSubTitle:rateTitle];
-        [cell stars:_movie.imdbRating];
+        MoviesCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MoviesCell" forIndexPath:indexPath];
+        
+        cell.detailTextLabel.text = nil;
+        cell.textLabel.text = nil;
+        cell.imageView.image = nil;
+        
+        
 
+        if(indexPath.row == 1)// to poster with title ... row in position 1
+        {
+            [cell loadImage:_movie.poster];
+            [cell textTitle:_movie.title];
+            [cell textDetail:_movie.plot];
+            return cell;
+        }
+        else
+        {
+            
+            if(indexPath.row == 2) // to rate and stars row in position 2
+            {
+                NSString * rateTitle = [NSString stringWithFormat:@"IMDB Rate: %@",_movie.imdbRating];
+                [cell textSubTitle:rateTitle];
+                [cell stars:_movie.imdbRating];
+                return cell;
+
+            }
+            else //default for others values
+            {
+                int indexPathCellInMoviesArray = (int) indexPath.row-3;//inside if use this index path
+
+                NSString * anyTitleinDic = _allKeysInMovieDic[indexPathCellInMoviesArray];
+                [cell textSubTitle:anyTitleinDic];
+                [cell textDetail:_movie.completeInformationDict[anyTitleinDic]];
+                
+                
+
+                return cell;
+            }
+        }
     }
-    
-    
-    
-    return cell;
 }
 
 

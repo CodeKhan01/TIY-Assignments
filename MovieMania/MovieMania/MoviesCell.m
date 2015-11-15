@@ -94,9 +94,17 @@
 
 -(void) textDetail:(NSString * )text //for detail
 {
-    if ([text length] > 50)
+    if ([text length] > 30)
     {
-        self.detailTextLabel.font = [UIFont fontWithName:@"Verdana" size:(11.5)];
+        if ([text length] > 60)
+        {
+            self.detailTextLabel.font = [UIFont fontWithName:@"Verdana" size:(11.3)];
+        }
+        else
+        {
+            self.detailTextLabel.font = [UIFont fontWithName:@"Verdana" size:(15.3)];
+
+        }
     }
     else
     {

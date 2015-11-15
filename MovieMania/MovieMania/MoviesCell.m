@@ -16,17 +16,18 @@
 
 - (void)awakeFromNib
 {
-    // Initialization code
+    // Initialization code 
 
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-    
+
 
     // Configure the view for the selected state
     //self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
     [self setLabelsProperties];
     
 }
@@ -41,11 +42,11 @@
 {
     self.backgroundColor = [UIColor blackColor];
     self.textLabel.textColor = [UIColor redColor];
-    self.textLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:(30.0)];
+    //self.textLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:(30.0)];
     self.textLabel.numberOfLines = 3;
     
     self.detailTextLabel.textColor = [UIColor whiteColor];
-    self.detailTextLabel.font = [UIFont fontWithName:@"Verdana" size:(14.0)];
+    //self.detailTextLabel.font = [UIFont fontWithName:@"Verdana" size:(14.0)];
     self.detailTextLabel.textAlignment = NSTextAlignmentLeft;
     self.detailTextLabel.numberOfLines = 4;
 }
@@ -55,9 +56,17 @@
 
 -(void) textTitle:(NSString * )text
 {
-    if ([text length] > 10)
+    if ([text length] > 11)
     {
-        self.textLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:(20.0)];
+        if ([text length] > 17)
+        {
+            self.textLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:(18.0)];
+        }
+        else
+        {
+            self.textLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:(24.0)];
+
+        }
     }
     else
     {
@@ -71,14 +80,25 @@
 {
     if ([text length] > 80)
     {
-        self.detailTextLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:(10.0)];
+        self.detailTextLabel.font = [UIFont fontWithName:@"Verdana-Bold" size:(12.0)];
     }
     else
     {
-        self.detailTextLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:(13.0)];
+        self.detailTextLabel.font = [UIFont fontWithName:@"Verdana-Bold" size:(15.0)];
     }
     
-    self.detailTextLabel.text = text;
+    if(!self.detailTextLabel.text || [self.detailTextLabel.text isEqual:nil]||[self.detailTextLabel.text isEqualToString:@""])
+    {
+        self.detailTextLabel.text = text;
+    }
+    else
+    {
+        NSString * tempString = [[NSString alloc] initWithFormat:@"%@",self.detailTextLabel.text];
+        self.detailTextLabel.text =  [tempString stringByAppendingString:text];
+        tempString = @"";
+        tempString = nil;
+    }
+
 }
 
 -(void) stars:(NSString * )text

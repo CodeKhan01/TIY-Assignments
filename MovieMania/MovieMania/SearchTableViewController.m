@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Search Movie";
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor redColor]};
+
 
     _moviesArray = [[NSMutableArray alloc] init];
     _shouldShowSearchResults = NO;
@@ -191,8 +193,8 @@
     
      NSString * searchTermProcesed = [searchTerm stringByReplacingOccurrencesOfString:@" " withString: @"+"];
 
-    //[self search:searchTermProcesed]; // normal
-    [self searchByType:searchTermProcesed]; // by type
+    [self search:searchTermProcesed]; // normal
+    //[self searchByType:searchTermProcesed]; // by type
     
 }
 
@@ -276,11 +278,16 @@
                       //  [_idObjectInMoviesDic addObject:aDictionary[@"imdbID"]];
                         [self.tableView reloadData];
                          _receivedData = nil;
+                        [task cancel];
                    // }
                     
                 }
                 
             }
+        }
+        else
+        {
+            [task cancel];
         }
       
 
@@ -288,6 +295,10 @@
         
         //NSLog(@"the information from omdb: %@", _moviesArray);
         
+    }
+    else
+    {
+        [task cancel];
     }
     _receivedData = nil;
     

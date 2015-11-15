@@ -23,6 +23,7 @@
     [super viewDidLoad];
     self.title = @"CineMania! 🎬";
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor redColor]};
+
     self.view.backgroundColor = [UIColor blackColor];
     self.tableView.separatorColor = [UIColor clearColor];
 
@@ -39,6 +40,9 @@
      self.navigationItem.rightBarButtonItem = _rightAddButton;
     
     [self.tableView registerClass:MoviesCell.self forCellReuseIdentifier:@"MoviesCell"];
+    [self.tableView registerClass:UITableViewCell.self forCellReuseIdentifier:@"UITableViewCell"];
+
+
     
 
     
@@ -63,42 +67,79 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
-    return _moviesArray.count;
+    return _moviesArray.count*2;
 }
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 120;
+    if (indexPath.row % 2 == 1)
+    {
+        return 120;
+    }
+    else
+    {
+        return  10;
+    }
 }
 
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MoviesCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MoviesCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    [cell textTitle:[_moviesArray[indexPath.row] title]]; //= [_moviesArray[indexPath.row] title];
     
     
-    //cell.detailTextLabel.text = [_moviesArray[indexPath.row] plot];
-    
-    [cell stars:[_moviesArray[indexPath.row] imdbRating]];
-    cell.detailTextLabel.text = [cell.detailTextLabel.text stringByAppendingString:@"\r"];
-    cell.detailTextLabel.text = [cell.detailTextLabel.text stringByAppendingString:[_moviesArray[indexPath.row] imdbRating]];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    [cell loadImage:[_moviesArray[indexPath.row] poster]];
-    
-    return cell;
+   if(indexPath.row % 2 == 1)
+   {
+       MoviesCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MoviesCell" forIndexPath:indexPath];
+
+       int indexPathCellInMoviesArray =(int) indexPath.row/2;//inside if use this index path
+       
+       cell.detailTextLabel.text = @"";
+       
+       [cell textTitle:[_moviesArray[indexPathCellInMoviesArray] title]];
+       [cell textDetail:@"Year: "];
+       [cell textDetail:[_moviesArray[indexPathCellInMoviesArray] yearM]];
+       [cell textDetail:@"\r"];
+       [cell stars:[_moviesArray[indexPathCellInMoviesArray] imdbRating]];
+       [cell textDetail:@"\r"];
+       [cell textDetail:@"Rate: "];
+       [cell textDetail:[_moviesArray[indexPathCellInMoviesArray] imdbRating]];
+       
+       //cell.detailTextLabel.text = [cell.detailTextLabel.text stringByAppendingString:[_moviesArray[indexPath.row] imdbRating]];
+       [cell loadImage:[_moviesArray[indexPathCellInMoviesArray] poster]];
+       //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+       //cell.detailTextLabel.text = [_moviesArray[indexPath.row] plot];
+       
+       return cell;
+
+   }
+   else
+   {
+       
+       UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+       cell.textLabel.text = @"";
+       cell.detailTextLabel.text = @"";
+       cell.backgroundColor = [UIColor clearColor];
+        return cell;
+ 
+   }
+   
 }
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DetailTableViewController *detailTableVC = [[DetailTableViewController alloc]init];
-    
-    detailTableVC.movie = _moviesArray[indexPath.row];
-    
-    [self.navigationController pushViewController:detailTableVC animated:YES];
+    if(indexPath.row % 2 == 1)
+    {
+        int indexPathCellInMoviesArray =(int) indexPath.row/2;//inside if use this index path
+        
+        DetailTableViewController *detailTableVC = [[DetailTableViewController alloc]init];
+        
+        detailTableVC.movie = _moviesArray[indexPathCellInMoviesArray];
+        
+        [self.navigationController pushViewController:detailTableVC animated:YES];
+    }
     
 }
 
@@ -152,9 +193,12 @@
 {
     SearchTableViewController *searchTableVC = [[SearchTableViewController alloc]init];
     UINavigationController *navigationConroller = [[UINavigationController alloc]initWithRootViewController:searchTableVC];
+    [[navigationConroller navigationBar] setBarTintColor:[UIColor colorWithRed:0.1 green:0.00 blue:0.00 alpha:1.0]];//reference[1] RED
+
     searchTableVC.delegator = self;
     searchTableVC.view.backgroundColor = [UIColor blackColor];
     searchTableVC.tableView.separatorColor = [UIColor clearColor];
+    
     [self presentViewController:navigationConroller animated:YES completion:nil];
     
 }

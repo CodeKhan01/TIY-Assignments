@@ -9,6 +9,7 @@
 #import "SearchTableViewController.h"
 #import "MoviesCell.h"
 
+
 @interface SearchTableViewController ()<UISearchBarDelegate,UISearchDisplayDelegate,UISearchResultsUpdating,UITableViewDataSource, NSURLSessionDataDelegate>
 
 @end
@@ -52,7 +53,8 @@
     [self.tableView reloadData];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

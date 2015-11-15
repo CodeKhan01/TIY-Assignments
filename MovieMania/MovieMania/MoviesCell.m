@@ -177,7 +177,7 @@
 
 -(void)loadImage:(NSString *)ImagePath
 {
-    NSString *defaultImagePath = @"gravatar.jpg";
+   NSString *defaultImagePath = @"logo_github_small.gif";
     NSString *path;
     
     if ([ImagePath  isEqual: @""] || [ImagePath  isEqual: @"N/A"] )

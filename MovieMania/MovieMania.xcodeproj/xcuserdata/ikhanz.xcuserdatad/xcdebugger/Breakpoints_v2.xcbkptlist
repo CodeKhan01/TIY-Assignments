@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieMania/SearchTableViewController.m"
-            timestampString = "469130791.058882"
+            timestampString = "469311791.970736"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
-            landmarkName = "-searchBarCancelButtonClicked:"
-            landmarkType = "5">
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "@implementation SearchTableViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

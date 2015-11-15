@@ -28,6 +28,7 @@
 
     self.view.backgroundColor = [UIColor blackColor];
     self.tableView.separatorColor = [UIColor clearColor];
+    self.navigationItem.leftBarButtonItem = self.editButtonItem; //edit to remove movies from cell list
 
 
     
@@ -143,6 +144,16 @@
         [self.navigationController pushViewController:detailTableVC animated:YES];
     }
     
+}
+// deletes the cell and the content thats in the cell.
+-(void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        [_moviesArray removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [self.tableView reloadData];
+    }
 }
 
 

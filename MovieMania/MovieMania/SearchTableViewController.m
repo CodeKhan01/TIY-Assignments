@@ -28,6 +28,8 @@
     
     
     [self.tableView registerClass:MoviesCell.self forCellReuseIdentifier:@"MoviesCell"];
+    [self.tableView registerClass:UITableViewCell.self forCellReuseIdentifier:@"UITableViewCell"];
+
     
     //Customize the view controller bar
     _searchController.searchResultsUpdater = self;
@@ -61,34 +63,66 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _moviesArray.count;
+    
+    return _moviesArray.count*2;
 }
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 150;
+    if (indexPath.row % 2 == 1)
+    {
+        return 120;
+    }
+    else
+    {
+        return  10;
+    }
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MoviesCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MoviesCell" forIndexPath:indexPath];
+    if(indexPath.row % 2 == 1)
+    {
+        MoviesCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MoviesCell" forIndexPath:indexPath];
+        
+        int indexPathCellInMoviesArray =(int) indexPath.row/2;//inside if use this index path
+        
+        cell.detailTextLabel.text = @"";
 
-    // Configure the cell...
-    cell.textLabel.text = [_moviesArray[indexPath.row] title];
-    [cell loadImage:[_moviesArray[indexPath.row] poster]];
-    //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        // Configure the cell...
+        [cell textTitle:[_moviesArray[indexPathCellInMoviesArray] title]];
+        [cell loadImage:[_moviesArray[indexPathCellInMoviesArray] poster]];
+        [cell textDetail:@"Genre: "];
+        [cell textDetail:[_moviesArray[indexPathCellInMoviesArray] genre]];
+        [cell textDetail:@"\r"];
+        [cell textDetail:@"Rate: "];
+        [cell textDetail:[_moviesArray[indexPathCellInMoviesArray] imdbRating]];
+        //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        return cell;
+        
+    }
+    else
+    {
+        
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+        cell.textLabel.text = @"";
+        cell.detailTextLabel.text = @"";
+        cell.backgroundColor = [UIColor clearColor];
+        return cell;
+        
+    }
 
 
-    
-
-    
-    return cell;
 }
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.delegator movieWasFound:_moviesArray[indexPath.row]];
+    if(indexPath.row % 2 == 1)
+    {
+        int indexPathCellInMoviesArray =(int) indexPath.row/2;//inside if use this index path
+    
+        [self.delegator movieWasFound:_moviesArray[indexPathCellInMoviesArray]];
+    }
 }
 
 /*

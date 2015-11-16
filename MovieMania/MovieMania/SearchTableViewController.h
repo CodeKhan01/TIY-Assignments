@@ -23,4 +23,6 @@
 
 @property (nonatomic) NSMutableArray * idObjectInMoviesDic;
 
+@property (nonatomic) NSMutableArray * arrayTasks;
+
 @end

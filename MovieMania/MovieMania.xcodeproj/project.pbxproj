@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B77996931BF8EC280071C605 /* logo_github_small.gif in Resources */ = {isa = PBXBuildFile; fileRef = B77996921BF8EC280071C605 /* logo_github_small.gif */; };
+		68F8057D1BFA2647004351A8 /* gravatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68F8057C1BFA2647004351A8 /* gravatar.jpg */; settings = {ASSET_TAGS = (); }; };
 		B79FF0291BF52606005D5713 /* MoviesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B79FF0281BF52606005D5713 /* MoviesCell.m */; };
 		B79FF02C1BF529D7005D5713 /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B79FF02B1BF529D7005D5713 /* SearchTableViewController.m */; };
 		B79FF02F1BF53902005D5713 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = B79FF02E1BF53902005D5713 /* Movie.m */; };
@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B77996921BF8EC280071C605 /* logo_github_small.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = logo_github_small.gif; sourceTree = "<group>"; };
+		68F8057C1BFA2647004351A8 /* gravatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gravatar.jpg; sourceTree = "<group>"; };
 		B79FF0271BF52606005D5713 /* MoviesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesCell.h; sourceTree = "<group>"; };
 		B79FF0281BF52606005D5713 /* MoviesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesCell.m; sourceTree = "<group>"; };
 		B79FF02A1BF529D7005D5713 /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
@@ -56,7 +56,6 @@
 			children = (
 				B7FAE13C1BF51B4C00E99DC6 /* MovieMania */,
 				B7FAE13B1BF51B4C00E99DC6 /* Products */,
-				B77996921BF8EC280071C605 /* logo_github_small.gif */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +82,7 @@
 				B79FF02E1BF53902005D5713 /* Movie.m */,
 				B7CE2A401BF67D2C006B7455 /* DetailTableViewController.h */,
 				B7CE2A411BF67D2C006B7455 /* DetailTableViewController.m */,
+				68F8057C1BFA2647004351A8 /* gravatar.jpg */,
 				B7FAE1491BF51B4C00E99DC6 /* Assets.xcassets */,
 				B7FAE14B1BF51B4C00E99DC6 /* LaunchScreen.storyboard */,
 				B7FAE14E1BF51B4C00E99DC6 /* Info.plist */,
@@ -157,9 +157,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B77996931BF8EC280071C605 /* logo_github_small.gif in Resources */,
 				B7FAE14D1BF51B4C00E99DC6 /* LaunchScreen.storyboard in Resources */,
 				B7FAE14A1BF51B4C00E99DC6 /* Assets.xcassets in Resources */,
+				68F8057D1BFA2647004351A8 /* gravatar.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

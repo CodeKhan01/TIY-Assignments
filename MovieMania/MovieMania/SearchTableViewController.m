@@ -232,9 +232,13 @@
 {
     
      NSString * searchTermProcesed = [searchTerm stringByReplacingOccurrencesOfString:@" " withString: @"+"];
+    
+    _arrayTasks = [[NSMutableArray alloc] init];
 
     [self search:searchTermProcesed]; // normal
-    //[self searchByType:searchTermProcesed]; // by type
+    [self searchByType:searchTermProcesed]; // by type
+    
+    [_arrayTasks[0] resume];
     
 }
 
@@ -243,19 +247,52 @@
    
     NSString *urlString = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@",searchTerm ];
     [self requestAPI:urlString];
+  
 }
 
 -(void) searchByType:(NSString * )searchTerm
 {
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
+   // NSInteger day = [components day];
+    //NSInteger month = [components month];
+    NSInteger presentYear = [components year];
+
+    NSInteger year = 1980;
     
-   NSString *urlStringMovie = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@",searchTerm,@"&type=movie"];
-   [self requestAPI:urlStringMovie];
     
-    //NSString *urlStringSeries = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@",searchTerm,@"&type=series"];
-    //[self requestAPI:urlStringSeries];
+    //NSString *urlStringMovie = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@",searchTerm];
+    //[self requestAPI:urlStringMovie];
     
-    //NSString *urlStringEpisode = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@",searchTerm,@"&type=episode"];
-    //[self requestAPI:urlStringEpisode];
+    NSInteger part = 0;
+    
+    for (NSInteger iy = year; iy <= presentYear; iy++)
+    {
+
+//        NSString *urlStringMovie = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@%li",searchTerm,@"&y=",iy];
+//        [self requestAPI:urlStringMovie];
+        
+        NSString *urlStringMovieType = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@%li",searchTerm,@"&type=movie&y=",iy];
+        [self requestAPI:urlStringMovieType];
+        
+
+        
+        NSString *urlStringMoviePart = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@%li",searchTerm,@"+",part];
+        [self requestAPI:urlStringMoviePart];
+        
+        
+       // NSString *urlStringSeries = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@%li",searchTerm,@"&type=series&y=",iy];
+        //[self requestAPI:urlStringSeries];
+        
+        //NSString *urlStringEpisode = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@",searchTerm,@"&type=episode"];
+        //[self requestAPI:urlStringEpisode];
+        
+        
+        
+//                    });
+    
+       part++;
+    }
+   
 }
 
 #pragma mark - NSURLSessionData delegate
@@ -270,7 +307,9 @@
     
     NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url];
     
-    [dataTask resume];
+    //[dataTask resume];
+    
+    [_arrayTasks addObject:dataTask];
 
 }
 
@@ -318,17 +357,33 @@
                       //  [_idObjectInMoviesDic addObject:aDictionary[@"imdbID"]];
                         [self.tableView reloadData];
                          _receivedData = nil;
-                        [task cancel];
+                       // [task cancel];
+                    
+                    
                    // }
                     
+                }
+                else
+                {
+//                    [task cancel];
                 }
                 
             }
         }
         else
         {
-            [task cancel];
+//            [task cancel];
         }
+        
+        [task cancel];
+        [_arrayTasks removeObject:task];
+        
+        if (_arrayTasks.count != 0 )
+        {
+            [_arrayTasks[0] resume];
+
+        }
+        
       
 
        
@@ -338,7 +393,7 @@
     }
     else
     {
-        [task cancel];
+        //[task cancel];
     }
     _receivedData = nil;
     

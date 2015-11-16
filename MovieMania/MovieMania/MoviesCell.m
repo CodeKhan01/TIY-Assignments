@@ -122,6 +122,23 @@
         tempString = @"";
         tempString = nil;
     }
+}
+
+-(void) textDetailStandar:(NSString * )text //for detail
+{
+ 
+    if ([text length] > 80)
+    {
+        self.detailTextLabel.font = [UIFont fontWithName:@"Verdana" size:(11.3)];
+        self.textLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:(18.0)];
+    }
+    else
+    {
+        self.detailTextLabel.font = [UIFont fontWithName:@"Verdana" size:(15.3)];
+        
+    }
+ 
+    self.detailTextLabel.text = text;
 
 }
 
@@ -177,7 +194,7 @@
 
 -(void)loadImage:(NSString *)ImagePath
 {
-   NSString *defaultImagePath = @"logo_github_small.gif";
+   NSString *defaultImagePath = @"gravatar.jpg";
     NSString *path;
     
     if ([ImagePath  isEqual: @""] || [ImagePath  isEqual: @"N/A"] )

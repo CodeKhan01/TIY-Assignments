@@ -94,8 +94,8 @@ self.tableView.rowHeight = UITableViewAutomaticDimension;
         }
         else
         {
-            return 70;
-                //return UITableViewAutomaticDimension;
+            //return 70;
+            return UITableViewAutomaticDimension;
         }
     }
    
@@ -150,7 +150,7 @@ self.tableView.rowHeight = UITableViewAutomaticDimension;
 
                 NSString * anyTitleinDic = _allKeysInMovieDic[indexPathCellInMoviesArray];
                 [cell textSubTitle:anyTitleinDic];
-                [cell textDetail:_movie.completeInformationDict[anyTitleinDic]];
+                [cell textDetailStandar:_movie.completeInformationDict[anyTitleinDic]];
                 
                 
 

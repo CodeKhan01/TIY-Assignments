@@ -148,10 +148,12 @@
 // deletes the cell and the content thats in the cell.
 -(void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSInteger indexPathCellInMoviesArray =(int) indexPath.row/2;//inside if use this index path
+
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
-        [_moviesArray removeObjectAtIndex:indexPath.row];
-        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [_moviesArray removeObjectAtIndex:indexPathCellInMoviesArray];
+        //[self.tableView deleteRowsAtIndexPaths:@[indexPath.row/2] withRowAnimation:UITableViewRowAnimationFade];
         [self.tableView reloadData];
     }
 }

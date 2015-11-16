@@ -20,6 +20,7 @@
 -(void) stars:(NSString * )text;
 -(void) textSubTitle:(NSString * )text;
 
+-(void)setLabelsDefaultProperties;
 -(void) textDetailStandar:(NSString * )text;
 
 @end

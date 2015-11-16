@@ -146,15 +146,26 @@ self.tableView.rowHeight = UITableViewAutomaticDimension;
             }
             else //default for others values
             {
+                MoviesCell *cell2 = [tableView dequeueReusableCellWithIdentifier:@"MoviesCell" forIndexPath:indexPath];
+                //[cell2 setLabelsDefaultProperties];
+
+                cell2.detailTextLabel.text = nil;
+                cell2.textLabel.text = nil;
+                cell2.imageView.image = nil;
+
+                
                 int indexPathCellInMoviesArray = (int) indexPath.row-3;//inside if use this index path
+                
 
                 NSString * anyTitleinDic = _allKeysInMovieDic[indexPathCellInMoviesArray];
-                [cell textSubTitle:anyTitleinDic];
-                [cell textDetailStandar:_movie.completeInformationDict[anyTitleinDic]];
+                [cell2 textSubTitle:anyTitleinDic];
+                //[cell2 textDetailStandar:_movie.completeInformationDict[anyTitleinDic]];
+                [cell2 textDetail:_movie.completeInformationDict[anyTitleinDic]];
+
                 
                 
 
-                return cell;
+                return cell2;
             }
         }
     }

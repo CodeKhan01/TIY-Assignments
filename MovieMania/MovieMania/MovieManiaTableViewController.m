@@ -152,9 +152,12 @@
 
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
-        [_moviesArray removeObjectAtIndex:indexPathCellInMoviesArray];
-        //[self.tableView deleteRowsAtIndexPaths:@[indexPath.row/2] withRowAnimation:UITableViewRowAnimationFade];
-        [self.tableView reloadData];
+        if (indexPath.row % 2 == 1)
+        {
+            [_moviesArray removeObjectAtIndex:indexPathCellInMoviesArray];
+            //[self.tableView deleteRowsAtIndexPaths:@[indexPath.row/2] withRowAnimation:UITableViewRowAnimationFade];
+            [self.tableView reloadData];
+        }
     }
 }
 

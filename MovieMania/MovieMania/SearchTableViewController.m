@@ -214,10 +214,14 @@
 
 -(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
 {
-    _shouldShowSearchResults = YES;
-    [self.moviesArray removeAllObjects];
-    [self omdbAPIRequest:searchBar.text];
-    [self.tableView reloadData];
+    if (![searchBar.text isEqualToString:@""])
+    {
+        
+        _shouldShowSearchResults = YES;
+        [self.moviesArray removeAllObjects];
+        [self omdbAPIRequest:searchBar.text];
+        [self.tableView reloadData];
+    }
 }
 
 -(void)updateSearchResultsForSearchController:(UISearchController *)searchController
@@ -280,11 +284,11 @@
         [self requestAPI:urlStringMoviePart];
         
         
-       // NSString *urlStringSeries = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@%li",searchTerm,@"&type=series&y=",iy];
-        //[self requestAPI:urlStringSeries];
+        NSString *urlStringSeries = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@%li",searchTerm,@"&type=series&y=",iy];
+        [self requestAPI:urlStringSeries];
         
-        //NSString *urlStringEpisode = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@",searchTerm,@"&type=episode"];
-        //[self requestAPI:urlStringEpisode];
+        NSString *urlStringEpisode = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@%@",searchTerm,@"&type=episode"];
+        [self requestAPI:urlStringEpisode];
         
         
         
@@ -350,17 +354,17 @@
                 
                 if ([aDictionary[@"Response"] isEqualToString:@"True"])
                 {
-                    //if (![_idObjectInMoviesDic containsObject: aDictionary[@"imdbID"]])
-                    //{
+                    if (![_idObjectInMoviesDic containsObject: aDictionary[@"imdbID"]])
+                    {
                         Movie * newMovie = [[Movie alloc] init:aDictionary];
                         [_moviesArray addObject:newMovie];
-                      //  [_idObjectInMoviesDic addObject:aDictionary[@"imdbID"]];
+                        [_idObjectInMoviesDic addObject:aDictionary[@"imdbID"]];
                         [self.tableView reloadData];
                          _receivedData = nil;
                        // [task cancel];
                     
                     
-                   // }
+                    }
                     
                 }
                 else

@@ -28,7 +28,7 @@
     // Configure the view for the selected state
     //self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
-    [self setLabelsProperties];
+    [self setLabelsDefaultProperties];
     
 }
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier//reference[1]
@@ -38,7 +38,7 @@
     return self;
 }
 
--(void)setLabelsProperties
+-(void)setLabelsDefaultProperties
 {
     self.backgroundColor = [UIColor blackColor];
     self.textLabel.textColor = [UIColor redColor];
@@ -129,7 +129,7 @@
  
     if ([text length] > 80)
     {
-        self.detailTextLabel.font = [UIFont fontWithName:@"Verdana" size:(11.3)];
+        //self.detailTextLabel.font = [UIFont fontWithName:@"Verdana" size:(11.3)];
         self.textLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:(18.0)];
     }
     else

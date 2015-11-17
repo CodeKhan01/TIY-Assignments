@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import Foundation
+
+protocol CitiesTableViewController
+{
+    func timeZoneWasChosen(chosenCity: String)
+}
 
 class TimeZoneTableViewController: UITableViewController
 {
+    
 
     override func viewDidLoad()
     {
@@ -87,14 +94,25 @@ class TimeZoneTableViewController: UITableViewController
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "ShowCitiesSegue"
+        {
+            let destinationVC = segue.destinationViewController as! CitiesTableViewController
+        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
+
+    
+    func timeZoneWasChosen(chosenCity: String)
+    {
+        
+    }
+    
 
 }

@@ -87,7 +87,7 @@
                     <navigationItem key="navigationItem" id="0hE-C8-gx6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="LKl-m3-I7z">
                             <connections>
-                                <segue destination="uGs-gS-lpe" kind="presentation" identifier="presentModalSegue" id="asJ-2l-Rfj"/>
+                                <segue destination="uGs-gS-lpe" kind="presentation" identifier="ShowCitiesSegue" id="asJ-2l-Rfj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

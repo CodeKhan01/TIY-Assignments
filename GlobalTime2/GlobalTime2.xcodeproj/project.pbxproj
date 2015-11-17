@@ -11,6 +11,11 @@
 		B7A6CFE61BFBCC0B00180ABD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A6CFE41BFBCC0B00180ABD /* Main.storyboard */; };
 		B7A6CFE81BFBCC0B00180ABD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7A6CFE71BFBCC0B00180ABD /* Assets.xcassets */; };
 		B7A6CFEB1BFBCC0B00180ABD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A6CFE91BFBCC0B00180ABD /* LaunchScreen.storyboard */; };
+		B7A6CFF31BFBCE0100180ABD /* TimeZoneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6CFF21BFBCE0100180ABD /* TimeZoneTableViewController.swift */; };
+		B7A6CFF51BFBCE2F00180ABD /* TimeZoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6CFF41BFBCE2F00180ABD /* TimeZoneCell.swift */; };
+		B7A6CFF71BFBCE6600180ABD /* CitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6CFF61BFBCE6600180ABD /* CitiesTableViewController.swift */; };
+		B7A6CFF91BFBCE9000180ABD /* CitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6CFF81BFBCE9000180ABD /* CitiesCell.swift */; };
+		B7A6CFFF1BFBD1C300180ABD /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6CFFE1BFBD1C300180ABD /* ClockView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		B7A6CFE71BFBCC0B00180ABD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7A6CFEA1BFBCC0B00180ABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7A6CFEC1BFBCC0B00180ABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7A6CFF21BFBCE0100180ABD /* TimeZoneTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeZoneTableViewController.swift; sourceTree = "<group>"; };
+		B7A6CFF41BFBCE2F00180ABD /* TimeZoneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeZoneCell.swift; sourceTree = "<group>"; };
+		B7A6CFF61BFBCE6600180ABD /* CitiesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitiesTableViewController.swift; sourceTree = "<group>"; };
+		B7A6CFF81BFBCE9000180ABD /* CitiesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitiesCell.swift; sourceTree = "<group>"; };
+		B7A6CFFE1BFBD1C300180ABD /* ClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClockView.swift; path = ../ClockView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				B7A6CFE01BFBCC0B00180ABD /* AppDelegate.swift */,
+				B7A6CFF21BFBCE0100180ABD /* TimeZoneTableViewController.swift */,
+				B7A6CFF41BFBCE2F00180ABD /* TimeZoneCell.swift */,
+				B7A6CFF61BFBCE6600180ABD /* CitiesTableViewController.swift */,
+				B7A6CFF81BFBCE9000180ABD /* CitiesCell.swift */,
+				B7A6CFFE1BFBD1C300180ABD /* ClockView.swift */,
 				B7A6CFE41BFBCC0B00180ABD /* Main.storyboard */,
 				B7A6CFE71BFBCC0B00180ABD /* Assets.xcassets */,
 				B7A6CFE91BFBCC0B00180ABD /* LaunchScreen.storyboard */,
@@ -133,6 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7A6CFF51BFBCE2F00180ABD /* TimeZoneCell.swift in Sources */,
+				B7A6CFFF1BFBD1C300180ABD /* ClockView.swift in Sources */,
+				B7A6CFF91BFBCE9000180ABD /* CitiesCell.swift in Sources */,
+				B7A6CFF31BFBCE0100180ABD /* TimeZoneTableViewController.swift in Sources */,
+				B7A6CFF71BFBCE6600180ABD /* CitiesTableViewController.swift in Sources */,
 				B7A6CFE11BFBCC0B00180ABD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +301,7 @@
 				B7A6CFF11BFBCC0B00180ABD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
